@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OMUGO AI BUILDER - Cheapest ₦1k $3</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#080a0b;color:#fff}
+.btn{padding:14px 28px;border-radius:30px;font-weight:800;text-decoration:none;display:inline-flex;justify-content:center;cursor:pointer;border:none}
+.btn-gold{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.grid3{grid-template-columns:1fr}}
+.input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:16px;border-radius:14px;color:#fff}
+.tag{display:inline-block;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.3);color:#FFD84D;padding:6px 12px;border-radius:20px;font-size:11px;margin:4px;cursor:pointer;font-weight:700}
+.price-switch{display:flex;background:rgba(255,255,255,.08);border-radius:30px;padding:4px;width:fit-content;margin:24px auto;border:1px solid rgba(255,255,255,.1)}
+.price-switch div{padding:10px 22px;border-radius:30px;cursor:pointer;font-weight:800;font-size:13px}.active{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111!important}
+</style>
+</head>
+<body style="background:radial-gradient(1200px 600px at 20% -10%,rgba(13,74,46,.4),transparent),radial-gradient(1000px 500px at 90% 0%,rgba(201,162,39,.25),transparent),#080a0b">
+
+<header style="display:flex;justify-content:space-between;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;backdrop-filter:blur(24px);background:rgba(8,10,11,.9);z-index:100">
+<div style="display:flex;align-items:center;gap:10px;font-weight:900"><div style="width:40px;height:40px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:11px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI<div style="background:#C9A227;color:#111;padding:3px 9px;border-radius:10px;font-size:10px">CHEAPEST</div></div>
+<a href="#builder" class="btn btn-gold" style="padding:10px 18px;font-size:13px">Start FREE 30 Days →</a>
+</header>
+
+<div id="builder" style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:40px 5%">
+<div>
+<div class="tag">🚀 2,847 websites built</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80">25x cheaper than Wix</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80">10x cheaper than Shopify</div>
+<h1 style="font-size:48px;font-weight:900;line-height:.95;margin:14px 0">Build any website with AI in <span style="color:#C9A227">30 seconds</span></h1>
+<p style="color:#a1a1aa;line-height:1.6">Type what you want - "fashion store with Naira prices", "church website". <b style="color:#fff">FREE 30 days, then Naira or Dollar.</b></p>
+<p style="color:#4ade80;font-weight:800;font-size:13px;margin-top:6px">✓ Gather clients first - Not in hurry - Go far!</p>
+
+<div style="background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:18px;margin:20px 0">
+<div style="display:flex;gap:8px"><input id="promptInput" class="input" placeholder="Describe: Fashion shop with ₦ prices and WhatsApp order..."><button onclick="buildWebsite()" class="btn btn-gold">✨ Build →</button></div>
+<div style="margin-top:14px">
+<span class="tag" onclick="setPrompt('Fashion store with Naira prices ₦ and WhatsApp order')">Fashion Store ₦</span>
+<span class="tag" onclick="setPrompt('Restaurant menu with online order')">Restaurant</span>
+<span class="tag" onclick="setPrompt('Church website with donation')">Church ⛪</span>
+<span class="tag" onclick="setPrompt('Real estate listing with WhatsApp')">Real Estate</span>
+</div>
+</div>
+</div>
+
+<div class="card" style="background:rgba(255,255,255,.08)">
+<div style="display:flex;justify-content:space-between;margin-bottom:12px"><b>🔴 Live Preview</b><span style="background:#0f5d31;color:#4ade80;padding:5px 10px;border-radius:12px;font-size:10px">● AI LIVE</span></div>
+<div id="preview" style="background:#FFFCF5;border-radius:14px;height:420px;overflow:auto;color:#111"><div style="padding:24px;text-align:center;color:#888;margin-top:70px"><div style="font-size:48px">👑</div><div style="font-weight:800;color:#0D4A2E">OMUGO AI</div><div style="font-size:11px;color:#C9A227;font-weight:800">CHEAPEST ₦1k / $3</div><div style="margin-top:12px;font-size:12px">Type above and click Build</div></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px"><button onclick="publishSite()" class="btn btn-gold" style="width:100%">🚀 Publish FREE 30 Days</button><button onclick="downloadCode()" class="btn" style="width:100%;background:rgba(255,255,255,.12);color:#fff">⬇ Download</button></div>
+</div>
+</div>
+
+<section style="padding:60px 5%;background:#0f1110">
+<h2 style="text-align:center;font-size:36px;font-weight:900">Cheaper than everyone - Gather more clients</h2>
+<p style="text-align:center;color:#a1a1aa;margin:12px 0">Wix ₦25k/mo. Shopify $29/mo. <b style="color:#fff">OMUGO AI ₦1k and $3</b> - 25x cheaper!</p>
+<div class="price-switch"><div id="nairaBtn" class="active" onclick="showNaira()">🇳🇬 NAIRA - 25x CHEAPER</div><div id="dollarBtn" onclick="showDollar()">🇺🇸 DOLLAR - 10x CHEAPER</div></div>
+
+<div id="nairaPricing" class="grid3" style="max-width:1100px;margin:0 auto">
+<div class="card"><h3>FREE - Gather Clients</h3><div style="font-size:36px;font-weight:900;margin:14px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:13px">✓ 30 days full<br>✓ No card<br>✓ Gather thousands</p><button class="btn" style="width:100%;margin-top:16px;background:#fff;color:#111">Start Free</button></div>
+<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.15)"><h3>Starter - Cheapest <span style="background:#C9A227;color:#111;padding:3px 8px;border-radius:10px;font-size:10px">POPULAR</span></h3><div style="font-size:36px;font-weight:900;margin:14px 0;color:#FFD84D">₦1,000<span style="font-size:14px;color:#a1a1aa">/month</span></div><p style="color:#a1a1aa;font-size:13px">✓ Wix ₦25k - You ₦1k<br>✓ Your Naira account<br>✓ 10k clients = ₦10M/mo!</p><a href="https://wa.me/2347035399931?text=I want to pay ₦1,000 monthly - Cheapest AI Builder - Naira" class="btn btn-gold" style="width:100%;margin-top:16px">Pay ₦1k →</a></div>
+<div class="card"><h3>Lifetime - Go Far!</h3><div style="font-size:36px;font-weight:900;margin:14px 0">₦7,500<span style="font-size:14px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:13px">✓ Pay once, own forever<br>✓ Go far in life</p><a href="https://wa.me/2347035399931?text=I want to pay ₦7,500 lifetime - Naira" class="btn" style="width:100%;margin-top:16px;background:rgba(255,255,255,.1);color:#fff">Pay ₦7.5k</a></div>
+</div>
+
+<div id="dollarPricing" class="grid3" style="display:none;max-width:1100px;margin:0 auto">
+<div class="card"><h3>FREE</h3><div style="font-size:36px;font-weight:900;margin:14px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:13px">✓ 30 days<br>✓ Gather clients</p></div>
+<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.15)"><h3>Starter - Cheapest <span style="background:#C9A227;color:#111;padding:3px 8px;border-radius:10px;font-size:10px">POPULAR</span></h3><div style="font-size:36px;font-weight:900;margin:14px 0;color:#FFD84D">$3<span style="font-size:14px;color:#a1a1aa">/month</span></div><p style="color:#a1a1aa;font-size:13px">✓ Shopify $29 - You $3<br>✓ Your Dollar account<br>✓ 10k × $3 = $30k/mo!</p><a href="https://wa.me/2347035399931?text=I want to pay $3 monthly - Dollar account" class="btn btn-gold" style="width:100%;margin-top:16px">Pay $3 →</a></div>
+<div class="card"><h3>Lifetime</h3><div style="font-size:36px;font-weight:900;margin:14px 0">$15<span style="font-size:14px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:13px">✓ Own forever<br>✓ Go far</p><a href="https://wa.me/2347035399931?text=I want to pay $15 lifetime - Dollar" class="btn" style="width:100%;margin-top:16px;background:rgba(255,255,255,.1);color:#fff">Pay $15</a></div>
+</div>
+</section>
+
+<footer style="padding:32px 5%;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:#666;font-size:12px">
+<div style="font-weight:900;font-size:22px;color:#fff">OMUGO AI BUILDER</div><div style="color:#C9A227;font-size:11px;font-weight:800">CHEAPEST ₦1,000 / $3 - GO FAR - NAIRA & DOLLAR ONLY</div>
+<div style="margin-top:14px">📍 Lagos + Abomey-Calavi + Germany 🇩🇪<br>📞 +2347035399931 | Naira + Dollar Account - No France CFA<br>© 2026 OMUGO AI. 25x cheaper than Wix.</div>
+</footer>
+
+<script>
+function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsite();}
+function showNaira(){document.getElementById('nairaPricing').style.display='grid';document.getElementById('dollarPricing').style.display='none';document.getElementById('nairaBtn').classList.add('active');document.getElementById('dollarBtn').classList.remove('active');}
+function showDollar(){document.getElementById('dollarPricing').style.display='grid';document.getElementById('nairaPricing').style.display='none';document.getElementById('dollarBtn').classList.add('active');document.getElementById('nairaBtn').classList.remove('active');}
+function buildWebsite(){
+ let p=document.getElementById('promptInput').value.toLowerCase(); if(!p){alert('Type what website you want first!');return;}
+ let html='';
+ if(p.includes('fashion')||p.includes('store')||p.includes('shop')){
+  html=`<div style="font-family:sans-serif;background:#FFFCF5;color:#111"><div style="padding:12px 5%;display:flex;justify-content:space-between;border-bottom:1px solid #eee"><b><span style="color:#0D4A2E">OMUGO</span> <span style="color:#C9A227">FASHION</span></b><span>🛒</span></div><div style="padding:28px 5%;text-align:center"><h1 style="font-size:26px;font-weight:800">New Collection 2026 - Cheapest</h1><p style="color:#666">Built with OMUGO AI - ₦1k/mo $3/mo</p><button style="background:#0D4A2E;color:#fff;padding:12px 22px;border-radius:30px;border:none;font-weight:800">Shop Now ₦12,000 →</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 5% 20px"><div style="background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden"><div style="height:110px;background:#f5efe0"></div><div style="padding:12px"><b>Ankara Dress</b><br><b>₦12,000 / $25</b><br><button style="width:100%;background:#0D4A2E;color:#fff;border:none;padding:9px;border-radius:10px;margin-top:6px">Buy via WhatsApp</button></div></div><div style="background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden"><div style="height:110px;background:#e8f5ec"></div><div style="padding:12px"><b>Leather Bag</b><br><b>₦8,500 / $18</b><br><button style="width:100%;background:#0D4A2E;color:#fff;border:none;padding:9px;border-radius:10px;margin-top:6px">Buy</button></div></div></div></div>`;
+ }else{
+  html=`<div style="font-family:sans-serif;background:#FFFCF5;color:#111;padding:28px 5%"><h1 style="font-size:24px;font-weight:800">✨ ${document.getElementById('promptInput').value}</h1><p style="color:#666;margin:10px 0">Built with OMUGO AI - Cheapest ₦1k $3 - 25x cheaper than Wix!</p><div style="background:#fff;border:1px solid #eee;border-radius:16px;padding:20px;margin-top:16px"><h3>Welcome - Cheapest!</h3><p style="font-size:13px;color:#666;margin-top:8px">Fully functional, Naira ₦ and Dollar $ pricing, WhatsApp ordering, Paystack for Naira, PayPal for Dollar. Gather many clients and go far!</p><button style="background:#0D4A2E;color:#fff;padding:10px 20px;border:none;border-radius:30px;margin-top:12px;font-weight:700">Contact WhatsApp</button></div></div>`;
+ }
+ document.getElementById('preview').innerHTML=html; window.lastBuilt=html;
+}
+function publishSite(){ if(!window.lastBuilt){alert('Build first! Type above and click Build');return;} let sites=JSON.parse(localStorage.getItem('omugo_sites')||'[]'); let id=Date.now(); sites.push({id:id,html:window.lastBuilt,date:new Date().toLocaleString()}); localStorage.setItem('omugo_sites',JSON.stringify(sites)); alert('🎉 PUBLISHED FREE 30 DAYS!\\nAfter 30 days: ₦1k/mo or $3/mo to YOUR Naira + Dollar account\\nSites: '+sites.length+'\\nGo far!'); window.open('https://wa.me/2347035399931?text=My AI site published ID:'+id+' - Pay ₦1k or $3 after 30 days - Naira Dollar only','_blank');}
+function downloadCode(){ if(!window.lastBuilt){alert('Build first!');return;} let blob=new Blob([window.lastBuilt],{type:'text/html'}); let a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='cheapest-website-1k-3dollars.html'; a.click();}
+</script>
+</body>
+</html>
