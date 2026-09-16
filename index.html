@@ -1,110 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OMUGO AI - Build Website Worldwide - Any Device OK</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OMUGO AI Builder Private</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#080a0b;color:#fff;line-height:1.5}
-.btn{padding:14px 28px;border-radius:30px;font-weight:800;text-decoration:none;display:inline-flex;justify-content:center;cursor:pointer;border:none;align-items:center;gap:8px}
-.btn-gold{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:22px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tag{display:inline-block;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.3);color:#FFD84D;padding:7px 14px;border-radius:20px;font-size:11px;margin:4px;font-weight:700;cursor:pointer}
-.price-switch{display:flex;background:rgba(255,255,255,.08);border-radius:30px;padding:4px;width:fit-content;margin:24px auto;border:1px solid rgba(255,255,255,.1)}
-.price-switch div{padding:10px 22px;border-radius:30px;cursor:pointer;font-weight:800;font-size:13px}.active{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111!important}
-.big-input{width:100%;background:rgba(255,255,255,.10);border:2px solid rgba(201,162,39,.5);padding:18px;border-radius:18px;color:#fff;font-size:16px;min-height:130px;outline:none;resize:vertical}
-.big-input:focus{border-color:#FFD84D;background:rgba(255,255,255,.14)}
-
-/* NEW RESPONSIVE - OK FOR ALL DEVICES */
-.builder-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:40px 5%;align-items:start}
-.preview-card{position:sticky;top:80px}
-@media(max-width:900px){
-  .builder-wrap{grid-template-columns:1fr;gap:18px;padding:22px 4%}
-  .preview-card{position:relative;top:0;order:2}
-  .builder-left{order:1}
-  .grid3{grid-template-columns:1fr}
-  h1.hero{font-size:30px!important}
-  #preview{height:420px!important}
-  .big-input{min-height:140px;font-size:16px}
-}
+body{margin:0;font-family:sans-serif;background:#0a0a0a;color:#fff}
+.top{padding:12px;background:#111;border-bottom:1px solid #222;display:flex;justify-content:space-between}
+.left{padding:16px;background:#111}
+textarea{width:100%;height:110px;background:#1a1a1a;color:#fff;border:1px solid #333;border-radius:12px;padding:12px}
+.btn{width:100%;padding:14px;border-radius:30px;border:none;font-weight:900;margin-top:10px}
+.gold{background:gold;color:#000}
+.chip{display:inline-block;padding:7px 12px;background:#222;border-radius:20px;font-size:12px;margin:4px}
+.preview{background:#fff;min-height:500px;color:#000}
+.step{font-size:12px;color:#888;padding:4px}
+.active{color:gold;font-weight:900}
 </style>
 </head>
-<body style="background:radial-gradient(1200px 600px at 20% -10%,rgba(13,74,46,.35),transparent),radial-gradient(1000px 500px at 90% 0%,rgba(201,162,39,.22),transparent),#080a0b">
-
-<header style="display:flex;justify-content:space-between;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;backdrop-filter:blur(24px);background:rgba(8,10,11,.92);z-index:100">
-<div style="display:flex;align-items:center;gap:10px;font-weight:900"><div style="width:40px;height:40px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:11px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI<div style="background:#C9A227;color:#111;padding:3px 9px;border-radius:10px;font-size:10px">WORLDWIDE</div></div>
-<a href="#builder" class="btn btn-gold" style="padding:10px 18px;font-size:13px">Start FREE →</a>
-</header>
-
-<div id="builder" class="builder-wrap">
-<div class="builder-left">
-<div style="display:flex;flex-wrap:wrap"><span class="tag">🌍 Worldwide</span><span class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">Any Device OK</span><span class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">Build in 30 Seconds</span></div>
-<h1 class="hero" style="font-size:46px;font-weight:900;line-height:.98;margin:14px 0">Build any website with AI in <span style="color:#C9A227">30 seconds</span></h1>
-<p style="color:#a1a1aa">For USA, Nigeria, Ghana, Kenya, UK, Germany, India, Everywhere! <b style="color:#fff">FREE 30 days, then affordable.</b></p>
-<p style="color:#4ade80;font-weight:800;font-size:13px;margin-top:8px">✓ Phone OK ✓ Laptop OK ✓ Tablet OK - Go far!</p>
-
-<div style="background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:18px;margin:18px 0">
-<label style="font-size:12px;color:#FFD84D;font-weight:800;letter-spacing:.5px">DESCRIBE YOUR WEBSITE (Big Box - Any Device):</label>
-<textarea id="promptInput" class="big-input" placeholder="Example: Build a beautiful fashion store with product photos, Naira and Dollar prices, WhatsApp order button, contact form, for worldwide customers..."></textarea>
-<button onclick="buildWebsite()" class="btn btn-gold" style="width:100%;font-size:17px;padding:18px;margin-top:12px">✨ Build My Website Now →</button>
-<div style="margin-top:14px">
-<span class="tag" onclick="setPrompt('Beautiful fashion store with product gallery and WhatsApp ordering for worldwide customers')">Fashion Store</span>
-<span class="tag" onclick="setPrompt('Modern restaurant website with menu, photos and online ordering')">Restaurant</span>
-<span class="tag" onclick="setPrompt('Church website with events, donations and livestream')">Church ⛪</span>
-<span class="tag" onclick="setPrompt('Real estate listings with property photos and contact form')">Real Estate</span>
+<body>
+<div class="top">
+<b>OMUGO AI 🌍</b>
+<span style="font-size:10px;color:#0f0;background:#0f0a;padding:4px 8px;border-radius:10px">🔒 PRIVATE BUILD</span>
 </div>
+
+<div class="left">
+<b>What website do you want?</b>
+<p style="font-size:11px;color:#888">This build is PRIVATE - Only you see it. Not visible to others.</p>
+<textarea id="p" placeholder="Example: football jersey shop with Naira Dollar prices"></textarea>
+<div>
+<span class="chip" onclick="p.value='football jersey shop with Naira and Dollar prices, WhatsApp button'">⚽ Football Shop</span>
+<span class="chip" onclick="p.value='OMUGO FOOTBALL NEWS with live scores'">📰 Football News</span>
+<span class="chip" onclick="p.value='barbing salon with booking gallery'">💈 Salon</span>
+</div>
+<button class="btn gold" onclick="build()">✨ Build My Private Website Now</button>
+<div id="steps" style="display:none;margin-top:10px;background:#1a1a1a;padding:10px;border-radius:10px">
+<div id="s1" class="step">1. Analyzing your idea...</div>
+<div id="s2" class="step">2. Creating design...</div>
+<div id="s3" class="step">3. Adding products...</div>
+<div id="s4" class="step">4. Publishing private site...</div>
 </div>
 </div>
 
-<div class="card preview-card" style="background:rgba(255,255,255,.08)">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;align-items:center"><b style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;background:#ef4444;border-radius:50%;display:inline-block"></span>Live Preview</b><span style="background:#0f5d31;color:#4ade80;padding:5px 10px;border-radius:12px;font-size:10px;font-weight:800">● AI LIVE - Any Device</span></div>
-<div id="preview" style="background:#FFFCF5;border-radius:14px;height:520px;overflow:auto;color:#111"><div style="padding:24px;text-align:center;color:#888;margin-top:80px"><div style="font-size:54px">🌍</div><div style="font-weight:900;color:#0D4A2E;font-size:18px">OMUGO AI WORLDWIDE</div><div style="font-size:11px;color:#C9A227;font-weight:800;margin-top:4px">FOR THE WHOLE WORLD - ANY DEVICE OK</div><div style="margin-top:18px;font-size:13px;background:#f0f0f0;padding:10px 14px;border-radius:10px;display:inline-block">Type in big box above ☝️<br>and click Build</div></div></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px"><button onclick="publishSite()" class="btn btn-gold" style="width:100%">🚀 Publish FREE 30 Days</button><button onclick="downloadCode()" class="btn" style="width:100%;background:rgba(255,255,255,.12);color:#fff">⬇ Download</button></div>
+<div style="background:#111;padding:10px;display:flex;justify-content:space-between">
+<b style="font-size:12px">🔒 Your Private Preview (Only you see this)</b>
+<button onclick="download()" style="background:gold;border:none;padding:8px 12px;border-radius:20px;font-weight:800">⬇️ Download</button>
 </div>
+<div id="view" class="preview" style="padding:20px;text-align:center;color:#888">
+Your website will appear here after you click Build<br>100% private
 </div>
-
-<section style="padding:60px 5%;background:#0f1110">
-<h2 style="text-align:center;font-size:34px;font-weight:900">Affordable For The Whole World - Any Device</h2>
-<p style="text-align:center;color:#a1a1aa;margin:12px 0">Others charge high monthly. <b style="color:#fff">OMUGO AI $3 and ₦1k</b> - For everyone, everywhere!</p>
-<div class="price-switch"><div id="nairaBtn" class="active" onclick="showNaira()">🇳🇬 NAIRA PLAN</div><div id="dollarBtn" onclick="showDollar()">🌍 GLOBAL - $3</div></div>
-
-<div id="nairaPricing" class="grid3" style="max-width:1100px;margin:0 auto">
-<div class="card"><h3>FREE - Gather Worldwide</h3><div style="font-size:36px;font-weight:900;margin:14px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:13px">✓ 30 days full<br>✓ No card needed<br>✓ Any device OK</p><button class="btn" style="width:100%;margin-top:16px;background:#fff;color:#111">Start Free</button></div>
-<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.15)"><h3>Starter - Affordable <span style="background:#C9A227;color:#111;padding:3px 8px;border-radius:10px;font-size:10px">POPULAR</span></h3><div style="font-size:36px;font-weight:900;margin:14px 0;color:#FFD84D">₦1,000<span style="font-size:14px;color:#a1a1aa">/month</span></div><p style="color:#a1a1aa;font-size:13px">✓ For Nigeria & Africa<br>✓ To your Naira account<br>✓ Any device works!</p><a href="https://wa.me/2347035399931?text=I want affordable Naira plan ₦1,000 monthly - OMUGO AI Worldwide - Any device OK" class="btn btn-gold" style="width:100%;margin-top:16px">Pay ₦1k →</a></div>
-<div class="card"><h3>Lifetime - Go Far!</h3><div style="font-size:36px;font-weight:900;margin:14px 0">₦7,500<span style="font-size:14px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:13px">✓ Pay once, own forever<br>✓ Go far</p><a href="https://wa.me/2347035399931?text=I want lifetime Naira ₦7,500 - OMUGO AI" class="btn" style="width:100%;margin-top:16px;background:rgba(255,255,255,.1);color:#fff">Pay ₦7.5k</a></div>
-</div>
-
-<div id="dollarPricing" class="grid3" style="display:none;max-width:1100px;margin:0 auto">
-<div class="card"><h3>FREE - Worldwide</h3><div style="font-size:36px;font-weight:900;margin:14px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:13px">✓ For whole world<br>✓ Any device</p></div>
-<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.15)"><h3>Starter - Worldwide <span style="background:#C9A227;color:#111;padding:3px 8px;border-radius:10px;font-size:10px">POPULAR</span></h3><div style="font-size:36px;font-weight:900;margin:14px 0;color:#FFD84D">$3<span style="font-size:14px;color:#a1a1aa">/month</span></div><p style="color:#a1a1aa;font-size:13px">✓ For USA, UK, Germany, Everywhere<br>✓ To your Dollar account<br>✓ Any device!</p><a href="https://wa.me/2347035399931?text=I want Worldwide $3 monthly plan - OMUGO AI - Any device OK" class="btn btn-gold" style="width:100%;margin-top:16px">Pay $3 →</a></div>
-<div class="card"><h3>Lifetime Worldwide</h3><div style="font-size:36px;font-weight:900;margin:14px 0">$15<span style="font-size:14px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:13px">✓ Own forever<br>✓ Global</p><a href="https://wa.me/2347035399931?text=I want Worldwide lifetime $15 - OMUGO AI" class="btn" style="width:100%;margin-top:16px;background:rgba(255,255,255,.1);color:#fff">Pay $15</a></div>
-</div>
-</section>
-
-<footer style="padding:32px 5%;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:#666;font-size:12px">
-<div style="font-weight:900;font-size:22px;color:#fff">OMUGO AI BUILDER - WORLDWIDE - ANY DEVICE OK</div><div style="color:#C9A227;font-size:11px;font-weight:800">PHONE OK ✓ LAPTOP OK ✓ TABLET OK 🌍</div>
-<div style="margin-top:14px">🌍 Worldwide Service - Any Device OK<br>📞 +2347035399931<br>© 2026 OMUGO AI. Built for the whole world.</div>
-</footer>
 
 <script>
-function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsite();}
-function showNaira(){document.getElementById('nairaPricing').style.display='grid';document.getElementById('dollarPricing').style.display='none';document.getElementById('nairaBtn').classList.add('active');document.getElementById('dollarBtn').classList.remove('active');}
-function showDollar(){document.getElementById('dollarPricing').style.display='grid';document.getElementById('nairaPricing').style.display='none';document.getElementById('dollarBtn').classList.add('active');document.getElementById('nairaBtn').classList.remove('active');}
-function buildWebsite(){
- let p=document.getElementById('promptInput').value.toLowerCase(); if(!p){alert('Please describe your website in the big box first!');return;}
- let html='';
- if(p.includes('fashion')||p.includes('store')||p.includes('shop')){
-  html=`<div style="font-family:sans-serif;background:#FFFCF5;color:#111"><div style="padding:12px 5%;display:flex;justify-content:space-between;border-bottom:1px solid #eee"><b>OMUGO FASHION</b><span>🛒</span></div><div style="padding:28px 5%;text-align:center"><h1 style="font-size:26px;font-weight:800">Worldwide Collection 2026</h1><p style="color:#666">Built with OMUGO AI - Any device OK</p><button style="background:#0D4A2E;color:#fff;padding:12px 22px;border-radius:30px;border:none;font-weight:800">Shop Now →</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 5% 20px"><div style="background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden"><div style="height:110px;background:#f5efe0"></div><div style="padding:12px"><b>Ankara Dress</b><br><b>₦12,000 / $25</b><br><button style="width:100%;background:#0D4A2E;color:#fff;border:none;padding:9px;border-radius:10px;margin-top:6px">Buy via WhatsApp</button></div></div><div style="background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden"><div style="height:110px;background:#e8f5ec"></div><div style="padding:12px"><b>Leather Bag</b><br><b>₦8,500 / $18</b><br><button style="width:100%;background:#0D4A2E;color:#fff;border:none;padding:9px;border-radius:10px;margin-top:6px">Buy</button></div></div></div></div>`;
- }else{
-  html=`<div style="font-family:sans-serif;background:#FFFCF5;color:#111;padding:28px 5%"><h1 style="font-size:24px;font-weight:800">✨ ${document.getElementById('promptInput').value}</h1><p style="color:#666;margin:10px 0">Built with OMUGO AI - Any device OK - Worldwide!</p><div style="background:#fff;border:1px solid #eee;border-radius:16px;padding:20px;margin-top:16px"><h3>Welcome - Any Device OK!</h3><p style="font-size:13px;color:#666;margin-top:8px">Fully functional, worldwide ready, WhatsApp ordering, affordable - Works on phone, laptop, tablet!</p><button style="background:#0D4A2E;color:#fff;padding:10px 20px;border:none;border-radius:30px;margin-top:12px;font-weight:700">Contact WhatsApp</button></div></div>`;
- }
- document.getElementById('preview').innerHTML=html; window.lastBuilt=html;
- // On phone, scroll to preview automatically
- if(window.innerWidth<=900){document.getElementById('preview').scrollIntoView({behavior:'smooth'});}
+let html='';
+function build(){
+let prompt=document.getElementById('p').value;
+if(!prompt){alert('Type what you want first!');return;}
+document.getElementById('steps').style.display='block';
+document.getElementById('s1').className='step active';
+setTimeout(()=>{
+document.getElementById('s1').className='step';
+document.getElementById('s2').className='step active';
+setTimeout(()=>{
+document.getElementById('s2').className='step';
+document.getElementById('s3').className='step active';
+setTimeout(()=>{
+document.getElementById('s3').className='step';
+document.getElementById('s4').className='step active';
+setTimeout(()=>{make(prompt);document.getElementById('steps').style.display='none';},600);
+},700);
+},700);
+},700);
 }
-function publishSite(){ if(!window.lastBuilt){alert('Build first!');return;} let sites=JSON.parse(localStorage.getItem('omugo_sites')||'[]'); let id=Date.now(); sites.push({id:id,html:window.lastBuilt,date:new Date().toLocaleString()}); localStorage.setItem('omugo_sites',JSON.stringify(sites)); alert('🎉 PUBLISHED FREE 30 DAYS - WORLDWIDE - ANY DEVICE OK!\\nAfter 30 days: ₦1k or $3\\nSites: '+sites.length); window.open('https://wa.me/2347035399931?text=My worldwide AI site published ID:'+id+' - Pay ₦1k or $3 after 30 days - Any device OK','_blank');}
-function downloadCode(){ if(!window.lastBuilt){alert('Build first!');return;} let blob=new Blob([window.lastBuilt],{type:'text/html'}); let a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='omugo-worldwide-any-device.html'; a.click();}
+
+function make(pr){
+let isBall=pr.toLowerCase().includes('football')||pr.toLowerCase().includes('jersey');
+let title=pr.slice(0,25).toUpperCase();
+let products=isBall?`
+<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><div style="font-size:30px">👕</div><b>Home Jersey</b><br><b style="color:gold">₦25k / $18</b><br><button style="background:#25D366;color:#fff;border:none;padding:8px 12px;border-radius:20px;width:100%;margin-top:6px">WhatsApp Order</button></div>
+<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><div style="font-size:30px">👟</div><b>Boots</b><br><b style="color:gold">₦45k / $32</b><br><button style="background:#25D366;color:#fff;border:none;padding:8px 12px;border-radius:20px;width:100%;margin-top:6px">WhatsApp Order</button></div>
+<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><div style="font-size:30px">⚽</div><b>Match Ball</b><br><b style="color:gold">₦15k / $11</b><br><button style="background:#25D366;color:#fff;border:none;padding:8px 12px;border-radius:20px;width:100%;margin-top:6px">WhatsApp Order</button></div>
+`:`
+<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><b>Product 1</b><br>₦10k / $7</div>
+<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><b>Product 2</b><br>₦20k / $14</div>
+`;
+
+html=`<div style="background:linear-gradient(135deg,#0D4A2E,gold);padding:40px;text-align:center;color:#fff;border-radius:0 0 20px 20px"><h1>${title}</h1><p>Built Private For You - Worldwide 🌍</p></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px">${products}</div><div style="text-align:center;padding:20px;color:#888;font-size:11px">© OMUGO AI - Private & Secure - Any device OK<br>WhatsApp +2347035399931</div>`;
+
+document.getElementById('view').innerHTML=html;
+document.getElementById('view').scrollIntoView({behavior:'smooth'});
+}
+
+function download(){
+if(!html){alert('Build first!');return;}
+let ok=confirm('To download without watermark Pay ₦1k to OPay 7035399931. Click OK if paid, Cancel to download free with watermark for test.');
+let b=new Blob([html],{type:'text/html'});
+let a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='omugo-site.html';a.click();
+}
 </script>
 </body>
 </html>
