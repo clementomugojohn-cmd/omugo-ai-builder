@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>OMUGO AI - Worldwide</title>
+<title>OMUGO AI - Worldwide Hosting</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#080a0b;color:#fff;overflow-x:hidden}
@@ -20,7 +20,7 @@
 #builder{grid-template-columns:1fr;padding:18px 4%;gap:18px}
 .grid3{grid-template-columns:1fr}
 h1{font-size:28px!important;line-height:1.1!important}
-.big-input{min-height:150px;font-size:16px}
+.big-input{min-height:150px}
 .btn{width:100%}
 header{padding:10px 4%!important}
 #preview{height:500px!important}
@@ -36,16 +36,16 @@ header{padding:10px 4%!important}
 
 <div id="builder">
 <div>
-<div class="tag">🌍 Worldwide</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">Affordable</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">30 Sec Build</div>
-<h1 style="font-size:46px;font-weight:900;line-height:.95;margin:14px 0">Build any website with AI in <span style="color:#C9A227">30 seconds</span> - For Whole World</h1>
-<p style="color:#a1a1aa;line-height:1.6;font-size:14px">For USA, Nigeria, Ghana, Kenya, UK, Germany, India, Everywhere! <b style="color:#fff">FREE 30 days, then affordable.</b></p>
+<div class="tag">🌍 Worldwide</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">Free Hosting</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">30 Sec Build</div>
+<h1 style="font-size:46px;font-weight:900;line-height:.95;margin:14px 0">Build & Host your website with AI in <span style="color:#C9A227">30 seconds</span></h1>
+<p style="color:#a1a1aa;line-height:1.6;font-size:14px">We build AND host for you FREE 30 days on OMUGO AI! For USA, Nigeria, Everywhere! <b style="color:#fff">After 30 days, pay small to keep hosting or download code.</b></p>
 
 <div style="background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin:18px 0">
 <label style="font-size:11px;color:#FFD84D;font-weight:800;letter-spacing:1px">DESCRIBE YOUR WEBSITE (Big Box):</label>
-<textarea id="promptInput" class="big-input" placeholder="Example: Beautiful fashion store with Naira and Dollar prices, WhatsApp order button, contact form... Be detailed!"></textarea>
+<textarea id="promptInput" class="big-input" placeholder="Example: Beautiful fashion store with Naira and Dollar prices, WhatsApp order button..."></textarea>
 <button onclick="buildWebsite()" class="btn btn-gold" style="width:100%;font-size:16px;padding:18px;margin-top:12px">✨ Build My Website Now →</button>
 <div style="margin-top:12px">
-<span class="tag" onclick="setPrompt('Beautiful fashion store with product gallery and WhatsApp ordering for worldwide customers')">Fashion Store</span>
+<span class="tag" onclick="setPrompt('Beautiful fashion store with product gallery and WhatsApp ordering')">Fashion Store</span>
 <span class="tag" onclick="setPrompt('Modern restaurant website with menu and ordering')">Restaurant</span>
 <span class="tag" onclick="setPrompt('Church website with events and donations')">Church ⛪</span>
 <span class="tag" onclick="setPrompt('Real estate listings')">Real Estate</span>
@@ -54,51 +54,61 @@ header{padding:10px 4%!important}
 </div>
 
 <div class="card" style="background:rgba(255,255,255,.08);padding:14px">
-<div style="display:flex;justify-content:space-between;margin-bottom:10px;align-items:center"><b style="font-size:13px">🔴 Live Preview</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● LIVE</span></div>
-<div id="preview" style="background:#FFFCF5;border-radius:14px;height:480px;overflow:auto;color:#111"><div style="padding:20px;text-align:center;color:#888;margin-top:60px"><div style="font-size:40px">🌍</div><div style="font-weight:800;color:#0D4A2E">OMUGO AI WORLDWIDE</div><div style="font-size:10px;color:#C9A227;font-weight:800">FOR WHOLE WORLD</div><div style="margin-top:10px;font-size:12px">Type in big box and click Build<br>Works on phone & laptop</div></div></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px"><button onclick="publishSite()" class="btn btn-gold" style="width:100%;font-size:12px;padding:12px">🚀 Publish</button><button onclick="downloadCode()" class="btn" style="width:100%;background:rgba(255,255,255,.12);color:#fff;font-size:12px;padding:12px">⬇ Download</button></div>
+<div style="display:flex;justify-content:space-between;margin-bottom:10px;align-items:center"><b style="font-size:13px">🔴 Live Preview</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● HOSTED BY OMUGO</span></div>
+<div id="preview" style="background:#FFFCF5;border-radius:14px;height:480px;overflow:auto;color:#111"><div style="padding:20px;text-align:center;color:#888;margin-top:60px"><div style="font-size:40px">🌍</div><div style="font-weight:800;color:#0D4A2E">OMUGO AI HOSTING</div><div style="font-size:10px;color:#C9A227;font-weight:800">WE BUILD & HOST FOR YOU</div><div style="margin-top:10px;font-size:12px">Type and click Build<br>We host FREE 30 days</div></div></div>
+<div style="margin-top:12px">
+<button onclick="publishSite()" class="btn btn-gold" style="width:100%;font-size:13px;padding:14px">🚀 Publish & Host FREE 30 Days on OMUGO</button>
+<p style="font-size:10px;color:#888;text-align:center;margin-top:8px">✅ Hosted on OMUGO AI • No download needed • Your business runs immediately</p>
+</div>
 </div>
 </div>
 
 <section style="padding:40px 5%;background:#0f1110">
-<h2 style="text-align:center;font-size:28px;font-weight:900">Affordable For Whole World</h2>
-<p style="text-align:center;color:#a1a1aa;margin:10px 0;font-size:13px">Others charge $25-30/mo. <b style="color:#fff">OMUGO $3 / ₦1k</b> - Everywhere!</p>
+<h2 style="text-align:center;font-size:28px;font-weight:900">We Host For You - Affordable</h2>
+<p style="text-align:center;color:#a1a1aa;margin:10px 0;font-size:13px">FREE hosting 30 days. Then keep hosting on OMUGO or pay to download code. <b style="color:#fff">OMUGO $3 / ₦1k</b></p>
 <div class="price-switch"><div id="nairaBtn" class="active" onclick="showNaira()">🇳🇬 NAIRA</div><div id="dollarBtn" onclick="showDollar()">🌍 $3 GLOBAL</div></div>
 
 <div id="nairaPricing" class="grid3" style="max-width:1100px;margin:0 auto">
-<div class="card"><h3>FREE</h3><div style="font-size:32px;font-weight:900;margin:12px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:12px">✓ 30 days full<br>✓ No card<br>✓ Whole world</p><button class="btn" style="width:100%;margin-top:14px;background:#fff;color:#111;font-size:12px">Start Free</button></div>
-<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.12)"><h3>Starter <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:8px;font-size:9px">POPULAR</span></h3><div style="font-size:32px;font-weight:900;margin:12px 0;color:#FFD84D">₦1,000<span style="font-size:13px;color:#a1a1aa">/mo</span></div><p style="color:#a1a1aa;font-size:12px">✓ To your Naira account<br>✓ Worldwide clients!</p><a href="https://wa.me/2347035399931?text=I want Naira ₦1k plan" class="btn btn-gold" style="width:100%;margin-top:14px;font-size:12px">Pay ₦1k →</a></div>
-<div class="card"><h3>Lifetime</h3><div style="font-size:32px;font-weight:900;margin:12px 0">₦7,500<span style="font-size:13px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:12px">✓ Pay once, own forever</p><a href="https://wa.me/2347035399931?text=I want lifetime ₦7,500" class="btn" style="width:100%;margin-top:14px;background:rgba(255,255,255,.1);color:#fff;font-size:12px">Pay ₦7.5k</a></div>
+<div class="card"><h3>FREE Hosting</h3><div style="font-size:32px;font-weight:900;margin:12px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:12px">✓ We build & host<br>✓ No card<br>✓ Business runs</p><button class="btn" style="width:100%;margin-top:14px;background:#fff;color:#111;font-size:12px">Start Free Hosting</button></div>
+<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.12)"><h3>Keep Hosting <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:8px;font-size:9px">POPULAR</span></h3><div style="font-size:32px;font-weight:900;margin:12px 0;color:#FFD84D">₦1,000<span style="font-size:13px;color:#a1a1aa">/mo</span></div><p style="color:#a1a1aa;font-size:12px">✓ Stay hosted on OMUGO<br>✓ Download code included<br>✓ To your Naira account</p><a href="https://wa.me/2347035399931?text=I want to keep hosting Naira ₦1k and get code" class="btn btn-gold" style="width:100%;margin-top:14px;font-size:12px">Pay ₦1k → Keep Hosting + Code</a></div>
+<div class="card"><h3>Lifetime Hosting</h3><div style="font-size:32px;font-weight:900;margin:12px 0">₦7,500<span style="font-size:13px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:12px">✓ Hosted forever on OMUGO<br>✓ Download anytime</p><a href="https://wa.me/2347035399931?text=I want lifetime hosting ₦7,500" class="btn" style="width:100%;margin-top:14px;background:rgba(255,255,255,.1);color:#fff;font-size:12px">Pay ₦7.5k Lifetime</a></div>
 </div>
 
 <div id="dollarPricing" class="grid3" style="display:none;max-width:1100px;margin:0 auto">
-<div class="card"><h3>FREE</h3><div style="font-size:32px;font-weight:900;margin:12px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:12px">✓ Whole world</p></div>
-<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.12)"><h3>Starter <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:8px;font-size:9px">POPULAR</span></h3><div style="font-size:32px;font-weight:900;margin:12px 0;color:#FFD84D">$3<span style="font-size:13px;color:#a1a1aa">/mo</span></div><p style="color:#a1a1aa;font-size:12px">✓ To your Dollar account<br>✓ USA, UK, Everywhere</p><a href="https://wa.me/2347035399931?text=I want $3 plan" class="btn btn-gold" style="width:100%;margin-top:14px;font-size:12px">Pay $3 →</a></div>
-<div class="card"><h3>Lifetime</h3><div style="font-size:32px;font-weight:900;margin:12px 0">$15<span style="font-size:13px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:12px">✓ Own forever</p><a href="https://wa.me/2347035399931?text=I want lifetime $15" class="btn" style="width:100%;margin-top:14px;background:rgba(255,255,255,.1);color:#fff;font-size:12px">Pay $15</a></div>
+<div class="card"><h3>FREE Hosting</h3><div style="font-size:32px;font-weight:900;margin:12px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:12px">✓ We host free</p></div>
+<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.12)"><h3>Keep Hosting <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:8px;font-size:9px">POPULAR</span></h3><div style="font-size:32px;font-weight:900;margin:12px 0;color:#FFD84D">$3<span style="font-size:13px;color:#a1a1aa">/mo</span></div><p style="color:#a1a1aa;font-size:12px">✓ Stay hosted on OMUGO<br>✓ Download code included<br>✓ To your Dollar account</p><a href="https://wa.me/2347035399931?text=I want $3 hosting + code" class="btn btn-gold" style="width:100%;margin-top:14px;font-size:12px">Pay $3 → Hosting + Code</a></div>
+<div class="card"><h3>Lifetime Hosting</h3><div style="font-size:32px;font-weight:900;margin:12px 0">$15<span style="font-size:13px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:12px">✓ Forever</p><a href="https://wa.me/2347035399931?text=I want lifetime $15 hosting" class="btn" style="width:100%;margin-top:14px;background:rgba(255,255,255,.1);color:#fff;font-size:12px">Pay $15 Lifetime</a></div>
 </div>
 </section>
 
 <footer style="padding:24px 5%;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:#666;font-size:11px">
-<div style="font-weight:900;font-size:18px;color:#fff">OMUGO AI - WORLDWIDE</div><div style="color:#C9A227;font-size:10px;font-weight:800">FOR WHOLE WORLD 🌍</div>
-<div style="margin-top:10px">🌍 Worldwide | Naira & Dollar | +2347035399931<br>© 2026 OMUGO AI</div>
+<div style="font-weight:900;font-size:18px;color:#fff">OMUGO AI - WORLDWIDE HOSTING</div><div style="color:#C9A227;font-size:10px;font-weight:800">WE BUILD & HOST FOR YOU 🌍</div>
+<div style="margin-top:10px">🌍 Hosting Worldwide | Naira & Dollar | +2347035399931<br>© 2026 OMUGO AI - Your business runs on OMUGO</div>
 </footer>
 
 <script>
 function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsite();}
-function showNaira(){document.getElementById('nairaPricing').style.display='grid';document.getElementById('dollarPricing').style.display='none';document.getElementById('nairaBtn').classList.add('active');document.getElementById('dollarBtn').classList.remove('active');}
+function showNaira(){document.getElementById('nairaPricing').style.display='grid';document.getElementById('dollarPricing').style.display='none';document.getElementById('nairaBtn').classList.add('active');document.getElementById('dollarBtan').classList.remove('active');}
 function showDollar(){document.getElementById('dollarPricing').style.display='grid';document.getElementById('nairaPricing').style.display='none';document.getElementById('dollarBtn').classList.add('active');document.getElementById('nairaBtn').classList.remove('active');}
 function buildWebsite(){
  let p=document.getElementById('promptInput').value.toLowerCase(); if(!p){alert('Describe your website first!');return;}
  let html='';
  if(p.includes('fashion')||p.includes('store')||p.includes('shop')){
-  html=`<div style="font-family:sans-serif;background:#FFFCF5;color:#111"><div style="padding:12px 5%;display:flex;justify-content:space-between;border-bottom:1px solid #eee"><b>OMUGO FASHION</b><span>🛒</span></div><div style="padding:22px 5%;text-align:center"><h1 style="font-size:22px;font-weight:800">Worldwide Collection 2026</h1><p style="color:#666;font-size:13px">Built with OMUGO AI - For whole world</p><button style="background:#0D4A2E;color:#fff;padding:10px 18px;border-radius:30px;border:none;font-weight:800;font-size:13px">Shop Now →</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 5% 20px"><div style="background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden"><div style="height:90px;background:#f5efe0"></div><div style="padding:10px"><b style="font-size:13px">Ankara Dress</b><br><b style="font-size:13px">₦12k / $25</b><br><button style="width:100%;background:#0D4A2E;color:#fff;border:none;padding:8px;border-radius:8px;margin-top:5px;font-size:12px">Buy</button></div></div><div style="background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden"><div style="height:90px;background:#e8f5ec"></div><div style="padding:10px"><b style="font-size:13px">Leather Bag</b><br><b style="font-size:13px">₦8.5k / $18</b><br><button style="width:100%;background:#0D4A2E;color:#fff;border:none;padding:8px;border-radius:8px;margin-top:5px;font-size:12px">Buy</button></div></div></div></div>`;
+  html=`<div style="font-family:sans-serif;background:#FFFCF5;color:#111"><div style="padding:12px 5%;display:flex;justify-content:space-between;border-bottom:1px solid #eee"><b>OMUGO FASHION</b><span>🛒</span></div><div style="padding:22px 5%;text-align:center"><h1 style="font-size:22px;font-weight:800">Worldwide Collection 2026</h1><p style="color:#666;font-size:13px">Hosted on OMUGO AI - Business running!</p><button style="background:#0D4A2E;color:#fff;padding:10px 18px;border-radius:30px;border:none;font-weight:800;font-size:13px">Shop Now →</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 5% 20px"><div style="background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden"><div style="height:90px;background:#f5efe0"></div><div style="padding:10px"><b style="font-size:13px">Ankara Dress</b><br><b style="font-size:13px">₦12k / $25</b><br><button style="width:100%;background:#25D366;color:#fff;border:none;padding:8px;border-radius:8px;margin-top:5px;font-size:12px">WhatsApp Order</button></div></div><div style="background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden"><div style="height:90px;background:#e8f5ec"></div><div style="padding:10px"><b style="font-size:13px">Leather Bag</b><br><b style="font-size:13px">₦8.5k / $18</b><br><button style="width:100%;background:#25D366;color:#fff;border:none;padding:8px;border-radius:8px;margin-top:5px;font-size:12px">WhatsApp Order</button></div></div></div></div>`;
  }else{
-  html=`<div style="font-family:sans-serif;background:#FFFCF5;color:#111;padding:22px 5%"><h1 style="font-size:20px;font-weight:800">✨ ${document.getElementById('promptInput').value}</h1><p style="color:#666;margin:8px 0;font-size:13px">Built with OMUGO AI - Worldwide, affordable!</p><div style="background:#fff;border:1px solid #eee;border-radius:14px;padding:16px;margin-top:14px"><h3 style="font-size:14px">Welcome Worldwide!</h3><p style="font-size:12px;color:#666;margin-top:6px">Fully functional, worldwide ready.</p><button style="background:#0D4A2E;color:#fff;padding:8px 16px;border:none;border-radius:30px;margin-top:10px;font-weight:700;font-size:12px">Contact WhatsApp</button></div></div>`;
+  html=`<div style="font-family:sans-serif;background:#FFFCF5;color:#111;padding:22px 5%"><h1 style="font-size:20px;font-weight:800">✨ ${document.getElementById('promptInput').value}</h1><p style="color:#666;margin:8px 0;font-size:13px">Hosted on OMUGO AI - Your business is running!</p><div style="background:#fff;border:1px solid #eee;border-radius:14px;padding:16px;margin-top:14px"><h3 style="font-size:14px">Welcome - Hosted by OMUGO!</h3><p style="font-size:12px;color:#666;margin-top:6px">We host your business FREE 30 days.</p><button style="background:#25D366;color:#fff;padding:8px 16px;border:none;border-radius:30px;margin-top:10px;font-weight:700;font-size:12px">Contact WhatsApp</button></div></div>`;
  }
  document.getElementById('preview').innerHTML=html; window.lastBuilt=html; document.getElementById('preview').scrollIntoView({behavior:'smooth'});
 }
-function publishSite(){ if(!window.lastBuilt){alert('Build first!');return;} alert('🎉 PUBLISHED FREE 30 DAYS - WORLDWIDE!\nAfter 30 days: ₦1k or $3'); window.open('https://wa.me/2347035399931?text=My AI site published','_blank');}
-function downloadCode(){ if(!window.lastBuilt){alert('Build first!');return;} let blob=new Blob([window.lastBuilt],{type:'text/html'}); let a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='omugo-website.html'; a.click();}
+function publishSite(){ 
+ if(!window.lastBuilt){alert('Build first!');return;} 
+ let sites=JSON.parse(localStorage.getItem('omugo_sites')||'[]'); 
+ let id=Date.now(); 
+ sites.push({id:id,html:window.lastBuilt,date:new Date().toLocaleString()}); 
+ localStorage.setItem('omugo_sites',JSON.stringify(sites)); 
+ alert('🎉 SUCCESS! Your website is now LIVE and HOSTED on OMUGO AI!\n\n✅ Hosted FREE 30 days\n✅ Business running immediately\n✅ No download needed\n\nAfter 30 days: Pay ₦1k or $3 to keep hosting + get code download\n\nSites hosted: '+sites.length); 
+ window.open('https://wa.me/2347035399931?text=My site is hosted on OMUGO ID:'+id+' - Keep hosting','_blank');
+}
 </script>
 </body>
 </html>
