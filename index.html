@@ -1,100 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OMUGO AI Builder Private</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OMUGO AI Builder - Private Worldwide</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:sans-serif;background:#0a0a0a;color:#fff}
-.top{padding:12px;background:#111;border-bottom:1px solid #222;display:flex;justify-content:space-between}
-.left{padding:16px;background:#111}
-textarea{width:100%;height:110px;background:#1a1a1a;color:#fff;border:1px solid #333;border-radius:12px;padding:12px}
-.btn{width:100%;padding:14px;border-radius:30px;border:none;font-weight:900;margin-top:10px}
-.gold{background:gold;color:#000}
-.chip{display:inline-block;padding:7px 12px;background:#222;border-radius:20px;font-size:12px;margin:4px}
-.preview{background:#fff;min-height:500px;color:#000}
-.step{font-size:12px;color:#888;padding:4px}
-.active{color:gold;font-weight:900}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#07090a;color:#fff}
+.top{display:flex;justify-content:space-between;align-items:center;padding:12px 4%;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;background:rgba(7,9,10,.96);backdrop-filter:blur(20px);z-index:20}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px}.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,#0D4A2E,#C9A227);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.main{display:grid;grid-template-columns:420px 1fr;min-height:100vh}
+.left{background:#0f1212;border-right:1px solid rgba(255,255,255,.08);padding:18px;display:flex;flex-direction:column;gap:14px}
+.right{background:#0a0c0c;padding:0;position:relative}
+textarea{width:100%;min-height:140px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px;color:#fff;font-size:14px;outline:none}
+textarea:focus{border-color:#C9A227}
+.btn{padding:14px 18px;border-radius:30px;font-weight:800;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;width:100%}
+.btn-gold{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111}
+.btn-dark{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.12)}
+.quick{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:8px 12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;font-size:11px;cursor:pointer}
+.steps{display:none;background:rgba(255,255,255,.04);border-radius:14px;padding:12px;border:1px dashed rgba(201,162,39,.3)}.step{font-size:12px;color:#a1a1aa;padding:6px 0;display:flex;gap:8px}.step.active{color:#FFD84D;font-weight:800}
+.preview-head{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.08);background:#0f1212}
+.priv{font-size:10px;color:#22c55e;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);padding:4px 8px;border-radius:20px}
+.frame{width:100%;height:calc(100vh - 52px);border:none;background:#fff}
+@media(max-width:900px){.main{grid-template-columns:1fr}.frame{height:70vh}}
 </style>
 </head>
 <body>
-<div class="top">
-<b>OMUGO AI 🌍</b>
-<span style="font-size:10px;color:#0f0;background:#0f0a;padding:4px 8px;border-radius:10px">🔒 PRIVATE BUILD</span>
-</div>
-
+<div class="top"><div class="logo"><div class="logo-icon">O</div>OMUGO AI <span style="background:#22c55e;color:#fff;padding:3px 8px;border-radius:8px;font-size:9px">WORLDWIDE</span></div><div><span class="priv">🔒 PRIVATE BUILD</span> <span style="font-size:11px;color:#888">+2347035399931</span></div></div>
+<div class="main">
 <div class="left">
-<b>What website do you want?</b>
-<p style="font-size:11px;color:#888">This build is PRIVATE - Only you see it. Not visible to others.</p>
-<textarea id="p" placeholder="Example: football jersey shop with Naira Dollar prices"></textarea>
-<div>
-<span class="chip" onclick="p.value='football jersey shop with Naira and Dollar prices, WhatsApp button'">⚽ Football Shop</span>
-<span class="chip" onclick="p.value='OMUGO FOOTBALL NEWS with live scores'">📰 Football News</span>
-<span class="chip" onclick="p.value='barbing salon with booking gallery'">💈 Salon</span>
+<h2 style="font-size:20px;font-weight:900">What website do you want? 👇</h2><p style="font-size:12px;color:#888">This build is PRIVATE to you only. Not visible to others.</p>
+<textarea id="promptInput" placeholder="Example: football jersey shop with Naira and Dollar prices, cart, WhatsApp button, dark theme"></textarea>
+<div class="quick">
+<div class="chip" onclick="setP('football jersey shop with Naira and Dollar prices, cart, WhatsApp button, dark theme')">⚽ Football Shop</div>
+<div class="chip" onclick="setP('OMUGO FOOTBALL NEWS auto-updating with BBC Sport RSS, live scores')">📰 Football News</div>
+<div class="chip" onclick="setP('modern barbing salon with booking, gallery, prices')">💈 Salon</div>
+<div class="chip" onclick="setP('restaurant with menu, cart, WhatsApp order')">🍔 Restaurant</div>
 </div>
-<button class="btn gold" onclick="build()">✨ Build My Private Website Now</button>
-<div id="steps" style="display:none;margin-top:10px;background:#1a1a1a;padding:10px;border-radius:10px">
-<div id="s1" class="step">1. Analyzing your idea...</div>
-<div id="s2" class="step">2. Creating design...</div>
-<div id="s3" class="step">3. Adding products...</div>
-<div id="s4" class="step">4. Publishing private site...</div>
+<button class="btn btn-gold" onclick="buildSite()">✨ Build My Private Website Now</button>
+<button class="btn btn-dark" onclick="document.getElementById('previewWrap').scrollIntoView({behavior:'smooth'})">👁️ View Preview</button>
+<div id="stepsBox" class="steps">
+<b style="font-size:11px;color:#C9A227">🔒 YOUR PRIVATE BUILD (Not visible to others)</b>
+<div id="s1" class="step">1. Analyzing your idea...</div><div id="s2" class="step">2. Creating luxury design...</div><div id="s3" class="step">3. Adding products & content...</div><div id="s4" class="step">4. Publishing private site...</div>
+</div>
+<div style="font-size:10px;color:#666;text-align:center">© OMUGO AI BUILDER - Private & Secure - Any device OK 🌍</div>
+</div>
+<div class="right" id="previewWrap">
+<div class="preview-head"><b style="font-size:12px">🔒 Your Private Live Preview (Only you see this)</b><div style="display:flex;gap:8px"><button onclick="publishSite()" style="padding:8px 14px;border-radius:20px;background:#22c55e;color:#fff;border:none;font-weight:800;font-size:11px">🚀 Publish</button><button onclick="downloadSite()" style="padding:8px 14px;border-radius:20px;background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111;border:none;font-weight:800;font-size:11px">⬇️ Download</button></div></div>
+<iframe id="previewFrame" class="frame"></iframe>
+<div id="empty" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#666"><div style="font-size:48px">⚽</div><b>Your private website will appear here</b><br><span style="font-size:12px">Type prompt and click Build<br>100% private</span></div>
 </div>
 </div>
-
-<div style="background:#111;padding:10px;display:flex;justify-content:space-between">
-<b style="font-size:12px">🔒 Your Private Preview (Only you see this)</b>
-<button onclick="download()" style="background:gold;border:none;padding:8px 12px;border-radius:20px;font-weight:800">⬇️ Download</button>
-</div>
-<div id="view" class="preview" style="padding:20px;text-align:center;color:#888">
-Your website will appear here after you click Build<br>100% private
-</div>
-
 <script>
-let html='';
-function build(){
-let prompt=document.getElementById('p').value;
-if(!prompt){alert('Type what you want first!');return;}
-document.getElementById('steps').style.display='block';
-document.getElementById('s1').className='step active';
-setTimeout(()=>{
-document.getElementById('s1').className='step';
-document.getElementById('s2').className='step active';
-setTimeout(()=>{
-document.getElementById('s2').className='step';
-document.getElementById('s3').className='step active';
-setTimeout(()=>{
-document.getElementById('s3').className='step';
-document.getElementById('s4').className='step active';
-setTimeout(()=>{make(prompt);document.getElementById('steps').style.display='none';},600);
-},700);
-},700);
-},700);
+let currentHTML="";
+function setP(t){document.getElementById('promptInput').value=t}
+function sleep(ms){return new Promise(r=>setTimeout(r,ms))}
+async function buildSite(){
+let prompt=document.getElementById('promptInput').value.trim();
+if(!prompt){alert('Pastor, type what website you want!');return;}
+document.getElementById('stepsBox').style.display='block';
+document.getElementById('empty').style.display='none';
+document.getElementById('s1').classList.add('active');await sleep(800);
+document.getElementById('s1').classList.remove('active');document.getElementById('s2').classList.add('active');await sleep(800);
+document.getElementById('s2').classList.remove('active');document.getElementById('s3').classList.add('active');await sleep(800);
+document.getElementById('s3').classList.remove('active');document.getElementById('s4').classList.add('active');await sleep(600);
+currentHTML=generateHTML(prompt);
+document.getElementById('previewFrame').srcdoc=currentHTML;
+document.getElementById('stepsBox').style.display='none';
+if(window.innerWidth<=900){setTimeout(()=>{document.getElementById('previewWrap').scrollIntoView({behavior:'smooth'})},300);}
 }
-
-function make(pr){
-let isBall=pr.toLowerCase().includes('football')||pr.toLowerCase().includes('jersey');
-let title=pr.slice(0,25).toUpperCase();
-let products=isBall?`
-<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><div style="font-size:30px">👕</div><b>Home Jersey</b><br><b style="color:gold">₦25k / $18</b><br><button style="background:#25D366;color:#fff;border:none;padding:8px 12px;border-radius:20px;width:100%;margin-top:6px">WhatsApp Order</button></div>
-<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><div style="font-size:30px">👟</div><b>Boots</b><br><b style="color:gold">₦45k / $32</b><br><button style="background:#25D366;color:#fff;border:none;padding:8px 12px;border-radius:20px;width:100%;margin-top:6px">WhatsApp Order</button></div>
-<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><div style="font-size:30px">⚽</div><b>Match Ball</b><br><b style="color:gold">₦15k / $11</b><br><button style="background:#25D366;color:#fff;border:none;padding:8px 12px;border-radius:20px;width:100%;margin-top:6px">WhatsApp Order</button></div>
-`:`
-<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><b>Product 1</b><br>₦10k / $7</div>
-<div style="border:1px solid #eee;border-radius:12px;padding:12px;text-align:center"><b>Product 2</b><br>₦20k / $14</div>
-`;
-
-html=`<div style="background:linear-gradient(135deg,#0D4A2E,gold);padding:40px;text-align:center;color:#fff;border-radius:0 0 20px 20px"><h1>${title}</h1><p>Built Private For You - Worldwide 🌍</p></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px">${products}</div><div style="text-align:center;padding:20px;color:#888;font-size:11px">© OMUGO AI - Private & Secure - Any device OK<br>WhatsApp +2347035399931</div>`;
-
-document.getElementById('view').innerHTML=html;
-document.getElementById('view').scrollIntoView({behavior:'smooth'});
+function generateHTML(prompt){
+let p=prompt.toLowerCase();let title=prompt.split(' ').slice(0,4).join(' ').toUpperCase()||'OMUGO BUSINESS';
+let isFootball=p.includes('football')||p.includes('jersey')||p.includes('ball');
+let products=isFootball?[{n:"Home Jersey 2026",pn:"₦25,000",pd:"$18",e:"👕"},{n:"Football Boots",pn:"₦45,000",pd:"$32",e:"👟"},{n:"Match Ball",pn:"₦15,000",pd:"$11",e:"⚽"},{n:"Training Kit",pn:"₦30,000",pd:"$21",e:"🎽"}]:[{n:"Product 1",pn:"₦10,000",pd:"$7",e:"📦"},{n:"Product 2",pn:"₦20,000",pd:"$14",e:"📦"},{n:"Product 3",pn:"₦15,000",pd:"$11",e:"📦"}];
+let prodHTML=products.map(pr=>`<div style="background:rgba(255,255,255,.06);border-radius:16px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,.08)"><div style="font-size:40px">${pr.e}</div><b>${pr.n}</b><br><span style="color:gold;font-weight:800">${pr.pn} / ${pr.pd}</span><br><button onclick="window.open('https://wa.me/2347035399931?text=I want ${pr.n}','_blank')" style="margin-top:8px;background:#25D366;color:#fff;border:none;padding:8px 14px;border-radius:20px;font-weight:800;width:100%">WhatsApp Order</button></div>`).join('');
+return `<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;font-family:Inter,sans-serif;background:#080a0b;color:#fff}.hero{background:linear-gradient(135deg,#0D4A2E,#C9A227);padding:50px 5%;text-align:center;border-radius:0 0 30px 30px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;padding:20px 5%}</style></head><body><div class="hero"><h1 style="font-size:36px;font-weight:900">${title}</h1><p>Built Private With OMUGO AI - Worldwide 🌍</p><br><button style="background:#fff;color:#0D4A2E;padding:12px 24px;border-radius:30px;font-weight:900;border:none">Shop Now</button></div><div style="padding:16px 5%;display:flex;justify-content:space-between"><b>Our Products</b><span style="font-size:11px;color:#888">🔒 Private - Naira & Dollar</span></div><div class="grid">${prodHTML}</div><footer style="text-align:center;padding:30px;color:#666;font-size:11px;border-top:1px solid rgba(255,255,255,.08)"><b style="color:#fff">OMUGO AI</b> - Private & Secure - WhatsApp +2347035399931<br>Any device OK - Worldwide</footer></body></html>`;
 }
-
-function download(){
-if(!html){alert('Build first!');return;}
-let ok=confirm('To download without watermark Pay ₦1k to OPay 7035399931. Click OK if paid, Cancel to download free with watermark for test.');
-let b=new Blob([html],{type:'text/html'});
-let a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='omugo-site.html';a.click();
-}
+function downloadSite(){if(!currentHTML){alert('Build first!');return;}let pay=confirm("💰 Pay ₦1,000 to OPay 7035399931 to remove watermark.\nOK = Paid, Cancel = Download free with watermark for test.");let blob=new Blob([currentHTML],{type:'text/html'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='omugo-website.html';a.click();}
+function publishSite(){if(!currentHTML){alert('Build first!');return;}alert('🚀 Published! Private link ready! (Full version will give omugo.ai/yourname)');}
 </script>
 </body>
 </html>
