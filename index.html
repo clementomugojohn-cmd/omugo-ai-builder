@@ -137,5 +137,13 @@ async function publishSite(){
 }
 function downloadHTML(){if(!window.lastBuilt){alert('Build first!');return;}var blob=new Blob([window.lastBuilt],{type:'text/html'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='omugo-premium-website.html';a.click();URL.revokeObjectURL(url);}
 </script>
+ <style>
+@media(max-width:768px){
+  #heroGrid{grid-template-columns:1fr!important}
+  #heroGrid h1{font-size:30px!important}
+  #builder{grid-template-columns:1fr!important}
+  #previewFrame{height:500px!important}
+}
+</style>
 </body>
 </html>
