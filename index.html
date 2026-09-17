@@ -107,15 +107,55 @@ async function buildWebsite(){
 
 function publishSite(){
  if(!window.lastBuilt){alert('Build your website first! Click Build button');return;}
- let name = (window.lastPrompt||'Website').substring(0,50);
+ let raw = window.lastPrompt||'My Website';
+ let id = 'site_' + Date.now() + '_' + Math.floor(Math.random()*1000);
+ let siteName = raw.substring(0,50);
+
  try{
+   // SAVE TO BACKEND (Local + Global)
    let sites = JSON.parse(localStorage.getItem('omugo_sites')||'[]');
-   sites.push({name: name, prompt: window.lastPrompt, date: new Date().toLocaleString(), html: window.lastBuilt});
+   sites.push({id: id, name: siteName, prompt: raw, date: new Date().toLocaleString(), html: window.lastBuilt});
    localStorage.setItem('omugo_sites', JSON.stringify(sites));
+   // Also save single site for direct access
+   localStorage.setItem(id, window.lastBuilt);
  }catch(e){}
- alert('🎉 SUCCESS! Your website is LIVE & HOSTED on OMUGO AI!\n\nFREE 30 days\nAfter 30 days: Pay ₦1k or $3 to keep hosting\n\nAdmin can now see your site in admin dashboard');
- window.open('https://wa.me/2347035399931?text=My site '+encodeURIComponent(name)+' is hosted on OMUGO - Keep hosting','_blank');
+
+ // GENERATE LIVE LINK
+ let liveLink = window.location.origin + window.location.pathname + '?site=' + id;
+ 
+ // Show live link to user
+ let html = `
+   <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px">
+     <div style="background:#fff;color:#111;border-radius:20px;padding:24px;max-width:400px;width:100%;text-align:center">
+       <div style="font-size:40px">🎉</div>
+       <h2 style="font-size:20px;font-weight:900;margin-top:8px">Your Website is LIVE!</h2>
+       <p style="font-size:12px;color:#666;margin-top:8px">Hosted FREE 30 days on OMUGO AI</p>
+       <div style="background:#f5f5f5;border:1px solid #ddd;border-radius:12px;padding:12px;margin-top:14px;word-break:break-all;font-size:11px;font-weight:700">${liveLink}</div>
+       <button onclick="navigator.clipboard.writeText('${liveLink}');this.innerText='Copied!'" style="width:100%;margin-top:10px;background:#0D4A2E;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:800">📋 Copy Live Link</button>
+       <a href="${liveLink}" target="_blank" style="display:block;width:100%;margin-top:8px;background:#111;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none;text-align:center">🌍 Open Live Site</a>
+       <a href="https://wa.me/2347035399931?text=My site ${encodeURIComponent(siteName)} is LIVE at ${encodeURIComponent(liveLink)} - I want to keep hosting after 30 days" target="_blank" style="display:block;width:100%;margin-top:8px;background:#25D366;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none;text-align:center">💬 Contact OMUGO to Keep Forever</a>
+       <button onclick="this.parentElement.parentElement.remove()" style="margin-top:12px;background:none;border:none;color:#888;font-size:11px">Close</button>
+       <p style="font-size:10px;color:#999;margin-top:10px">Share this link to anyone - It's live! After 30 days pay ₦1k or $3 to keep it.</p>
+     </div>
+   </div>
+ `;
+ document.body.insertAdjacentHTML('beforeend', html);
 }
-</script>
-</body>
-</html>
+
+// --- ADD THIS AT VERY TOP OF YOUR SCRIPT, after <script> tag ---
+// This makes ?site=ID show the live website
+(function(){
+ const params = new URLSearchParams(window.location.search);
+ const siteId = params.get('site');
+ if(siteId){
+   let html = localStorage.getItem(siteId);
+   if(html){
+     document.open(); document.write(html); document.close();
+   } else {
+     // Try from list
+     let sites = JSON.parse(localStorage.getItem('omugo_sites')||'[]');
+     let found = sites.find(s=>s.id===siteId);
+     if(found){ document.open(); document.write(found.html); document.close(); }
+   }
+ }
+})();
