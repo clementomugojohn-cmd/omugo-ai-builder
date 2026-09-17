@@ -2,101 +2,140 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OMUGO AI - Build Any Beautiful Website - $5</title>
+<title>OMUGO AI 2.0 - Pay Once, Build Unlimited AI Websites - No Monthly Fees!</title>
 <script src="https://js.puter.com/v2/"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Poppins,sans-serif;background:#080a0b;color:#fff}
-.btn{padding:14px 28px;border-radius:30px;font-weight:800;cursor:pointer;border:none;display:inline-flex;justify-content:center;text-decoration:none}
-.btn-gold{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:18px}
-.tag{display:inline-block;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.3);color:#FFD84D;padding:8px 14px;border-radius:20px;font-size:11px;margin:4px;font-weight:700;cursor:pointer}
-.big-input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(201,162,39,.5);padding:18px;border-radius:18px;color:#fff;font-size:15px;min-height:170px;outline:none}
-#builder{display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;padding:30px 5%}
-@media(max-width:900px){#builder{grid-template-columns:1fr;padding:16px 4%}}
-.loader{border:3px solid #333;border-top:3px solid #C9A227;border-radius:50%;width:22px;height:22px;animation:spin 1s linear infinite;display:inline-block}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Poppins,sans-serif;background:#0a0a12;color:#fff;overflow-x:hidden}
+.grad-text{background:linear-gradient(90deg,#FFD84D,#C9A227,#FF6B6B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px}
+.tab-active{background:linear-gradient(135deg,#C9A227,#FFD84D)!important;color:#111!important;font-weight:900!important;border-color:#FFD84D!important}
+.big-input{width:100%;background:rgba(255,255,255,.07);border:2px solid rgba(201,162,39,.4);padding:16px;border-radius:16px;color:#fff;font-size:13px;outline:none}
+.btn-gold{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111;padding:16px 28px;border-radius:30px;font-weight:900;border:none;cursor:pointer;box-shadow:0 8px 25px rgba(201,162,39,.3);transition:.3s}
+.btn-gold:hover{transform:translateY(-2px)}
+.loader{border:3px solid #333;border-top:3px solid #C9A227;border-radius:50%;width:20px;height:20px;animation:spin 1s linear infinite;display:inline-block}
 @keyframes spin{to{transform:rotate(360deg)}}
-#loadingScreen{position:fixed;inset:0;background:#080a0b;display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;padding:20px;text-align:center}
+#loadingScreen{position:fixed;inset:0;background:#0a0a12;display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column}
 </style>
 </head>
 <body>
-<div id="loadingScreen" style="display:none"><span class="loader" style="width:40px;height:40px"></span><p style="margin-top:12px;color:#FFD84D;font-weight:800">Loading live site...</p><p id="loadInfo" style="color:#666;font-size:12px">Checking cloud 2 sec...</p><div id="notFoundMsg" style="display:none;margin-top:20px"><p style="color:#fff;font-weight:800">⚠️ Link not found - old cloud</p><p style="color:#aaa;font-size:12px">Please build NEW website with new cloud</p><a href="/" style="display:inline-block;margin-top:12px;background:#C9A227;color:#111;padding:12px 20px;border-radius:20px;font-weight:800;text-decoration:none">← Build NEW Site</a></div></div>
-<div id="appShell">
-<header style="display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;background:rgba(8,10,11,.95);z-index:100"><div style="display:flex;align-items:center;gap:8px;font-weight:900"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111"><i class="fas fa-magic"></i></div>OMUGO AI <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:6px;font-size:9px">$5 BEAUTIFUL CLOUD</span></div><a href="#builder" class="btn btn-gold" style="padding:8px 14px;font-size:12px">Start FREE</a></header>
-<div id="builder">
+<div id="loadingScreen" style="display:none"><span class="loader" style="width:44px;height:44px"></span><p style="margin-top:12px;color:#FFD84D;font-weight:900">Loading live site from cloud...</p><p id="loadMsg" style="color:#666;font-size:11px">Checking JSONBlob...</p><div id="notFound" style="display:none;margin-top:16px;text-align:center"><p>⚠️ Link expired or not found</p><a href="/" style="display:inline-block;margin-top:10px;background:#FFD84D;color:#111;padding:10px 18px;border-radius:20px;font-weight:800;text-decoration:none">← Build New Site</a></div></div>
+<div id="app">
+
+<!-- HERO LIKE CLICKSITES AD YOU SENT -->
+<section style="background:radial-gradient(circle at 20% 30%,#2a1a5e 0%,#0a0a12 60%),radial-gradient(circle at 80% 20%,#5a1a8a 0%,transparent 50%);padding:24px 5% 40px">
+<header style="display:flex;justify-content:space-between;align-items:center;padding:10px 0"><div style="display:flex;align-items:center;gap:8px;font-weight:900;font-size:20px"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111"><i class="fas fa-bolt"></i></div>OMUGO AI <span style="background:#FFD84D;color:#111;padding:2px 8px;border-radius:6px;font-size:10px">2.0 AI</span></div><div style="display:flex;gap:8px"><span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:8px 12px;border-radius:20px;font-size:11px">🌍 30+ Built</span><a href="#builder" class="btn-gold" style="padding:10px 16px;font-size:12px">Start FREE</a></div></header>
+
+<div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px;align-items:center;margin-top:20px" id="heroGrid">
 <div>
-<h1 style="font-size:36px;font-weight:900;line-height:.95;margin:12px 0">Build <span style="color:#C9A227">Any</span> Beautiful Website in <span style="color:#4ade80">30s</span></h1>
-<p style="color:#a1a1aa;font-size:13px">Pure AI Builder - Type car dealer gets car dealer, fish pond gets fish pond - Beautiful HD images with Unsplash + Tailwind + FontAwesome!</p>
-<div style="background:rgba(0,0,0,.6);border:1px solid rgba(201,162,39,.3);border-radius:20px;padding:16px;margin:18px 0">
-<label style="font-size:11px;color:#FFD84D;font-weight:800"><i class="fas fa-edit"></i> DESCRIBE YOUR WEBSITE (Be specific for beautiful result):</label>
-<textarea id="promptInput" class="big-input">Build me a modern, professional, mobile-responsive website for a fish farm called EUNICE FISH POND - Fresh From Pond To Kitchen. Tagline: 100% Fresh, Healthy & Direct From Our Pond. Colors: Beautiful blue and white fresh water theme with gradients. Sections: Hero with beautiful fish pond image, About Abomey-Calavi farm, Our Fresh Fish Catfish Tilapia Smoked with prices per kg in Naira, Gallery with HD fish images, Why Choose Us, WhatsApp ordering, Location.</textarea>
-<div id="status" style="margin-top:10px;font-size:12px;display:none;background:rgba(201,162,39,.1);padding:10px;border-radius:12px"><span class="loader"></span> <span id="statusText" style="color:#FFD84D">OMUGO AI building exactly what you typed with beautiful HD images...</span></div>
-<button id="buildBtn" onclick="buildWebsite()" class="btn btn-gold" style="width:100%;font-size:17px;padding:18px;margin-top:12px"><i class="fas fa-wand-magic-sparkles"></i> Build My Website Now</button>
-<div style="margin-top:12px">
-<span class="tag" onclick="setPrompt('Build modern beautiful car dealer website with Toyota Camry Honda Accord for sale prices $15000 $22000 HD car images gallery test drive booking WhatsApp')"><i class="fas fa-car"></i> Car Dealer</span>
-<span class="tag" onclick="setPrompt('Build me a modern fish farm EUNICE FISH POND Fresh From Pond To Kitchen 100% Fresh Healthy Direct From Pond blue white catfish tilapia prices per kg gallery WhatsApp')"><i class="fas fa-fish"></i> Fish Farm</span>
-<span class="tag" onclick="setPrompt('Build beautiful church website welcome pastor sermons events donation')"><i class="fas fa-church"></i> Church</span>
-<span class="tag" onclick="setPrompt('Build beautiful Omugo Football Live dark green breaking news slider live scores')"><i class="fas fa-futbol"></i> Football</span>
+<div style="display:inline-block;background:#FFD84D;color:#111;padding:6px 14px;border-radius:20px;font-weight:900;font-size:12px;transform:rotate(-2deg)">PAY ONCE AND BUILD...</div>
+<h1 style="font-size:42px;line-height:.9;font-weight:900;margin-top:12px">UNLIMITED<br><span style="color:#FFD84D">WEBSITES!</span></h1>
+<div style="margin-top:16px">
+<p style="display:flex;gap:8px;align-items:center;font-size:13px;margin:8px 0"><span style="background:#22c55e;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#111;font-size:10px">✓</span> No Monthly Fees - Pay Once $30/year</p>
+<p style="display:flex;gap:8px;align-items:center;font-size:13px;margin:8px 0"><span style="background:#22c55e;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#111;font-size:10px">✓</span> Unlimited Sites - Host Anywhere</p>
+<p style="display:flex;gap:8px;align-items:center;font-size:13px;margin:8px 0"><span style="background:#22c55e;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#111;font-size:10px">✓</span> One-Time Price - You Own 100%</p>
+</div>
+<a href="#builder" class="btn-gold" style="display:inline-flex;margin-top:18px;font-size:14px"><i class="fas fa-rocket"></i>&nbsp;GET STARTED NOW!</a>
+<p style="font-size:10px;color:#888;margin-top:10px">All-in-One AI Website Builder • Like ClickSites but YOU own it!</p>
+</div>
+<div style="position:relative">
+<div style="background:linear-gradient(135deg,#1a1a2e,#2a1a5e);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:12px;transform:rotate(2deg)"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" style="width:100%;border-radius:12px"><div style="display:flex;gap:6px;margin-top:8px"><div style="flex:1;background:rgba(255,255,255,.08);border-radius:10px;padding:8px;text-align:center;font-size:10px">🛋️ Casual Furniture<br><span style="color:#FFD84D">$299</span></div><div style="flex:1;background:rgba(255,255,255,.08);border-radius:10px;padding:8px;text-align:center;font-size:10px">📱 Mobile Ready<br><span style="color:#4ade80">100%</span></div></div></div>
+<div style="position:absolute;bottom:-10px;right:-10px;background:#FFD84D;color:#111;padding:8px 12px;border-radius:20px;font-weight:900;font-size:11px;transform:rotate(-3deg)"><i class="fas fa-magic"></i> AI Builds in 30s</div>
 </div>
 </div>
+</section>
+
+<!-- FEATURES LIKE CLICKSITES -->
+<section style="padding:18px 5%;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+<div class="card"><i class="fas fa-code" style="color:#FFD84D"></i><b style="display:block;margin-top:6px;font-size:12px">AI HTML Builder</b><p style="font-size:10px;color:#888">Build with prompt</p></div>
+<div class="card"><i class="fas fa-link" style="color:#60a5fa"></i><b style="display:block;margin-top:6px;font-size:12px">Create With URL</b><p style="font-size:10px;color:#888">Clone any site better</p></div>
+<div class="card"><i class="fas fa-image" style="color:#f472b6"></i><b style="display:block;margin-top:6px;font-size:12px">Create With Image</b><p style="font-size:10px;color:#888">Flyer → Website</p></div>
+<div class="card"><i class="fas fa-wand-magic-sparkles" style="color:#4ade80"></i><b style="display:block;margin-top:6px;font-size:12px">AI Image Creator</b><p style="font-size:10px;color:#888">HD Unsplash + AI</p></div>
+<div class="card"><i class="fas fa-pen-ruler" style="color:#FFD84D"></i><b style="display:block;margin-top:6px;font-size:12px">Drag & Drop Editor</b><p style="font-size:10px;color:#888">Edit after build</p></div>
+<div class="card"><i class="fas fa-cloud" style="color:#60a5fa"></i><b style="display:block;margin-top:6px;font-size:12px">Host or Download HTML</b><p style="font-size:10px;color:#888">Cloud + Download</p></div>
+</section>
+
+<!-- BUILDER -->
+<div id="builder" style="padding:20px 5%;display:grid;grid-template-columns:1.1fr 0.9fr;gap:20px">
+<div>
+<div style="display:flex;gap:6px;margin-bottom:12px">
+<button id="tabPrompt" onclick="switchTab('prompt')" class="tab-active" style="flex:1;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-size:12px;font-weight:700"><i class="fas fa-keyboard"></i> Prompt</button>
+<button id="tabUrl" onclick="switchTab('url')" style="flex:1;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-size:12px;font-weight:700"><i class="fas fa-link"></i> URL</button>
+<button id="tabImage" onclick="switchTab('image')" style="flex:1;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-size:12px;font-weight:700"><i class="fas fa-image"></i> Image</button>
 </div>
-<div class="card" style="padding:12px">
-<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:12px"><i class="fas fa-eye" style="color:#4ade80"></i> Live Preview - Pure AI</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● PURE AI - NO TEMPLATE</span></div>
-<iframe id="previewFrame" style="width:100%;height:620px;background:#fff;border-radius:16px;border:none"></iframe>
-<button onclick="publishSite()" class="btn btn-gold" style="width:100%;margin-top:12px;padding:14px"><i class="fas fa-cloud-upload-alt"></i> Publish & Get Live Link FREE</button>
-<p style="font-size:10px;color:#888;text-align:center;margin-top:6px">✅ Pure AI - Cloud Only - Beautiful libraries - No phone storage</p>
+
+<div id="panelPrompt">
+<textarea id="promptInput" class="big-input" style="min-height:170px">Build me a modern, premium, mobile-responsive personal portfolio website for a Software Developer called YOUR NAME. Tagline: Building Fast, Modern and Scalable Digital Solutions. Design: Clean modern developer style, dark mode and light mode, colors Dark Navy #0A192F White and Cyan accent #64FFDA, fully responsive. Hero with photo name role Software Developer intro I build modern websites web apps and digital solutions that help businesses grow buttons View My Projects and Hire Me. About bio years experience. Skills icons HTML CSS JavaScript React Next.js Node.js Tailwind Git GitHub WordPress. Projects 6 cards each with image title description tech stack Live Demo GitHub links. Services Web Development Ecommerce Landing Maintenance. Experience timeline Download CV. Testimonials. Contact form email phone WhatsApp GitHub LinkedIn location Abomey-Calavi. Footer social links. Premium polished glassmorphism rounded 24px shadow-xl hover lift AOS animations Unsplash HD.</textarea>
+</div>
+<div id="panelUrl" style="display:none">
+<input id="urlInput" class="big-input" style="min-height:56px" placeholder="Paste any website URL to clone & make better - e.g. https://example.com">
+<p style="font-size:10px;color:#888;margin-top:6px">AI will read the URL idea and build a better, premium polished version with your business name.</p>
+</div>
+<div id="panelImage" style="display:none">
+<input type="file" id="imageFile" accept="image/*" class="big-input" style="padding:12px">
+<div id="imagePreview" style="margin-top:8px;display:none"><img id="imgPrev" style="width:100%;border-radius:12px;max-height:200px;object-fit:cover"><p id="imgDesc" style="font-size:10px;color:#888;margin-top:4px"></p></div>
+<input id="imagePrompt" class="big-input" style="min-height:56px;margin-top:8px" placeholder="Describe what website you want from this image - e.g. Build restaurant site from this menu image">
+</div>
+
+<div id="status" style="display:none;margin-top:10px;background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.3);padding:10px;border-radius:12px;font-size:12px"><span class="loader"></span> <span id="statusText" style="color:#FFD84D">Building premium...</span></div>
+<button id="buildBtn" onclick="buildWebsite()" class="btn-gold" style="width:100%;margin-top:12px"><i class="fas fa-wand-magic-sparkles"></i> Build My Website Now</button>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
+<span onclick="setQuick('Build modern premium portfolio website for Software Developer called YOUR NAME Tagline Building Fast Modern and Scalable Digital Solutions Design Dark Navy #0A192F Cyan #64FFDA white clean modern dark light mode Hero with photo name role Software Developer intro I build modern websites buttons View Projects Hire Me About Skills HTML CSS JS React Next Node Tailwind Git GitHub WordPress Projects 6 cards with image title tech stack Live Demo GitHub Services Web Dev Ecom Landing Maintenance Experience timeline Download CV Testimonials Contact form WhatsApp GitHub LinkedIn Abomey-Calavi')" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:20px;font-size:10px;cursor:pointer">💼 Portfolio Premium</span>
+<span onclick="setQuick('Build modern premium beautiful car dealer website with Toyota Camry Honda Accord for sale prices $15000 $22000 HD car images gallery test drive booking WhatsApp dark theme red accent glass cards premium polished')" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:20px;font-size:10px;cursor:pointer">🚗 Car Dealer</span>
+<span onclick="setQuick('Build modern premium fish farm called EUNICE FISH POND Fresh From Pond To Kitchen 100% Fresh Healthy Direct From Pond blue cyan gradient beautiful fish pond HD images catfish tilapia prices per kg Naira gallery Why Choose Us WhatsApp ordering Abomey-Calavi premium glass rounded 24px')" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:20px;font-size:10px;cursor:pointer">🐟 Fish Farm</span>
 </div>
 </div>
-<footer style="padding:20px 5%;text-align:center;background:#000"><div style="font-weight:900">OMUGO AI BUILDER</div><div style="color:#C9A227;font-size:12px">$5/MONTH - $30/YEAR - Beautiful + Cloud</div></footer>
+
+<div class="card">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><b style="font-size:11px"><i class="fas fa-eye" style="color:#4ade80"></i> Live Preview - Premium Polished</b><div><button onclick="toggleEdit()" id="editBtn" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#fff;padding:4px 8px;border-radius:10px;font-size:9px"><i class="fas fa-pen"></i> Edit Mode</button> <span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:8px">PURE AI</span></div></div>
+<iframe id="previewFrame" style="width:100%;height:620px;background:#fff;border-radius:14px;border:none"></iframe>
+<button onclick="publishSite()" class="btn-gold" style="width:100%;margin-top:10px"><i class="fas fa-cloud-upload-alt"></i> Publish & Get Live Link</button>
+<button onclick="downloadHTML()" style="width:100%;margin-top:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:10px;border-radius:20px;font-size:12px;font-weight:700"><i class="fas fa-download"></i> Download HTML (Host Anywhere)</button>
 </div>
+</div>
+
+<footer style="padding:20px 5%;text-align:center;border-top:1px solid rgba(255,255,255,.06);margin-top:20px"><p style="font-weight:900">OMUGO AI 2.0 - ClickSites Killer</p><p style="font-size:10px;color:#888">Pay Once $30/year • Unlimited Sites • Prompt + URL + Image → Website • Host or Download • Abomey-Calavi → Worldwide</p></footer>
+</div>
+
 <script>
-var JSONBLOB_API="https://jsonblob.com/api/jsonBlob";
-function extractHTML(t){if(!t) return "";var x=t.replace(/```html/g,'').replace(/```/g,'').trim();var s=x.toLowerCase().indexOf('<!doctype');if(s===-1) s=x.toLowerCase().indexOf('<html');var e=x.toLowerCase().lastIndexOf('</html>');if(s!==-1&&e!==-1) return x.substring(s,e+7);return x;}
-async function checkLiveSite(){
-  var params=new URLSearchParams(window.location.search);var siteId=params.get('site');if(!siteId) return;
-  var loadingEl=document.getElementById('loadingScreen');var appEl=document.getElementById('appShell');var notFoundEl=document.getElementById('notFoundMsg');
-  loadingEl.style.display='flex';appEl.style.display='none';
-  var to=setTimeout(function(){document.getElementById('loadInfo').innerText='Not found';notFoundEl.style.display='block';setTimeout(function(){loadingEl.style.display='none';appEl.style.display='block';},2500);},2500);
-  var html=null;
-  try{if(siteId.length>10){var r=await Promise.race([fetch(JSONBLOB_API+"/"+siteId),new Promise(function(_,rej){setTimeout(function(){rej();},1800);})]);if(r&&r.ok){var d=await r.json();if(d&&d.html) html=d.html;}}}catch(e){}
-  if(!html){try{var c=await Promise.race([puter.kv.get('omugo_'+siteId),new Promise(function(_,rej){setTimeout(function(){rej();},1500);})]);if(c) html=c;}catch(e){}}
-  if(html&&html.length>400){clearTimeout(to);document.open();document.write(extractHTML(html));document.close();}
-}
-checkLiveSite();
-function setPrompt(t){document.getElementById('promptInput').value=t;buildWebsite();}
+var JSONBLOB_API="https://jsonblob.com/api/jsonBlob"; var currentTab='prompt'; var lastImageBase64='';
+function extractHTML(t){if(!t)return"";var x=t.replace(/```html/g,'').replace(/```/g,'').trim();var s=x.toLowerCase().indexOf('<!doctype');if(s===-1)s=x.toLowerCase().indexOf('<html');var e=x.toLowerCase().lastIndexOf('</html>');if(s!==-1&&e!==-1)return x.substring(s,e+7);return x;}
+async function checkLive(){var p=new URLSearchParams(location.search);var id=p.get('site');if(!id)return;var l=document.getElementById('loadingScreen');var a=document.getElementById('app');var nf=document.getElementById('notFound');l.style.display='flex';a.style.display='none';var to=setTimeout(function(){document.getElementById('loadMsg').innerText='Not found';nf.style.display='block';setTimeout(function(){l.style.display='none';a.style.display='block';},2000);},3000);var html=null;try{if(id.length>10){var r=await Promise.race([fetch(JSONBLOB_API+"/"+id),new Promise(function(_,rej){setTimeout(rej,1800)})]);if(r&&r.ok){var d=await r.json();if(d&&d.html)html=d.html;}}}catch(e){}if(!html){try{var c=await Promise.race([puter.kv.get('omugo_'+id),new Promise(function(_,rej){setTimeout(rej,1500)})]);if(c)html=c;}catch(e){}}if(html&&html.length>500){clearTimeout(to);document.open();document.write(extractHTML(html));document.close();}}checkLive();
+function switchTab(t){currentTab=t;['prompt','url','image'].forEach(function(k){document.getElementById('panel'+k.charAt(0).toUpperCase()+k.slice(1)).style.display=k===t?'block':'none';document.getElementById('tab'+k.charAt(0).toUpperCase()+k.slice(1)).className=k===t?'tab-active':'';if(k!==t)document.getElementById('tab'+k.charAt(0).toUpperCase()+k.slice(1)).style.cssText='flex:1;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-size:12px;font-weight:700';});}
+function setQuick(txt){switchTab('prompt');document.getElementById('promptInput').value=txt;}
+document.getElementById('imageFile').addEventListener('change',function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){lastImageBase64=ev.target.result;document.getElementById('imgPrev').src=lastImageBase64;document.getElementById('imagePreview').style.display='block';document.getElementById('imgDesc').innerText='Image loaded: '+f.name+' - AI will build site from it';};r.readAsDataURL(f);});
+function toggleEdit(){var fr=document.getElementById('previewFrame');try{var doc=fr.contentDocument||fr.contentWindow.document;var is=doc.body.isContentEditable;doc.body.contentEditable=!is;doc.designMode=!is?'on':'off';document.getElementById('editBtn').innerHTML=is?'<i class="fas fa-pen"></i> Edit Mode':'<i class="fas fa-check"></i> Editing...';if(!is)alert('✅ Drag & Drop Edit ON - Click any text in preview to edit! Then Publish again');}catch(e){alert('Build a site first to edit!');}}
 async function buildWebsite(){
-  var raw=document.getElementById('promptInput').value.trim();if(!raw){alert('Please describe your website!');return;}
-  var btn=document.getElementById('buildBtn');var status=document.getElementById('status');var st=document.getElementById('statusText');
-  btn.disabled=true;btn.innerHTML='<span class="loader"></span> Building your exact business...';status.style.display='block';st.innerText='Pure AI building: "'+raw.substring(0,40)+'" with beautiful HD images, Tailwind, FontAwesome... Please wait 10 sec, no hotel for fish!';
-  try{
-    var promptText="You are OMUGO AI pro builder. Build EXACTLY what user asks. No templates. USER REQUEST: \""+raw+"\". CRITICAL: Use business name from prompt exactly. If fish farm EUNICE FISH POND, title must be EUNICE FISH POND, tagline 100% Fresh Healthy & Direct From Our Pond, colors blue cyan, images fish pond catfish tilapia from Unsplash source.unsplash.com/800x600/?fish-pond,catfish,tilapia. If car dealer, use car images source.unsplash.com/800x600/?car-dealership,toyota. MUST include in head: Tailwind https://cdn.tailwindcss.com, FontAwesome https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css, Google Fonts Poppins. Use beautiful gradients, rounded-2xl, shadow-xl, icons like <i class=fas fa-fish>. Mobile responsive, hero with image background, sections, WhatsApp button, footer. Output ONLY HTML <!DOCTYPE html> to </html> no explanation.";
-    var r=await puter.ai.chat(promptText,{model:'gpt-4o-mini'});
-    var html=extractHTML(r.message.content||'');
-    if(html.length<800){var r2=await puter.ai.chat(promptText,{model:'gpt-4o-mini'});html=extractHTML(r2.message.content||'');}
-    if(html.length<600) throw new Error('AI short');
-    document.getElementById('previewFrame').srcdoc=html;window.lastBuilt=html;window.lastPrompt=raw;
-    st.innerText='✅ Beautiful website ready! Pure AI - Exactly what you typed!';
-  }catch(e){console.log(e);alert('AI busy or slow internet - Please click Build again! Pure AI will build your exact business with beautiful images! No hotel for fish!');}
-  status.style.display='none';btn.disabled=false;btn.innerHTML='<i class="fas fa-wand-magic-sparkles"></i> Build My Website Now';
+ var raw='';var mode=currentTab;
+ if(mode==='prompt') raw=document.getElementById('promptInput').value.trim();
+ else if(mode==='url'){var u=document.getElementById('urlInput').value.trim();if(!u){alert('Paste URL!');return;} raw='Create premium polished beautiful website inspired by this URL: '+u+' . Build BETTER version - modern, premium, glassmorphism, rounded 24px, shadow-xl, hover lift, Unsplash HD images, Tailwind CSS, FontAwesome icons, AOS animations, dark navy #0A192F cyan #64FFDA if portfolio, but adapt colors to business. Make it convert better than original URL. Include all sections.';}
+ else if(mode==='image'){var ip=document.getElementById('imagePrompt').value.trim();if(!lastImageBase64){alert('Upload image first!');return;} raw=(ip||'Build website from uploaded image')+' . User uploaded an image (flyer/menu/photo). Build premium polished website that matches the image content. Use modern premium design: glassmorphism, rounded 24px, shadow-xl, Unsplash HD relevant images, Tailwind, FontAwesome, AOS. Make it look like the image but as a full website.';
+ if(!raw){alert('Describe!');return;}
+ }
+ var btn=document.getElementById('buildBtn');var st=document.getElementById('status');var stt=document.getElementById('statusText');
+ btn.disabled=true;btn.innerHTML='<span class="loader"></span> Building Premium Polished...';st.style.display='block';stt.innerText='AI building '+mode.toUpperCase()+' → Premium polished (glass, glow, AOS, Unsplash HD)... '+raw.substring(0,50);
+ try{
+  var premiumRules="You are OMUGO AI 2.0 PREMIUM POLISHED - ClickSites Killer. USER REQUEST: \""+raw+"\". RULES: 1) Build EXACT business from request. If portfolio YOUR NAME show YOUR NAME. If fish farm EUNICE show EUNICE. 2) HEAD must include: Tailwind https://cdn.tailwindcss.com, FontAwesome https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css, Google Fonts Poppins + JetBrains Mono, AOS CSS https://unpkg.com/aos@2.3.1/dist/aos.css and JS https://unpkg.com/aos@2.3.1/dist/aos.js + AOS.init(). 3) PREMIUM DESIGN: dark navy #0A192F or business-appropriate colors, cyan #64FFDA accent, glassmorphism backdrop-blur-xl, rounded-[20px] rounded-[24px], shadow-xl shadow-2xl, border border-white/5 hover:border-[#64FFDA]/30 hover:translate-y-[-4px], gradient glow blur, dotted grid, mono labels, Poppins headings, sticky header glass, big bold hero. 4) Images: Use Unsplash HD: portfolio https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500 developer, car dealer https://source.unsplash.com/800x600/?luxury-car,toyota-camry,honda-accord, fish farm https://source.unsplash.com/800x600/?catfish-pond,tilapia,fish-farm. Min 5 images. 5) Sections: header glass sticky, hero with photo + glow + buttons View Projects Hire Me, about stats, skills icons glass, projects 6 cards image title desc tech Live Demo GitHub + filter, services icons, testimonials, contact form WhatsApp, footer. Output ONLY raw HTML <!DOCTYPE html> to </html>.";
+  var r=await puter.ai.chat(premiumRules,{model:'gpt-4o-mini'}); var html=extractHTML(r.message.content||'');
+  if(html.length<1000){var r2=await puter.ai.chat(premiumRules,{model:'gpt-4o-mini'}); html=extractHTML(r2.message.content||'');}
+  if(html.length<800) throw new Error('short');
+  document.getElementById('previewFrame').srcdoc=html; window.lastBuilt=html; window.lastPrompt=raw; stt.innerText='✅ Premium polished ready! Now Publish or Download!';
+ }catch(e){alert('AI busy - click Build again!'); console.log(e);}
+ st.style.display='none'; btn.disabled=false; btn.innerHTML='<i class="fas fa-wand-magic-sparkles"></i> Build My Website Now';
 }
 async function publishSite(){
  if(!window.lastBuilt){alert('Build first!');return;}
- var raw=window.lastPrompt||'Website';var btn=document.querySelector('[onclick="publishSite()"]');var old=btn.innerHTML;btn.innerHTML='<span class="loader"></span> Publishing to Cloud...';btn.disabled=true;
+ var btn=document.querySelector('[onclick="publishSite()"]');var old=btn.innerHTML;btn.innerHTML='<span class="loader"></span> Publishing to Cloud...';btn.disabled=true;
  var blobId=null;
- try{
-   var resp=await Promise.race([fetch(JSONBLOB_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({html:window.lastBuilt,prompt:raw,date:new Date().toISOString()})}),new Promise(function(_,rej){setTimeout(function(){rej();},4000);})]);
-   if(resp&&resp.ok){var loc=resp.headers.get('Location')||resp.headers.get('location');if(loc){blobId=loc.split('/').pop();}else{var txt=await resp.text();try{var j=JSON.parse(txt);blobId=j.id;}catch(e){}}}
- }catch(e){console.log('jsonblob fail',e);}
- try{if(!blobId){var id='site_'+Date.now();await Promise.race([puter.kv.set('omugo_'+id,window.lastBuilt),new Promise(function(_,rej){setTimeout(function(){rej();},2500);})]);blobId=id;}}catch(e){if(!blobId) blobId='site_'+Date.now();}
- btn.innerHTML=old;btn.disabled=false;if(!blobId){alert('Cloud failed, try again!');return;}
- var link=window.location.origin+window.location.pathname+'?site='+blobId;
- var pop=document.createElement('div');
- pop.innerHTML='<div style="position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px"><div style="background:#fff;color:#111;border-radius:20px;padding:24px;max-width:420px;width:100%;text-align:center;font-family:Poppins"><div style="font-size:44px">🎉</div><h2 style="font-size:18px;font-weight:900">Beautiful Website LIVE Worldwide!</h2><p style="font-size:11px;color:#0e7490;font-weight:800">✅ Pure AI - Cloud Only - No hotel for fish!</p><div style="background:#f5f5f5;border:1px solid #ddd;border-radius:12px;padding:12px;margin-top:14px;word-break:break-all;font-size:11px;font-weight:700">'+link+'</div><button id="copyBtn" style="width:100%;margin-top:10px;background:linear-gradient(90deg,#0e7490,#06b6d4);color:#fff;border:none;padding:14px;border-radius:12px;font-weight:800">📋 Copy Live Link</button><a href="'+link+'" target="_blank" style="display:block;width:100%;margin-top:8px;background:#111;color:#fff;padding:14px;border-radius:12px;font-weight:800;text-decoration:none;text-align:center">🌍 Test in Incognito</a><p style="font-size:10px;color:#666;margin-top:10px">Includes Unsplash HD + Tailwind + FontAwesome - Cloud only!</p><button id="closeBtn" style="margin-top:14px;background:none;border:none;color:#888">Close</button></div></div>';
- document.body.appendChild(pop);
- document.getElementById('copyBtn').onclick=function(){navigator.clipboard.writeText(link);this.innerText='✅ Copied! '+link.substring(0,30)+'...';};
- document.getElementById('closeBtn').onclick=function(){pop.remove();};
+ try{var resp=await Promise.race([fetch(JSONBLOB_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({html:window.lastBuilt,prompt:window.lastPrompt,date:new Date().toISOString()})}),new Promise(function(_,rej){setTimeout(rej,4000)})]);if(resp&&resp.ok){var loc=resp.headers.get('Location')||resp.headers.get('location');if(loc) blobId=loc.split('/').pop();else{var t=await resp.text();try{var j=JSON.parse(t);blobId=j.id;}catch(e){}}}}catch(e){}
+ try{if(!blobId){var id='site_'+Date.now();await Promise.race([puter.kv.set('omugo_'+id,window.lastBuilt),new Promise(function(_,rej){setTimeout(rej,2500)})]);blobId=id;}}catch(e){if(!blobId)blobId='site_'+Date.now();}
+ btn.innerHTML=old;btn.disabled=false;if(!blobId){alert('Cloud failed, try again');return;}
+ var link=location.origin+location.pathname+'?site='+blobId;
+ var pop=document.createElement('div');pop.innerHTML='<div style="position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px"><div style="background:#fff;color:#111;border-radius:20px;padding:22px;max-width:400px;width:100%;text-align:center;font-family:Poppins"><div style="font-size:40px">🎉</div><h2 style="font-weight:900">Premium Site LIVE!</h2><p style="font-size:10px;color:#0e7490;font-weight:800">✅ Pay Once $30/year • Unlimited • Cloud</p><div style="background:#f5f5f5;border:1px solid #ddd;border-radius:12px;padding:10px;margin-top:12px;word-break:break-all;font-size:11px;font-weight:700">'+link+'</div><button id="copyBtn" style="width:100%;margin-top:10px;background:linear-gradient(90deg,#C9A227,#FFD84D);color:#111;border:none;padding:12px;border-radius:12px;font-weight:900">📋 Copy Link</button><a href="'+link+'" target="_blank" style="display:block;width:100%;margin-top:8px;background:#111;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none;text-align:center">🌍 Test in Incognito</a><button id="closeBtn" style="margin-top:10px;background:none;border:none;color:#888">Close</button></div></div>';document.body.appendChild(pop);document.getElementById('copyBtn').onclick=function(){navigator.clipboard.writeText(link);this.innerText='✅ Copied!';};document.getElementById('closeBtn').onclick=function(){pop.remove();};
 }
+function downloadHTML(){if(!window.lastBuilt){alert('Build first!');return;}var blob=new Blob([window.lastBuilt],{type:'text/html'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='omugo-premium-website.html';a.click();URL.revokeObjectURL(url);}
 </script>
 </body>
 </html>
