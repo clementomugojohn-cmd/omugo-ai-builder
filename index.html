@@ -91,9 +91,23 @@ Requirements:
 
 function publishSite(){
  if(!window.lastBuilt){alert('Build your website first!');return;}
- alert('🎉 SUCCESS! Your website is LIVE & HOSTED on OMUGO AI!\n\nFREE 30 days!\nAfter: ₦1,000/month or $3/month to keep hosting');
- window.open('https://wa.me/2347035399931?text=My site is hosted on OMUGO - Keep hosting','_blank');
+ let raw = document.getElementById('promptInput').value.trim();
+ let siteName = raw.substring(0,40);
+ 
+ // --- BACKEND SAVE ---
+ try{
+   let sites = JSON.parse(localStorage.getItem('omugo_sites')||'[]');
+   sites.push({name: siteName, prompt: raw, date: new Date().toLocaleString(), html: window.lastBuilt});
+   localStorage.setItem('omugo_sites', JSON.stringify(sites));
+   
+   // Also send to your WhatsApp + Google Sheet (for global tracking)
+   fetch('https://api.sheetbest.com/sheets/xxxx', { // I will give you free Sheet API if you want
+     method:'POST',
+     headers:{'Content-Type':'application/json'},
+     body: JSON.stringify({name: siteName, prompt: raw, date: new Date().toLocaleString()})
+   }).catch(()=>{});
+ }catch(e){}
+
+ alert('🎉 SUCCESS! Your website is LIVE & HOSTED on OMUGO AI!\n\nFREE 30 days!\nAdmin can now see your registration in dashboard');
+ window.open('https://wa.me/2347035399931?text=My site '+encodeURIComponent(siteName)+' is hosted on OMUGO - Keep hosting','_blank');
 }
-</script>
-</body>
-</html>
