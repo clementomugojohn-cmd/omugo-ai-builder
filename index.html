@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OMUGO AI - Build Any Website in 30 Seconds - $4 Only - Cheaper Than Wix $29</title>
+<title>OMUGO AI - Build Any Website in 30 Seconds - Only $5</title>
 <script src="https://js.puter.com/v2/"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -20,67 +20,58 @@
 @media(max-width:900px){.grid3{grid-template-columns:1fr}}
 #loadingScreen{position:fixed;top:0;left:0;width:100%;height:100%;background:#080a0b;display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column}
 </style>
-<script>
-(function(){
-  const p=new URLSearchParams(window.location.search); const id=p.get('site');
-  if(id){
-    try{
-      let html=localStorage.getItem(id);
-      if(!html){let s=JSON.parse(localStorage.getItem('omugo_sites')||'[]'); let f=s.find(x=>x.id===id); if(f) html=f.html;}
-      if(html && html.length>500){html=html.split('This HTML code represents')[0]; document.write(html); document.close(); window.stop(); return;}
-    }catch(e){}
-  }
-})();
-</script>
 </head>
 <body style="background:#080a0b">
 
-<div id="loadingScreen" style="display:none"><span class="loader" style="width:40px;height:40px;border-width:4px"></span><p style="margin-top:16px;color:#FFD84D;font-weight:800">Loading live website...</p></div>
+<div id="loadingScreen" style="display:none"><span class="loader" style="width:40px;height:40px;border-width:4px"></span><p style="margin-top:16px;color:#FFD84D;font-weight:800">Loading your live website...</p></div>
 
 <div id="appShell">
 <header style="display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;background:rgba(8,10,11,.95);z-index:100">
-<div style="display:flex;align-items:center;gap:8px;font-weight:900"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:6px;font-size:9px">$4 GLOBAL</span></div>
+<div style="display:flex;align-items:center;gap:8px;font-weight:900"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:6px;font-size:9px">$5 GLOBAL</span></div>
 <a href="#builder" class="btn btn-gold" style="padding:8px 14px;font-size:12px">Start FREE →</a>
 </header>
 
 <div id="builder">
 <div>
-<div class="tag">🌍 Worldwide</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">$4 Only</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">AI Powered</div>
-<h1 style="font-size:38px;font-weight:900;line-height:.95;margin:14px 0">Build <span style="color:#C9A227">Any</span> Website with AI in <span style="color:#C9A227">30 seconds</span> - Only <span style="color:#4ade80">$4</span></h1>
-<p style="color:#a1a1aa;font-size:14px">Wix $29/mo. Shopify $29/mo. <b style="color:#fff">OMUGO AI $4/mo - 7x cheaper! Global hosting.</b> Fashion, football live, church, barber, hotel, school - One builder, 1 million ideas.</p>
+<div class="tag">🌍 Worldwide</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">$5 Only</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">AI Powered</div>
+<h1 style="font-size:38px;font-weight:900;line-height:.95;margin:14px 0">Build <span style="color:#C9A227">Any</span> Website with AI in <span style="color:#C9A227">30 seconds</span> - Only <span style="color:#4ade80">$5</span></h1>
+<p style="color:#a1a1aa;font-size:14px">Build professional websites for only <b style="color:#fff">$5/month - Affordable for everyone worldwide!</b> Fashion, football live, church, barber, hotel, school - One builder, 1 million ideas. FREE 30 days hosted on OMUGO Cloud.</p>
 <div style="background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin:18px 0">
 <label style="font-size:11px;color:#FFD84D;font-weight:800">DESCRIBE YOUR WEBSITE:</label>
-<textarea id="promptInput" class="big-input" placeholder='Build Pauline Omugo Fashion Store with beautiful images, Best Sellers, WhatsApp ordering'></textarea>
+<textarea id="promptInput" class="big-input" placeholder='Example: Build Pauline Omugo Fashion Store with beautiful images, Best Sellers, WhatsApp ordering'></textarea>
 <div id="status" style="margin-top:10px;font-size:12px;display:none"><span class="loader"></span> <span id="statusText" style="color:#FFD84D">Building...</span></div>
 <button id="buildBtn" onclick="buildWebsite()" class="btn btn-gold" style="width:100%;font-size:17px;padding:18px;margin-top:12px">✨ Build My Website Now →</button>
 <div style="margin-top:12px">
 <span class="tag" onclick="setPrompt('Build Pauline Omugo Fashion Store elegant with real Unsplash fashion images, Men Women Kids Shoes categories, Best Sellers $49.99, New Arrivals, reviews, WhatsApp')">Fashion Store</span>
 <span class="tag" onclick="setPrompt('Build Omugo Football Live dark green with breaking news slider, live scores, transfer news, Premier League La Liga Bundesliga categories')">⚽ Football Live</span>
+<span class="tag" onclick="setPrompt('Modern restaurant with menu and online ordering')">Restaurant</span>
+<span class="tag" onclick="setPrompt('Barber shop with services and booking')">Barber</span>
 </div>
 </div>
 </div>
 <div class="card" style="padding:14px">
-<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:13px">🔴 Live Preview</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● AI ACTIVE</span></div>
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:13px">🔴 Live Preview - OMUGO AI</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● AI ACTIVE</span></div>
 <iframe id="previewFrame" style="width:100%;height:560px;background:#fff;border-radius:14px;border:none"></iframe>
 <button onclick="publishSite()" class="btn btn-gold" style="width:100%;margin-top:12px;padding:14px">🚀 Publish & Get Live Link FREE</button>
+<p style="font-size:10px;color:#888;text-align:center;margin-top:8px">✅ Live Link Worldwide • Saved to OMUGO Cloud</p>
 </div>
 </div>
 
-<!-- DOLLAR ONLY PRICING - $4 GLOBAL -->
+<!-- PRICING - $5 GLOBAL ONLY - NO WIX SHOPIFY -->
 <section style="padding:40px 5%;background:#0a0a0a;border-top:1px solid rgba(255,255,255,.08)">
-<p style="text-align:center;color:#888;font-size:13px;margin-bottom:20px">Wix $29/mo. Shopify $29/mo. Hostinger $25/mo. <b style="color:#fff">OMUGO AI $4/mo - 7x CHEAPER! Global!</b></p>
+<p style="text-align:center;color:#888;font-size:13px;margin-bottom:20px">Build professional websites for only <b style="color:#fff">$5/month - Affordable for everyone worldwide!</b></p>
 <div class="grid3">
 <div class="card" style="background:#151515"><h3 style="font-size:14px">FREE - Gather Clients</h3><div style="font-size:36px;font-weight:900;margin:12px 0">FREE<span style="font-size:14px;color:#aaa"> 30 DAYS</span></div><p style="color:#888;font-size:12px;line-height:1.8">✓ 30 days full access<br>✓ No credit card needed<br>✓ Gather thousands of clients<br>✓ Live link worldwide</p><a href="#builder" class="btn" style="width:100%;margin-top:16px;background:#fff;color:#111">Start Free →</a></div>
-<div class="card" style="border:1.5px solid #C9A227;background:linear-gradient(135deg,rgba(201,162,39,.15),rgba(0,0,0,.3))"><h3 style="font-size:14px">Starter - Cheapest <span style="background:#C9A227;color:#111;padding:2px 8px;border-radius:10px;font-size:9px">POPULAR</span></h3><div style="font-size:42px;font-weight:900;margin:12px 0;color:#FFD84D">$4<span style="font-size:16px;color:#aaa">/month</span></div><p style="color:#aaa;font-size:12px;line-height:1.8">✓ Wix $29 - You $4 (7x cheaper!)<br>✓ Hostinger $25 - You $4 (6x cheaper!)<br>✓ Global hosting worldwide<br>✓ Your website stays live forever<br>✓ 10k clients = $40k/mo!</p><a href="https://wa.me/2347035399931?text=I want to pay $4 monthly for OMUGO AI hosting - Keep my website live forever" class="btn btn-gold" style="width:100%;margin-top:16px;font-size:14px">Pay $4 → Keep Live Forever</a></div>
-<div class="card" style="background:#151515"><h3 style="font-size:14px">Lifetime - Go Far!</h3><div style="font-size:36px;font-weight:900;margin:12px 0">$25<span style="font-size:14px;color:#aaa"> once</span></div><p style="color:#888;font-size:12px;line-height:1.8">✓ Pay once, own forever<br>✓ Never pay again<br>✓ Go far in life<br>✓ Best value worldwide</p><a href="https://wa.me/2347035399931?text=I want Lifetime $25 OMUGO AI - Pay once own forever" class="btn" style="width:100%;margin-top:16px;background:#333;color:#fff">Pay $25 Lifetime</a></div>
+<div class="card" style="border:1.5px solid #C9A227;background:linear-gradient(135deg,rgba(201,162,39,.15),rgba(0,0,0,.3))"><h3 style="font-size:14px">Starter - Best Value <span style="background:#C9A227;color:#111;padding:2px 8px;border-radius:10px;font-size:9px">POPULAR</span></h3><div style="font-size:42px;font-weight:900;margin:12px 0;color:#FFD84D">$5<span style="font-size:16px;color:#aaa">/month</span></div><p style="color:#aaa;font-size:12px;line-height:1.8">✓ Global hosting worldwide<br>✓ Your website stays live forever<br>✓ Fast & secure cloud<br>✓ Unlimited visitors<br>✓ 10k clients = $50k/mo!</p><a href="https://wa.me/2347035399931?text=I want to pay $5 monthly for OMUGO AI hosting - Keep my website live forever" class="btn btn-gold" style="width:100%;margin-top:16px;font-size:14px">Pay $5 → Keep Live Forever</a></div>
+<div class="card" style="background:#151515"><h3 style="font-size:14px">Lifetime - Go Far!</h3><div style="font-size:36px;font-weight:900;margin:12px 0">$30<span style="font-size:14px;color:#aaa"> once</span></div><p style="color:#888;font-size:12px;line-height:1.8">✓ Pay once, own forever<br>✓ Never pay again<br>✓ Go far in life<br>✓ Best value worldwide</p><a href="https://wa.me/2347035399931?text=I want Lifetime $30 OMUGO AI - Pay once own forever" class="btn" style="width:100%;margin-top:16px;background:#333;color:#fff">Pay $30 Lifetime</a></div>
 </div>
-<div style="text-align:center;margin-top:20px;color:#666;font-size:11px">💳 We accept Dollar worldwide - PayPal, Wise, Crypto, Bank Transfer | No Naira, Global Only</div>
+<div style="text-align:center;margin-top:20px;color:#666;font-size:11px">💳 We accept Dollar worldwide - PayPal, Wise, Crypto, Bank Transfer | Global Only</div>
 </section>
 
 <footer style="padding:28px 5%;text-align:center;background:#000;border-top:1px solid rgba(255,255,255,.08)">
 <div style="font-weight:900;font-size:20px">OMUGO AI BUILDER</div>
-<div style="color:#C9A227;font-weight:800;font-size:12px">CHEAPEST $4/MONTH - GLOBAL ONLY - 7x CHEAPER THAN WIX</div>
-<div style="color:#666;font-size:11px;margin-top:12px;line-height:1.6">📍 Lagos + Abomey-Calavi + Germany 🇩🇪 | Global Hosting<br>📞 +2347035399931 | Dollar Account Only - Worldwide<br>© 2026 OMUGO AI. 7x cheaper than Wix & Shopify. Global $4 hosting.</div>
+<div style="color:#C9A227;font-weight:800;font-size:12px">CHEAPEST $5/MONTH - GLOBAL ONLY</div>
+<div style="color:#666;font-size:11px;margin-top:12px;line-height:1.6">📍 Lagos + Abomey-Calavi + Germany 🇩🇪 | Global Hosting<br>📞 +2347035399931 | Dollar Account Only - Worldwide<br>© 2026 OMUGO AI. Global $5 hosting - Affordable for everyone.</div>
 <div style="margin-top:10px"><a href="admin.html" style="color:#222;font-size:10px">Admin</a></div>
 </footer>
 </div>
@@ -100,15 +91,15 @@ function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsi
 async function buildWebsite(){
   let raw=document.getElementById('promptInput').value.trim(); if(!raw){alert('Type what you want!');return;}
   let btn=document.getElementById('buildBtn'); let status=document.getElementById('status'); let st=document.getElementById('statusText');
-  btn.disabled=true; btn.innerHTML='<span class="loader"></span> Building...'; status.style.display='block'; st.innerText='OMUGO AI building... Allow login if asked';
+  btn.disabled=true; btn.innerHTML='<span class="loader"></span> Building...'; status.style.display='block'; st.innerText='OMUGO AI building... Allow login if asked (first time only)';
   try{
-    let p=`Build COMPLETE professional single-file HTML website for: "${raw}". RULES: Return ONLY HTML no explanation, use real Unsplash images, inline CSS mobile responsive, beautiful, WhatsApp button, SEO. Never output "This HTML code represents".`;
+    let p=`Build COMPLETE professional single-file HTML website for: "${raw}". RULES: Return ONLY HTML no explanation, use real Unsplash images https://images.unsplash.com/photo-..., inline CSS mobile responsive, beautiful, WhatsApp button, SEO. Never output "This HTML code represents".`;
     const r=await puter.ai.chat(p,{model:'gpt-4o-mini'}); let html=r.message.content.replace(/```html/g,'').replace(/```/g,'').trim().split('This HTML code represents')[0].trim();
     if(html.length<500) throw new Error('short');
     document.getElementById('previewFrame').srcdoc=html; window.lastBuilt=html; window.lastPrompt=raw; status.style.display='none'; btn.disabled=false; btn.innerHTML='✨ Build My Website Now →';
   }catch(e){
     st.innerText='AI busy, backup builder...'; let name=(raw.match(/called\s+"([^"]+)"/i)?.[1]||raw.substring(0,30)||'Store');
-    let html=`<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;font-family:Inter;background:#FFFCF5"><div style="padding:12px 5%;background:#0D4A2E;color:#fff;font-weight:900">${name.toUpperCase()}</div><div style="padding:16px 5%"><h2>Featured Categories</h2><div style="display:grid;gap:8px;margin-top:10px"><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1488161673893-72aa9a3350d7" style="width:50px;height:50px;border-radius:8px;object-fit:cover"><b>Men</b></div><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b" style="width:50px;height:50px;border-radius:8px;object-fit:cover"><b>Women</b></div></div></div><div style="background:#C9A227;color:#fff;padding:16px;text-align:center">© 2026 ${name}</div></body></html>`;
+    let html=`<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;font-family:Inter;background:#FFFCF5"><div style="padding:12px 5%;background:#0D4A2E;color:#fff;font-weight:900">${name.toUpperCase()}</div><div style="padding:16px 5%"><h2>Featured Categories</h2><div style="display:grid;gap:8px;margin-top:10px"><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1488161673893-72aa9a3350d7" style="width:50px;height:50px;border-radius:8px;object-fit:cover"><b>Men</b></div><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b" style="width:50px;height:50px;border-radius:8px;object-fit:cover"><b>Women</b></div><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2" style="width:50px;height:50px;border-radius:8px;object-fit:cover"><b>Kids</b></div><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" style="width:50px;height:50px;border-radius:8px;object-fit:cover"><b>Shoes</b></div></div></div><div style="background:#C9A227;color:#fff;padding:16px;text-align:center">© 2026 ${name}</div></body></html>`;
     document.getElementById('previewFrame').srcdoc=html; window.lastBuilt=html; window.lastPrompt=raw; setTimeout(()=>status.style.display='none',1500); btn.disabled=false; btn.innerHTML='✨ Build My Website Now →';
   }
 }
@@ -122,7 +113,7 @@ async function publishSite(){
  }catch(e){ console.log(e); }
  btn.innerHTML=old; btn.disabled=false;
  let link=window.location.origin+window.location.pathname+'?site='+id;
- let pop=document.createElement('div'); pop.innerHTML=`<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px"><div style="background:#fff;color:#111;border-radius:20px;padding:24px;max-width:420px;width:100%;text-align:center"><div style="font-size:44px">🎉</div><h2 style="font-size:20px;font-weight:900">Your Website is LIVE Worldwide!</h2><p style="font-size:11px;color:#4ade80;margin-top:6px;font-weight:800">✅ Saved to OMUGO Global Cloud - $4/mo</p><div style="background:#f5f5f5;border:1px solid #ddd;border-radius:12px;padding:12px;margin-top:14px;word-break:break-all;font-size:11px;font-weight:700">${link}</div><button id="c" style="width:100%;margin-top:10px;background:#0D4A2E;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:800">📋 Copy Live Link</button><a href="${link}" target="_blank" style="display:block;width:100%;margin-top:8px;background:#111;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none">🌍 Open Live Site</a><a href="https://wa.me/2347035399931?text=My site ${encodeURIComponent(raw.substring(0,30))} is LIVE at ${encodeURIComponent(link)} - I will pay $4 monthly to keep it forever" target="_blank" style="display:block;width:100%;margin-top:8px;background:#25D366;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none">💬 Pay $4 to Keep Forever</a><button id="x" style="margin-top:14px;background:none;border:none;color:#888">Close</button></div></div>`;
+ let pop=document.createElement('div'); pop.innerHTML=`<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px"><div style="background:#fff;color:#111;border-radius:20px;padding:24px;max-width:420px;width:100%;text-align:center"><div style="font-size:44px">🎉</div><h2 style="font-size:20px;font-weight:900">Your Website is LIVE Worldwide!</h2><p style="font-size:11px;color:#4ade80;margin-top:6px;font-weight:800">✅ Saved to OMUGO Global Cloud - $5/mo</p><div style="background:#f5f5f5;border:1px solid #ddd;border-radius:12px;padding:12px;margin-top:14px;word-break:break-all;font-size:11px;font-weight:700">${link}</div><button id="c" style="width:100%;margin-top:10px;background:#0D4A2E;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:800">📋 Copy Live Link</button><a href="${link}" target="_blank" style="display:block;width:100%;margin-top:8px;background:#111;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none">🌍 Open Live Site</a><a href="https://wa.me/2347035399931?text=My site ${encodeURIComponent(raw.substring(0,30))} is LIVE at ${encodeURIComponent(link)} - I will pay $5 monthly to keep it forever" target="_blank" style="display:block;width:100%;margin-top:8px;background:#25D366;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none">💬 Pay $5 to Keep Forever</a><button id="x" style="margin-top:14px;background:none;border:none;color:#888">Close</button></div></div>`;
  document.body.appendChild(pop); pop.querySelector('#c').onclick=function(){navigator.clipboard.writeText(link);this.innerText='✅ Copied!';}; pop.querySelector('#x').onclick=function(){pop.remove();};
 }
 </script>
