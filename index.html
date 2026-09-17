@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OMUGO AI - Build Any Website in 30 Seconds - Only $5</title>
+<title>OMUGO AI - Build Any Website - $5 - Type Anything</title>
 <script src="https://js.puter.com/v2/"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-<div id="loadingScreen" style="display:none"><span class="loader" style="width:40px;height:40px;border-width:4px"></span><p style="margin-top:16px;color:#FFD84D;font-weight:800">Loading live website...</p><p id="loadInfo" style="margin-top:8px;color:#666;font-size:12px">Checking OMUGO Cloud...</p><div id="notFoundMsg" style="display:none;margin-top:20px"><p style="color:#fff;font-weight:800">⚠️ Link not in cloud</p><p style="color:#aaa;font-size:12px;margin-top:8px">Build NEW site with new code</p><a href="/" style="display:inline-block;margin-top:14px;background:#C9A227;color:#111;padding:12px 20px;border-radius:20px;font-weight:800;text-decoration:none">← Go to Builder</a></div></div>
+<div id="loadingScreen" style="display:none"><span class="loader" style="width:40px;height:40px;border-width:4px"></span><p style="margin-top:16px;color:#FFD84D;font-weight:800">Loading your live website...</p><p id="loadInfo" style="margin-top:8px;color:#666;font-size:12px">Checking cloud (2 sec)...</p><div id="notFoundMsg" style="display:none;margin-top:20px"><p style="color:#fff;font-weight:800">⚠️ Old link - not in worldwide cloud</p><p style="color:#aaa;font-size:12px;margin-top:8px">Please build NEW website with new code to get worldwide link</p><a href="/" style="display:inline-block;margin-top:14px;background:#C9A227;color:#111;padding:12px 20px;border-radius:20px;font-weight:800;text-decoration:none">← Build NEW Site Now</a></div></div>
 <div id="appShell">
 <header style="display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;background:rgba(8,10,11,.95);z-index:100">
 <div style="display:flex;align-items:center;gap:8px;font-weight:900"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:6px;font-size:9px">$5 GLOBAL</span></div>
@@ -30,55 +30,46 @@
 </header>
 <div id="builder">
 <div>
-<div class="tag">🌍 Worldwide</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">$5 Only</div>
-<h1 style="font-size:38px;font-weight:900;line-height:.95;margin:14px 0">Build <span style="color:#C9A227">Any</span> Website with AI in <span style="color:#C9A227">30 seconds</span> - Only <span style="color:#4ade80">$5</span></h1>
-<p style="color:#a1a1aa;font-size:14px">Build professional websites for only <b style="color:#fff">$5/month</b> - Affordable worldwide! FREE 30 days.</p>
+<div class="tag">🌍 Google-like</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">Type Anything</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">AI Builds It</div>
+<h1 style="font-size:38px;font-weight:900;line-height:.95;margin:14px 0">Build <span style="color:#C9A227">Anything</span> with AI - Like <span style="color:#4ade80">Google</span> - Only <span style="color:#4ade80">$5</span></h1>
+<p style="color:#a1a1aa;font-size:14px">Type anything: church, barber, hotel, school, restaurant, fashion, football live, hospital... AI will build it! <b style="color:#fff">Garbage In, Garbage Out? No - Good In, Good Out!</b></p>
 <div style="background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin:18px 0">
-<label style="font-size:11px;color:#FFD84D;font-weight:800">DESCRIBE YOUR WEBSITE:</label>
-<textarea id="promptInput" class="big-input">Build Pauline Omugo Fashion Store - responsive, fast loading, clean and elegant, stylish header with logo, search, cart, wishlist. Home Page: Hero slider with models and text New Collection is Here - Shop Now, Featured Categories Men Women Kids Shoes, Best Sellers $49.99, New Arrivals, reviews, WhatsApp button, use real Unsplash images https://images.unsplash.com/photo-1483985988355-763728e1935b</textarea>
-<div id="status" style="margin-top:10px;font-size:12px;display:none"><span class="loader"></span> <span id="statusText" style="color:#FFD84D">Building...</span></div>
+<label style="font-size:11px;color:#FFD84D;font-weight:800">DESCRIBE ANY WEBSITE YOU WANT (Like Google search):</label>
+<textarea id="promptInput" class="big-input" placeholder="Example: Build modern barber shop with services, prices, booking, Instagram gallery... OR Build church website with sermons, events, donation... OR Build hotel with rooms, booking... Type ANYTHING!"></textarea>
+<div id="status" style="margin-top:10px;font-size:12px;display:none"><span class="loader"></span> <span id="statusText" style="color:#FFD84D">OMUGO AI is building your idea...</span></div>
 <button id="buildBtn" onclick="buildWebsite()" class="btn btn-gold" style="width:100%;font-size:17px;padding:18px;margin-top:12px">✨ Build My Website Now →</button>
 <div style="margin-top:12px">
-<span class="tag" onclick="setPrompt('Build Pauline Omugo Fashion Store elegant luxury, real fashion models from Unsplash https://images.unsplash.com/photo-1487412720507-e7ab37603c6f, Men Women Kids Shoes categories, Best Sellers $49.99, hero slider New Collection is Here, WhatsApp')">Fashion Store</span>
-<span class="tag" onclick="setPrompt('Build Omugo Football Live dark green theme, breaking news slider, live scores table, transfer news, Premier League La Liga categories, real football images from Unsplash')">⚽ Football Live</span>
+<span class="tag" onclick="setPrompt('Build modern barber shop with services haircut $20 beard $15, booking calendar, gallery, WhatsApp')">Barber Shop</span>
+<span class="tag" onclick="setPrompt('Build church website with hero welcome, pastor message, sermon videos, events, donation button')">Church</span>
+<span class="tag" onclick="setPrompt('Build hotel resort with rooms deluxe $100 suite $200, amenities pool, booking form, gallery')">Hotel</span>
+<span class="tag" onclick="setPrompt('Build restaurant with menu jollof rice, online ordering, table booking')">Restaurant</span>
+<span class="tag" onclick="setPrompt('Build Omugo Football Live with live scores, breaking news, transfer rumors')">⚽ Football Live</span>
+<span class="tag" onclick="setPrompt('Build Pauline Omugo Fashion Store with hero New Collection, categories Men Women Kids Shoes, Best Sellers $49.99')">Fashion Store</span>
 </div>
 </div>
 </div>
 <div class="card" style="padding:14px">
-<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:13px">🔴 Live Preview - OMUGO AI</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● AI ACTIVE</span></div>
-<iframe id="previewFrame" style="width:100%;height:580px;background:#fff;border-radius:14px;border:none"></iframe>
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:13px">🔴 Live Preview - OMUGO AI (Anything Builder)</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● AI ACTIVE</span></div>
+<iframe id="previewFrame" style="width:100%;height:600px;background:#fff;border-radius:14px;border:none"></iframe>
 <button onclick="publishSite()" class="btn btn-gold" style="width:100%;margin-top:12px;padding:14px">🚀 Publish & Get Live Link FREE</button>
+<p style="font-size:10px;color:#888;text-align:center;margin-top:8px">Pure AI - Type anything, builds anything - Like Google!</p>
 </div>
 </div>
 <section style="padding:40px 5%;background:#0a0a0a;border-top:1px solid rgba(255,255,255,.08)">
-<p style="text-align:center;color:#888;font-size:13px;margin-bottom:20px">Build professional websites for only <b style="color:#fff">$5/month</b></p>
 <div class="grid3">
-<div class="card" style="background:#151515"><h3>FREE - Gather Clients</h3><div style="font-size:36px;font-weight:900;margin:12px 0">FREE<span style="font-size:14px;color:#aaa"> 30 DAYS</span></div><p style="color:#888;font-size:12px">✓ 30 days full<br>✓ No card<br>✓ Gather thousands</p><a href="#builder" class="btn" style="width:100%;margin-top:16px;background:#fff;color:#111">Start Free →</a></div>
-<div class="card" style="border:1.5px solid #C9A227;background:linear-gradient(135deg,rgba(201,162,39,.15),rgba(0,0,0,.3))"><h3>Starter <span style="background:#C9A227;color:#111;padding:2px 8px;border-radius:10px;font-size:9px">POPULAR</span></h3><div style="font-size:42px;font-weight:900;margin:12px 0;color:#FFD84D">$5<span style="font-size:16px;color:#aaa">/month</span></div><p style="color:#aaa;font-size:12px">✓ Global hosting<br>✓ Stays live forever<br>✓ Fast cloud</p><a href="https://wa.me/2347035399931?text=I want $5 monthly" class="btn btn-gold" style="width:100%;margin-top:16px">Pay $5 →</a></div>
-<div class="card" style="background:#151515"><h3>Yearly - Save 50% <span style="background:#4ade80;color:#111;padding:2px 8px;border-radius:10px;font-size:9px">BEST DEAL</span></h3><div style="font-size:36px;font-weight:900;margin:12px 0">$30<span style="font-size:14px;color:#aaa">/year</span></div><p style="color:#888;font-size:12px">✓ $30 for 1 year<br>✓ Save $30<br>✓ Renew after 1 year</p><a href="https://wa.me/2347035399931?text=I want Yearly $30" class="btn" style="width:100%;margin-top:16px;background:#333;color:#fff">Pay $30 / Year</a></div>
+<div class="card" style="background:#151515"><h3>FREE 30 DAYS</h3><div style="font-size:36px;font-weight:900">FREE</div><p style="color:#888;font-size:12px">Gather thousands of clients</p></div>
+<div class="card" style="border:1.5px solid #C9A227"><h3>Starter POPULAR</h3><div style="font-size:42px;font-weight:900;color:#FFD84D">$5<span style="font-size:16px;color:#aaa">/month</span></div><p style="color:#aaa;font-size:12px">Global hosting worldwide</p></div>
+<div class="card" style="background:#151515"><h3>Yearly BEST DEAL</h3><div style="font-size:36px;font-weight:900">$30<span style="font-size:14px;color:#aaa">/year</span></div><p style="color:#888;font-size:12px">Save $30 - Renew yearly</p></div>
 </div>
 </section>
-<footer style="padding:28px 5%;text-align:center;background:#000;border-top:1px solid rgba(255,255,255,.08)">
-<div style="font-weight:900;font-size:20px">OMUGO AI BUILDER</div>
-<div style="color:#C9A227;font-weight:800;font-size:12px">CHEAPEST $5/MONTH - $30/YEAR</div>
-<div style="color:#666;font-size:11px;margin-top:12px">© 2026 OMUGO AI</div>
-<div style="margin-top:10px"><a href="admin.html" style="color:#222;font-size:10px">Admin</a></div>
-</footer>
+<footer style="padding:20px 5%;text-align:center;background:#000"><div style="font-weight:900">OMUGO AI BUILDER - Type Anything, Build Anything</div><div style="color:#C9A227;font-size:12px">$5/MONTH - $30/YEAR - Like Google for Websites</div></footer>
 </div>
 <script>
 function extractHTML(text){
-  // Remove markdown
   let t=text.replace(/```html/g,'').replace(/```/g,'').trim();
-  // Find first <html or <!DOCTYPE and last </html>
-  let start = t.toLowerCase().indexOf('<!doctype');
-  if(start===-1) start = t.toLowerCase().indexOf('<html');
-  let end = t.toLowerCase().lastIndexOf('</html>');
-  if(start!==-1 && end!==-1){ return t.substring(start, end+7); }
-  // Fallback: if still contains story text, strip it
-  t=t.split('This HTML code represents')[0];
-  t=t.split('Creating a complete e-commerce')[0];
-  t=t.split('Below is a simplified version')[0];
-  t=t.split('Note that for a real-world')[0];
+  let start=t.toLowerCase().indexOf('<!doctype'); if(start===-1) start=t.toLowerCase().indexOf('<html');
+  let end=t.toLowerCase().lastIndexOf('</html>'); if(start!==-1 && end!==-1) return t.substring(start,end+7);
+  t=t.split('This HTML code represents')[0].split('Creating a complete')[0].split('Below is a simplified')[0].split('Note that for a real-world')[0].split('###')[0];
   return t;
 }
 async function checkLiveSite(){
@@ -88,45 +79,39 @@ async function checkLiveSite(){
   let html=null;
   try{ html=localStorage.getItem(siteId); if(!html){let s=JSON.parse(localStorage.getItem('omugo_sites')||'[]'); let f=s.find(x=>x.id===siteId); if(f) html=f.html;}}catch(e){}
   if(!html){
-    try{
-      const c=await Promise.race([puter.kv.get('omugo_'+siteId), new Promise((_,rej)=>setTimeout(()=>rej('timeout'),2500))]);
-      if(c) html=c;
-    }catch(e){}
+    try{ const c=await Promise.race([puter.kv.get('omugo_'+siteId), new Promise((_,rej)=>setTimeout(()=>rej(),2000))]); if(c) html=c; }catch(e){}
   }
-  if(html && html.length>500){
-    html=extractHTML(html);
-    document.open(); document.write(html); document.close(); return;
-  }else{
-    setTimeout(()=>{ document.getElementById('loadInfo').innerText='Site not found - it was built before cloud'; notFoundEl.style.display='block'; setTimeout(()=>{loadingEl.style.display='none'; appEl.style.display='block';},3000); },1500);
-  }
+  if(html && html.length>400){ document.open(); document.write(extractHTML(html)); document.close(); return; }
+  else{ setTimeout(()=>{ document.getElementById('loadInfo').innerText='Not found - build NEW'; notFoundEl.style.display='block'; setTimeout(()=>{loadingEl.style.display='none'; appEl.style.display='block';},3000); },1000); }
 }
 checkLiveSite();
-function setPrompt(t){document.getElementById('promptInput').value=t; window.scrollTo({top:0,behavior:'smooth'});}
+function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsite();}
 async function buildWebsite(){
-  let raw=document.getElementById('promptInput').value.trim(); if(!raw){alert('Type what you want!');return;}
+  let raw=document.getElementById('promptInput').value.trim(); if(!raw){alert('Type anything you want to build! Like Google!');return;}
   let btn=document.getElementById('buildBtn'); let status=document.getElementById('status'); let st=document.getElementById('statusText');
-  btn.disabled=true; btn.innerHTML='<span class="loader"></span> Building...'; status.style.display='block'; st.innerText='OMUGO AI building... No story, only website!';
+  btn.disabled=true; btn.innerHTML='<span class="loader"></span> Building your idea...'; status.style.display='block'; st.innerText='OMUGO AI building "'+raw.substring(0,30)+'..." - Type anything, builds anything!';
   try{
-    let p=`TASK: Build complete professional single-file HTML website.
+    let p=`You are OMUGO AI Website Builder - Like Google but you BUILD websites.
 
-TOPIC: "${raw}"
+USER WANTS: "${raw}"
 
-CRITICAL RULES - MUST FOLLOW:
-1. OUTPUT ONLY RAW HTML CODE - Start with <!DOCTYPE html> and end with </html>
-2. NO explanations, NO markdown, NO English story, NO "Creating a complete...", NO "Below is..."
-3. Use REAL Unsplash images: https://images.unsplash.com/photo-1483985988355-763728e1935b, https://images.unsplash.com/photo-1487412720507-e7ab37603c6f, https://images.unsplash.com/photo-1496747611176-843222e1e57c
-4. Inline CSS only, mobile responsive, beautiful design
-5. Include: header with logo, hero slider "New Collection is Here - Shop Now", Featured Categories (Men Women Kids Shoes), Best Sellers with prices $49.99, WhatsApp button
-6. Never write "This HTML code represents" or any notes
+YOUR JOB: Build EXACTLY what user asked. If user says church, build church. If barber, build barber. If hotel, build hotel. If football, build football. If fashion, build fashion. If school, build school. ANYTHING user types, you build it! No limits!
 
-Begin HTML now:`;
-    const r=await puter.ai.chat(p,{model:'gpt-4o-mini'}); let html=extractHTML(r.message.content||r);
-    if(html.length<600){ throw new Error('too short'); }
+RULES - MUST FOLLOW:
+1. Output ONLY raw HTML - Start with <!DOCTYPE html> end with </html> - No explanations, no markdown
+2. Use real Unsplash images relevant to topic: e.g. for barber use barber images, for church use church images, for hotel use hotel images. Search in your mind for relevant Unsplash URLs like https://images.unsplash.com/photo-... Use at least 4 real images.
+3. Inline CSS only, mobile responsive, beautiful, modern, professional
+4. Make it functional: include header, hero, services/products, contact, WhatsApp button, footer
+5. Never write "Creating a complete..." or notes - ONLY HTML
+
+Build now - Start HTML:`;
+    const r=await puter.ai.chat(p,{model:'claude-sonnet-4'}); let html=extractHTML(r.message.content||r);
+    if(html.length<500){ const r2=await puter.ai.chat(p,{model:'gpt-4o-mini'}); html=extractHTML(r2.message.content||''); }
+    if(html.length<500) throw new Error('short');
     document.getElementById('previewFrame').srcdoc=html; window.lastBuilt=html; window.lastPrompt=raw; status.style.display='none'; btn.disabled=false; btn.innerHTML='✨ Build My Website Now →';
   }catch(e){
-    st.innerText='AI busy, using OMUGO pro template...';
-    let html=`<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;font-family:sans-serif;background:#FFFCF5}header{display:flex;justify-content:space-between;padding:12px 5%;background:#fff;border-bottom:1px solid #eee}.hero{background:linear-gradient(135deg,#FF1493,#FF6B9D);color:#fff;padding:60px 5%;text-align:center}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:16px 5%}.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.1)}.card img{width:100%;height:180px;object-fit:cover}.price{color:#FF1493;font-weight:900}.btn{background:#111;color:#fff;padding:10px;border-radius:20px;border:none;width:90%;margin:8px 5%}</style></head><body><header><b style="color:#FF1493">PAULINE OMUGO FASHION STORE</b><div>Home Shop About</div></header><div class="hero"><h1>New Collection is Here - Shop Now</h1><p>Beautiful fashion for everyone</p><button style="background:#fff;color:#FF1493;padding:12px 24px;border-radius:30px;border:none;font-weight:800;margin-top:12px">Shop Now</button></div><div style="padding:16px 5%"><h2>Featured Categories</h2><div class="grid"><div class="card"><img src="https://images.unsplash.com/photo-1488161673893-72aa9a3350d7"><p style="padding:8px"><b>Men</b></p></div><div class="card"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f"><p style="padding:8px"><b>Women</b></p></div><div class="card"><img src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2"><p style="padding:8px"><b>Kids</b></p></div><div class="card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"><p style="padding:8px"><b>Shoes</b></p></div></div><h2 style="margin-top:20px">Best Sellers</h2><div class="grid"><div class="card"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c"><div style="padding:10px"><b>Stylish Dress</b><div class="price">$49.99</div><button class="btn">Add to Cart</button></div></div><div class="card"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105"><div style="padding:10px"><b>Trendy Jacket</b><div class="price">$79.99</div><button class="btn">Add to Cart</button></div></div></div></div><div style="background:#111;color:#fff;padding:20px;text-align:center;margin-top:20px">© 2026 Pauline Omugo Fashion Store | WhatsApp: +2347035399931</div><a href="https://wa.me/2347035399931" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px;border-radius:50%;text-decoration:none">💬</a></body></html>`;
-    document.getElementById('previewFrame').srcdoc=html; window.lastBuilt=html; window.lastPrompt=raw; setTimeout(()=>status.style.display='none',1000); btn.disabled=false; btn.innerHTML='✨ Build My Website Now →';
+    st.innerText='AI busy, try again - type shorter prompt';
+    status.style.display='none'; btn.disabled=false; btn.innerHTML='✨ Build My Website Now →'; alert('AI busy - Please try again with shorter prompt. Example: Build barber shop with booking');
   }
 }
 async function publishSite(){
@@ -135,12 +120,12 @@ async function publishSite(){
  let btn=document.querySelector('[onclick="publishSite()"]'); let old=btn.innerHTML; btn.innerHTML='<span class="loader"></span> Publishing...'; btn.disabled=true;
  try{
    let s=JSON.parse(localStorage.getItem('omugo_sites')||'[]'); s.push({id:id,name:raw.substring(0,60),prompt:raw,date:new Date().toLocaleString(),html:window.lastBuilt}); localStorage.setItem('omugo_sites',JSON.stringify(s)); localStorage.setItem(id,window.lastBuilt);
-   try{ await Promise.race([puter.kv.set('omugo_'+id, window.lastBuilt), new Promise((_,rej)=>setTimeout(()=>rej(),4000))]); }catch(e){ console.log('cloud slow'); }
+   try{ await Promise.race([puter.kv.set('omugo_'+id, window.lastBuilt), new Promise((_,rej)=>setTimeout(()=>rej(),3000))]); }catch(e){ console.log('cloud slow - but local saved, allow login popup next time'); }
  }catch(e){}
  btn.innerHTML=old; btn.disabled=false;
  let link=window.location.origin+window.location.pathname+'?site='+id;
- let pop=document.createElement('div'); pop.innerHTML=`<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px"><div style="background:#fff;color:#111;border-radius:20px;padding:24px;max-width:420px;width:100%;text-align:center"><div style="font-size:44px">🎉</div><h2 style="font-size:20px;font-weight:900">LIVE Worldwide!</h2><p style="font-size:11px;color:#4ade80;font-weight:800">✅ OMUGO Cloud - $5/mo or $30/year</p><div style="background:#f5f5f5;border:1px solid #ddd;border-radius:12px;padding:12px;margin-top:14px;word-break:break-all;font-size:11px;font-weight:700">${link}</div><button id="c" style="width:100%;margin-top:10px;background:#0D4A2E;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:800">📋 Copy Live Link</button><a href="${link}" target="_blank" style="display:block;width:100%;margin-top:8px;background:#111;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none">🌍 Test Open (Incognito)</a><button id="x" style="margin-top:14px;background:none;border:none;color:#888">Close</button></div></div>`;
- document.body.appendChild(pop); pop.querySelector('#c').onclick=function(){navigator.clipboard.writeText(link);this.innerText='✅ Copied! Now test in incognito!';}; pop.querySelector('#x').onclick=function(){pop.remove();};
+ let pop=document.createElement('div'); pop.innerHTML=`<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px"><div style="background:#fff;color:#111;border-radius:20px;padding:24px;max-width:420px;width:100%;text-align:center"><div style="font-size:44px">🎉</div><h2 style="font-size:20px;font-weight:900">Your "${raw.substring(0,25)}" is LIVE!</h2><p style="font-size:11px;color:#4ade80;font-weight:800">✅ Pure AI Builder - Type anything, builds anything!</p><div style="background:#f5f5f5;border:1px solid #ddd;border-radius:12px;padding:12px;margin-top:14px;word-break:break-all;font-size:11px;font-weight:700">${link}</div><button id="c" style="width:100%;margin-top:10px;background:#0D4A2E;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:800">📋 Copy Live Link</button><a href="${link}" target="_blank" style="display:block;width:100%;margin-top:8px;background:#111;color:#fff;padding:12px;border-radius:12px;font-weight:800;text-decoration:none">🌍 Test Open (Incognito)</a><p style="font-size:10px;color:#888;margin-top:8px">If link shows loading forever, your popup blocker blocked cloud save. Enable popups and publish again. New links work worldwide!</p><button id="x" style="margin-top:14px;background:none;border:none;color:#888">Close</button></div></div>`;
+ document.body.appendChild(pop); pop.querySelector('#c').onclick=function(){navigator.clipboard.writeText(link);this.innerText='✅ Copied!';}; pop.querySelector('#x').onclick=function(){pop.remove();};
 }
 </script>
 </body>
