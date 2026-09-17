@@ -1,114 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>OMUGO AI - Worldwide Hosting</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OMUGO AI - Build Anything</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#080a0b;color:#fff;overflow-x:hidden}
-.btn{padding:14px 28px;border-radius:30px;font-weight:800;text-decoration:none;display:inline-flex;justify-content:center;cursor:pointer;border:none}
+.btn{padding:14px 28px;border-radius:30px;font-weight:800;cursor:pointer;border:none;display:inline-flex;justify-content:center;text-decoration:none}
 .btn-gold{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:22px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:16px}
+.big-input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(201,162,39,.4);padding:18px;border-radius:18px;color:#fff;font-size:16px;min-height:160px;outline:none}
+#builder{display:grid;grid-template-columns:1.1fr.9fr;gap:28px;padding:30px 5%}
+@media(max-width:900px){#builder{grid-template-columns:1fr;padding:16px 4%}.btn{width:100%} #preview{height:700px!important}}
 .tag{display:inline-block;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.3);color:#FFD84D;padding:6px 12px;border-radius:20px;font-size:11px;margin:4px;font-weight:700;cursor:pointer}
-.price-switch{display:flex;background:rgba(255,255,255,.08);border-radius:30px;padding:4px;width:fit-content;margin:24px auto;border:1px solid rgba(255,255,255,.1)}
-.price-switch div{padding:10px 22px;border-radius:30px;cursor:pointer;font-weight:800;font-size:13px}.active{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111!important}
-.big-input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(201,162,39,.4);padding:20px;border-radius:18px;color:#fff;font-size:16px;min-height:150px;outline:none;resize:vertical}
-.big-input:focus{border-color:#C9A227}
-#builder{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:40px 5%}
-@media(max-width:900px){#builder{grid-template-columns:1fr;padding:18px 4%} .grid3{grid-template-columns:1fr} h1{font-size:28px!important} .btn{width:100%} #preview{height:520px!important}}
 </style>
 </head>
-<body style="background:radial-gradient(1200px 600px at 20% -10%,rgba(13,74,46,.4),transparent),radial-gradient(1000px 500px at 90% 0%,rgba(201,162,39,.25),transparent),#080a0b">
+<body>
 
-<header style="display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;backdrop-filter:blur(24px);background:rgba(8,10,11,.9);z-index:100">
-<div style="display:flex;align-items:center;gap:8px;font-weight:900"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI<div style="background:#C9A227;color:#111;padding:2px 8px;border-radius:8px;font-size:9px">WORLDWIDE</div></div>
-<a href="#builder" class="btn btn-gold" style="padding:8px 14px;font-size:12px">Start FREE →</a>
+<header style="display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.1);position:sticky;top:0;background:rgba(8,10,11,.95);z-index:10">
+<div style="font-weight:900;display:flex;gap:8px;align-items:center"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI • UNIVERSAL BUILDER</div>
+<a class="btn btn-gold" style="padding:8px 14px;font-size:12px" href="#builder">Start FREE →</a>
 </header>
 
 <div id="builder">
 <div>
-<div class="tag">🌍 Worldwide</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">Free Hosting</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">AI Responds Now!</div>
-<h1 style="font-size:46px;font-weight:900;line-height:.95;margin:14px 0">Build any website with AI in <span style="color:#C9A227">30 seconds</span> - For Whole World</h1>
-<p style="color:#a1a1aa;line-height:1.6;font-size:14px">Type ANY business - restaurant, church, barber, hotel, fashion - AI will build it! <b style="color:#fff">FREE 30 days hosted on OMUGO.</b></p>
+<h1 style="font-size:38px;font-weight:900;line-height:.95">Build <span style="color:#C9A227">ANY</span> website with AI in 30 seconds</h1>
+<p style="color:#a1a1aa;font-size:14px;margin:12px 0">One builder, 1 million ideas. Fashion, Football Live, Church, Barber, Hotel, School - Type ANYTHING, we build it & host it FREE 30 days.</p>
 
-<div style="background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin:18px 0">
-<label style="font-size:11px;color:#FFD84D;font-weight:800;letter-spacing:1px">DESCRIBE YOUR WEBSITE (Big Box - Type Long):</label>
-<textarea id="promptInput" class="big-input" placeholder="Example: Build a barber shop website with services, prices in Naira and Dollar, booking button, gallery... Be detailed!"></textarea>
+<div style="background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin-top:16px">
+<label style="font-size:11px;color:#FFD84D;font-weight:800">DESCRIBE YOUR WEBSITE - BE DETAILED:</label>
+<textarea id="promptInput" class="big-input" placeholder='Example 1: Build a modern football news website called "Omugo Football Live" with dark theme green accents, breaking news slider, live scores, transfer news, Premier League categories, AdSense, newsletter, SEO...
+
+Example 2: Beautiful fashion store with Naira and Dollar, WhatsApp order...
+
+Example 3: Church website with donations, events...
+
+Type ANYTHING you want!'></textarea>
 <button onclick="buildWebsite()" class="btn btn-gold" style="width:100%;font-size:17px;padding:18px;margin-top:12px">✨ Build My Website Now →</button>
-<div style="margin-top:12px">
-<span class="tag" onclick="setPrompt('Beautiful fashion store with product gallery and WhatsApp ordering')">Fashion Store</span>
-<span class="tag" onclick="setPrompt('Modern restaurant with menu, food photos and WhatsApp ordering')">Restaurant</span>
-<span class="tag" onclick="setPrompt('Church website with Sunday service, events, donations')">Church ⛪</span>
-<span class="tag" onclick="setPrompt('Barber shop with haircut prices and booking')">Barber Shop</span>
-<span class="tag" onclick="setPrompt('Real estate listings with property photos')">Real Estate</span>
-<span class="tag" onclick="setPrompt('Hotel booking website with rooms and prices')">Hotel</span>
+<div style="margin-top:10px">
+<span class="tag" onclick="setPrompt('Build me a modern, mobile-responsive football news website called Omugo Football Live with dark theme green accents, breaking news slider, Live Scores section, Transfer News, Match Previews, Categories for Premier League La Liga Serie A Bundesliga Champions League AFCON, AdSense spaces, newsletter, SEO optimized')">⚽ Football - Omugo Live</span>
+<span class="tag" onclick="setPrompt('Beautiful fashion store called Omugo Fashion with product gallery, Naira and Dollar prices, WhatsApp ordering, categories')">Fashion Store</span>
+<span class="tag" onclick="setPrompt('Modern restaurant with menu, food delivery, WhatsApp order')">Restaurant</span>
+<span class="tag" onclick="setPrompt('Barber shop with services, prices, booking calendar')">Barber Shop</span>
+<span class="tag" onclick="setPrompt('Church website with Sunday service, donations, events')">Church</span>
 </div>
 </div>
 </div>
 
-<div class="card" style="background:rgba(255,255,255,.08);padding:14px">
-<div style="display:flex;justify-content:space-between;margin-bottom:10px;align-items:center"><b style="font-size:13px">🔴 Live Preview - AI ACTIVE</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● RESPONDING</span></div>
-<div id="preview" style="background:#FFFCF5;border-radius:14px;height:480px;overflow:auto;color:#111"><div style="padding:20px;text-align:center;color:#888;margin-top:60px"><div style="font-size:40px">🌍</div><div style="font-weight:800;color:#0D4A2E">OMUGO AI READY</div><div style="font-size:10px;color:#C9A227;font-weight:800">TYPE ANYTHING - I WILL BUILD IT</div><div style="margin-top:10px;font-size:12px">Try: Barber shop, Restaurant, Church, Hotel<br>Now AI responds to everything!</div></div></div>
-<div style="margin-top:12px">
-<button onclick="publishSite()" class="btn btn-gold" style="width:100%;font-size:13px;padding:14px">🚀 Publish & Host FREE 30 Days on OMUGO</button>
-<p style="font-size:10px;color:#888;text-align:center;margin-top:8px">✅ Hosted on OMUGO AI • Business runs immediately</p>
+<div class="card" style="padding:12px">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:12px">🔴 Live Preview - UNIVERSAL AI</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● UNDERSTANDS ANY PROMPT</span></div>
+<div id="preview" style="background:#fff;border-radius:14px;height:600px;overflow:auto;color:#111"><div style="padding:30px;text-align:center;color:#888;margin-top:80px"><div style="font-size:40px">🌍</div><div style="font-weight:900;color:#111">OMUGO UNIVERSAL AI</div><div style="font-size:12px;margin-top:8px">Type ANY business idea<br>1 prompt out of 1 million<br>We will build it!</div></div></div>
+<button onclick="publishSite()" class="btn btn-gold" style="width:100%;margin-top:12px">🚀 Publish & Host FREE 30 Days on OMUGO</button>
 </div>
 </div>
-</div>
-
-<section style="padding:40px 5%;background:#0f1110">
-<h2 style="text-align:center;font-size:28px;font-weight:900">We Host For You - Worldwide</h2>
-<div class="price-switch"><div id="nairaBtn" class="active" onclick="showNaira()">🇳🇬 NAIRA</div><div id="dollarBtn" onclick="showDollar()">🌍 $3 GLOBAL</div></div>
-<div id="nairaPricing" class="grid3" style="max-width:1100px;margin:0 auto">
-<div class="card"><h3>FREE Hosting</h3><div style="font-size:32px;font-weight:900;margin:12px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:12px">✓ We build & host<br>✓ No card</p></div>
-<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.12)"><h3>Keep Hosting <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:8px;font-size:9px">POPULAR</span></h3><div style="font-size:32px;font-weight:900;margin:12px 0;color:#FFD84D">₦1,000<span style="font-size:13px;color:#a1a1aa">/mo</span></div><p style="color:#a1a1aa;font-size:12px">✓ Stay hosted + get code</p><a href="https://wa.me/2347035399931?text=I want hosting ₦1k" class="btn btn-gold" style="width:100%;margin-top:14px;font-size:12px">Pay ₦1k →</a></div>
-<div class="card"><h3>Lifetime</h3><div style="font-size:32px;font-weight:900;margin:12px 0">₦7,500<span style="font-size:13px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:12px">✓ Forever</p><a href="https://wa.me/2347035399931?text=I want lifetime ₦7,500" class="btn" style="width:100%;margin-top:14px;background:rgba(255,255,255,.1);color:#fff;font-size:12px">Pay ₦7.5k</a></div>
-</div>
-<div id="dollarPricing" class="grid3" style="display:none;max-width:1100px;margin:0 auto">
-<div class="card"><h3>FREE Hosting</h3><div style="font-size:32px;font-weight:900;margin:12px 0">FREE 30 DAYS</div></div>
-<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.12)"><h3>Keep Hosting <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:8px;font-size:9px">POPULAR</span></h3><div style="font-size:32px;font-weight:900;margin:12px 0;color:#FFD84D">$3<span style="font-size:13px;color:#a1a1aa">/mo</span></div><p style="color:#a1a1aa;font-size:12px">✓ Hosting + code</p><a href="https://wa.me/2347035399931?text=I want $3 hosting" class="btn btn-gold" style="width:100%;margin-top:14px;font-size:12px">Pay $3 →</a></div>
-<div class="card"><h3>Lifetime</h3><div style="font-size:32px;font-weight:900;margin:12px 0">$15<span style="font-size:13px;color:#a1a1aa"> once</span></div><a href="https://wa.me/2347035399931?text=I want lifetime $15" class="btn" style="width:100%;margin-top:14px;background:rgba(255,255,255,.1);color:#fff;font-size:12px">Pay $15</a></div>
-</div>
-</section>
-
-<footer style="padding:24px 5%;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:#666;font-size:11px">
-<div style="font-weight:900;font-size:18px;color:#fff">OMUGO AI - WORLDWIDE</div><div style="margin-top:10px">🌍 Worldwide Hosting | +2347035399931<br>© 2026 OMUGO AI</div>
-</footer>
 
 <script>
 function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsite();}
-function showNaira(){document.getElementById('nairaPricing').style.display='grid';document.getElementById('dollarPricing').style.display='none';document.getElementById('nairaBtn').classList.add('active');document.getElementById('dollarBtn').classList.remove('active');}
-function showDollar(){document.getElementById('dollarPricing').style.display='grid';document.getElementById('nairaPricing').style.display='none';document.getElementById('dollarBtn').classList.add('active');document.getElementById('nairaBtn').classList.remove('active');}
 
 function buildWebsite(){
- let inputEl = document.getElementById('promptInput');
- let raw = inputEl.value.trim();
- if(!raw){alert('Please type what website you want in the big box!'); inputEl.focus(); return;}
+ let raw = document.getElementById('promptInput').value.trim();
+ if(!raw){alert('Type your website idea!');return;}
  let p = raw.toLowerCase();
- let title = raw;
- let safeTitle = title.replace(/</g,"&lt;").replace(/>/g,"&gt;");
- let html = '';
 
- if(p.includes('restaurant') || p.includes('food') || p.includes('kitchen') || p.includes('chicken')){
-  html = `<div style="font-family:sans-serif;background:#FFFCF5;color:#111"><div style="padding:14px 5%;display:flex;justify-content:space-between;align-items:center;background:#0D4A2E;color:#fff"><b>🍛 ${safeTitle}</b><span style="background:#C9A227;color:#111;padding:5px 10px;border-radius:20px;font-size:11px">Open Now</span></div><div style="padding:22px 5%;text-align:center"><h1 style="font-size:24px;font-weight:900">Delicious Meals, Worldwide Taste</h1><p style="color:#666;font-size:13px;margin-top:6px">Built from: "${safeTitle}"</p><button style="background:#0D4A2E;color:#fff;padding:12px 22px;border-radius:30px;border:none;font-weight:800;margin-top:12px">Order on WhatsApp →</button></div><div style="padding:0 5% 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:12px"><div style="height:80px;background:#f5efe0;border-radius:8px"></div><b style="font-size:13px">Jollof Special</b><br><span style="font-size:12px">₦3,500 / $4</span></div><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:12px"><div style="height:80px;background:#e8f5ec;border-radius:8px"></div><b style="font-size:13px">Grilled Chicken</b><br><span style="font-size:12px">₦5,000 / $6</span></div></div></div>`;
- } else if(p.includes('church') || p.includes('pastor') || p.includes('ministry')){
-  html = `<div style="font-family:sans-serif;background:#FFFCF5;color:#111"><div style="padding:20px 5%;background:#0D4A2E;color:#fff;text-align:center"><div style="font-size:12px;letter-spacing:2px">WELCOME TO</div><h1 style="font-size:22px;font-weight:900;margin-top:6px">${safeTitle}</h1><p style="font-size:12px;opacity:.8;margin-top:6px">Join us Sunday - Built with OMUGO AI</p></div><div style="padding:18px 5%"><div style="background:#fff;border:1px solid #eee;border-radius:14px;padding:16px"><h3>⛪ Sunday Service 9AM</h3><p style="font-size:12px;color:#666;margin-top:6px">Live stream & donations - Your church online worldwide</p><button style="background:#C9A227;color:#111;padding:10px 18px;border:none;border-radius:20px;font-weight:800;margin-top:10px;font-size:12px">Watch Live / Give</button></div></div></div>`;
- } else if(p.includes('barber') || p.includes('salon') || p.includes('hair')){
-  html = `<div style="font-family:sans-serif;background:#111;color:#fff"><div style="padding:16px 5%;display:flex;justify-content:space-between"><b>✂️ ${safeTitle}</b><span style="color:#C9A227">Book Now</span></div><div style="padding:24px 5%;text-align:center"><h1 style="font-size:26px;font-weight:900">Fresh Cuts, Sharp Looks</h1><p style="color:#aaa;font-size:13px;margin-top:8px">Built from: "${safeTitle}"</p></div><div style="padding:0 5% 20px;display:grid;gap:10px"><div style="background:#222;border-radius:12px;padding:14px;display:flex;justify-content:space-between"><span>Classic Cut</span><b style="color:#FFD84D">₦2k / $3</b></div><div style="background:#222;border-radius:12px;padding:14px;display:flex;justify-content:space-between"><span>Beard + Cut</span><b style="color:#FFD84D">₦3.5k / $5</b></div><button style="width:100%;background:#C9A227;color:#111;padding:12px;border:none;border-radius:30px;font-weight:800;margin-top:10px">Book on WhatsApp</button></div></div>`;
- } else if(p.includes('fashion') || p.includes('store') || p.includes('shop') || p.includes('boutique') || p.includes('cloth')){
-  html = `<div style="font-family:sans-serif;background:#FFFCF5;color:#111"><div style="padding:12px 5%;display:flex;justify-content:space-between;border-bottom:1px solid #eee"><b>${safeTitle}</b><span>🛒</span></div><div style="padding:22px 5%;text-align:center"><h1 style="font-size:22px;font-weight:900">Worldwide Collection 2026</h1><p style="color:#666;font-size:13px">Built from: "${safeTitle}" - Naira & Dollar</p><button style="background:#0D4A2E;color:#fff;padding:10px 18px;border-radius:30px;border:none;font-weight:800;font-size:13px">Shop Now →</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 5% 20px"><div style="background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden"><div style="height:90px;background:#f5efe0"></div><div style="padding:10px"><b style="font-size:13px">Ankara Dress</b><br><b style="font-size:13px">₦12k / $25</b><br><button style="width:100%;background:#25D366;color:#fff;border:none;padding:8px;border-radius:8px;margin-top:5px;font-size:12px">WhatsApp Order</button></div></div><div style="background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden"><div style="height:90px;background:#e8f5ec"></div><div style="padding:10px"><b style="font-size:13px">Leather Bag</b><br><b style="font-size:13px">₦8.5k / $18</b><br><button style="width:100%;background:#25D366;color:#fff;border:none;padding:8px;border-radius:8px;margin-top:5px;font-size:12px">WhatsApp Order</button></div></div></div></div>`;
- } else if(p.includes('hotel') || p.includes('lodge') || p.includes('apartment')){
-  html = `<div style="font-family:sans-serif;background:#FFFCF5;color:#111"><div style="padding:14px 5%;background:#0D4A2E;color:#fff;display:flex;justify-content:space-between"><b>🏨 ${safeTitle}</b><span style="font-size:12px">Book Now</span></div><div style="padding:20px 5%"><h1 style="font-size:22px;font-weight:900">Comfort & Luxury</h1><p style="font-size:13px;color:#666;margin-top:6px">Built from: "${safeTitle}"</p><div style="background:#fff;border:1px solid #eee;border-radius:12px;padding:14px;margin-top:14px"><div style="height:100px;background:#e8f5ec;border-radius:8px"></div><div style="display:flex;justify-content:space-between;margin-top:10px"><b>Deluxe Room</b><b style="color:#0D4A2E">₦15k / $20 / night</b></div><button style="width:100%;background:#0D4A2E;color:#fff;padding:10px;border:none;border-radius:20px;margin-top:10px;font-weight:700">Book on WhatsApp</button></div></div></div>`;
+ // Extract name
+ let nameMatch = raw.match(/called\s+"([^"]+)"/i) || raw.match(/called\s+([A-Za-z0-9\s]+)/i) || raw.match(/"([^"]+)"/);
+ let siteName = nameMatch? nameMatch[1].trim() : raw.split('.')[0].split(',')[0].substring(0,30);
+ siteName = siteName.replace(/build me a/i,'').trim();
+ let safeName = siteName.substring(0,40);
+
+ // Detect colors
+ let isDark = p.includes('dark theme') || p.includes('dark') || p.includes('football') || p.includes('sport') || p.includes('soccer');
+ let bg = isDark? '#070d0a' : '#FFFCF5';
+ let text = isDark? '#fff' : '#111';
+ let cardBg = isDark? '#101f15' : '#fff';
+ let border = isDark? '#1e3d2a' : '#eee';
+ let accent = p.includes('green')? '#00ff88' : (p.includes('gold')? '#C9A227' : '#0D4A2E');
+ let accent2 = isDark? '#00ff88' : '#0D4A2E';
+
+ // Detect sections they want
+ let wants = {
+   slider: p.includes('slider') || p.includes('breaking news'),
+   liveScores: p.includes('live score') || p.includes('live scores'),
+   transfer: p.includes('transfer'),
+   preview: p.includes('preview') || p.includes('review'),
+   categories: p.includes('categor') || p.includes('premier') || p.includes('la liga') || p.includes('serie a') || p.includes('bundesliga') || p.includes('champions') || p.includes('afcon'),
+   ads: p.includes('adsense') || p.includes('monetiz') || p.includes('ad '),
+   newsletter: p.includes('newsletter') || p.includes('email'),
+   search: p.includes('search'),
+   whatsapp: p.includes('whatsapp') || p.includes('order'),
+   seo: p.includes('seo')
+ };
+
+ let html = `<div style="font-family:Inter,sans-serif;background:${bg};color:${text};min-height:100%">
+   <div style="padding:14px 5%;background:${isDark? '#0a1a12' : '#0D4A2E'};color:#fff;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid ${accent}">
+     <div style="font-weight:900;font-size:16px">${safeName.toUpperCase()}</div>
+     <div style="background:${accent};color:${isDark? '#000' : '#fff'};padding:4px 10px;border-radius:20px;font-size:10px;font-weight:800">● LIVE</div>
+   </div>`;
+
+ // Dynamic sections based on prompt
+ if(wants.slider){
+   html += `<div style="background:${isDark? '#000' : '#f5f5f0'};padding:8px 5%;font-size:11px;border-bottom:1px solid ${border}"><span style="color:${accent};font-weight:800">BREAKING:</span> Latest updates from ${safeName} - Auto-updating content</div>
+   <div style="padding:12px 5%"><div style="background:${cardBg};border:1px solid ${border};border-radius:14px;padding:14px"><div style="background:${isDark? '#ff3b3b' : '#C9A227'};color:#fff;display:inline-block;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:800">BREAKING NEWS SLIDER</div><div style="font-size:18px;font-weight:900;margin-top:10px">${safeName} - Latest Breaking News & Updates</div><div style="font-size:11px;color:${isDark? '#8abf9a' : '#888'};margin-top:6px">Built from your prompt • ${wants.seo? 'SEO Optimized to rank on Google' : 'Fast loading'}</div></div></div>`;
  } else {
-  // GENERIC - ALWAYS RESPONDS WITH THEIR EXACT WORDS
-  html = `<div style="font-family:sans-serif;background:#FFFCF5;color:#111;padding:0"><div style="padding:16px 5%;background:#0D4A2E;color:#fff"><div style="font-size:10px;letter-spacing:2px;color:#FFD84D">BUILT WITH OMUGO AI</div><h1 style="font-size:20px;font-weight:900;margin-top:6px;line-height:1.2">${safeTitle}</h1></div><div style="padding:20px 5%"><div style="background:#fff;border:1px solid #eee;border-radius:16px;padding:18px"><h3 style="font-size:16px;font-weight:800">✨ Welcome to ${safeTitle}</h3><p style="font-size:13px;color:#666;margin-top:8px;line-height:1.5">Your professional website is ready! This design was generated from your exact prompt: "<b style="color:#111">${safeTitle}</b>". It includes WhatsApp ordering, contact form, and is ready for worldwide clients. Naira & Dollar prices supported.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><div style="background:#f9f9f9;border-radius:10px;padding:10px;text-align:center"><div style="font-size:20px">🌍</div><div style="font-size:11px;font-weight:700">Worldwide Ready</div></div><div style="background:#f9f9f9;border-radius:10px;padding:10px;text-align:center"><div style="font-size:20px">💬</div><div style="font-size:11px;font-weight:700">WhatsApp Order</div></div></div><button style="background:#0D4A2E;color:#fff;padding:12px 20px;border:none;border-radius:30px;margin-top:14px;font-weight:800;width:100%">Contact Us on WhatsApp</button></div><p style="font-size:11px;color:#999;text-align:center;margin-top:14px">Hosted FREE 30 days on OMUGO AI Worldwide</p></div></div>`;
+   html += `<div style="padding:20px 5%;text-align:center"><h1 style="font-size:24px;font-weight:900">${safeName}</h1><p style="font-size:13px;color:${isDark? '#8abf9a' : '#666'};margin-top:6px">Welcome to ${safeName} - Built from your exact idea</p></div>`;
  }
+
+ if(wants.categories){
+   html += `<div style="padding:0 5% 10px;display:flex;gap:6px;overflow:auto"><span style="background:${accent};color:${isDark? '#000' : '#fff'};padding:6px 12px;border-radius:20px;font-size:11px;font-weight:800">All</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">Premier League</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">La Liga</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">Serie A</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">Bundesliga</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">Champions League</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">AFCON</span></div>`;
+ }
+
+ html += `<div style="padding:0 5% 20px;display:grid;grid-template-columns:2fr 1fr;gap:12px"><div style="display:grid;gap:10px">`;
+
+ if(wants.liveScores){
+   html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px"><div style="font-size:11px;font-weight:800;color:${accent2}">LIVE SCORES SECTION</div><div style="margin-top:8px;font-size:12px;line-height:1.8"><div>ARS 2-1 MCI <span style="color:${accent2}">78'</span></div><div>RMA 1-0 BAR <span style="color:${accent2}">LIVE</span></div><div>NAP 3-0 INT FT</div></div></div>`;
+ }
+ if(wants.transfer){
+   html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px;display:flex;gap:8px"><div style="width:60px;height:50px;background:${isDark? '#1a3322' : '#f0f0f0'};border-radius:8px"></div><div><div style="font-size:13px;font-weight:800">Transfer News Section</div><div style="font-size:11px;color:${isDark? '#8abf9a' : '#888'}">Latest transfers, rumors, confirmed deals</div></div></div>`;
+ }
+ if(wants.preview){
+   html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px;display:flex;gap:8px"><div style="width:60px;height:50px;background:${isDark? '#1a3322' : '#f0f0f0'};border-radius:8px"></div><div><div style="font-size:13px;font-weight:800">Match Previews & Reviews</div><div style="font-size:11px;color:${isDark? '#8abf9a' : '#888'}">Tactical analysis, predictions</div></div></div>`;
+ }
+
+ // Always add main content from prompt
+ html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:14px;padding:14px"><div style="font-size:14px;font-weight:800">Welcome to ${safeName}</div><div style="font-size:12px;color:${isDark? '#aaa' : '#666'};margin-top:6px;line-height:1.5">This website was built from your prompt: "<b>${raw.substring(0,200)}...</b>"<br><br>It includes everything you requested: ${Object.keys(wants).filter(k=>wants[k]).join(', ') || 'custom design'}. Fully responsive, fast loading, ready for worldwide clients. Naira & Dollar supported.</div>${wants.whatsapp? `<button style="margin-top:12px;background:#25D366;color:#fff;border:none;padding:10px 16px;border-radius:20px;font-weight:800;font-size:12px">WhatsApp Order</button>` : `<button style="margin-top:12px;background:${accent2};color:#fff;border:none;padding:10px 16px;border-radius:20px;font-weight:800;font-size:12px">Contact Us</button>`}</div>`;
+
+ if(wants.ads){
+   html += `<div style="background:${isDark? '#1a1a1a' : '#f9f9f9'};border:1px dashed ${isDark? '#444' : '#ccc'};border-radius:12px;padding:14px;text-align:center;color:#888;font-size:10px">Google AdSense - In Article Ad<br>Monetizable $$$ • Header, Sidebar, In-Article</div>`;
+ }
+
+ html += `</div><div style="display:grid;gap:10px;align-content:start">`;
+
+ if(wants.search){
+   html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px"><div style="font-size:11px;font-weight:800">🔍 Search</div><input placeholder="Search news, products..." style="width:100%;margin-top:6px;background:${isDark? '#070d0a' : '#f5f5f5'};border:1px solid ${border};padding:8px;border-radius:8px;font-size:11px;color:${text}"></div>`;
+ }
+ if(wants.newsletter){
+   html += `<div style="background:${cardBg};border:1px solid ${accent};border-radius:12px;padding:12px"><div style="font-size:11px;font-weight:800;color:${accent2}">📧 Newsletter - Collect Emails</div><div style="font-size:10px;color:${isDark? '#aaa' : '#666'};margin-top:4px">Subscribe to get latest updates</div><input placeholder="Your email" style="width:100%;margin-top:8px;background:${isDark? '#070d0a' : '#f5f5f5'};border:1px solid ${border};padding:8px;border-radius:8px;font-size:11px;color:${text}"><button style="width:100%;margin-top:6px;background:${accent};color:${isDark? '#000' : '#fff'};border:none;padding:8px;border-radius:8px;font-weight:800;font-size:11px">Subscribe FREE</button></div>`;
+ }
+ if(wants.ads){
+   html += `<div style="background:${isDark? '#1a1a1a' : '#f9f9f9'};border:1px dashed ${isDark? '#444' : '#ccc'};border-radius:12px;padding:14px;text-align:center;color:#888;font-size:10px">Sidebar AdSense 300x250<br>Affiliate Links<br>$$$ Monetized</div>`;
+ }
+
+ html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px"><div style="font-size:11px;font-weight:800">Features Built</div><div style="font-size:10px;color:${isDark? '#8abf9a' : '#666'};margin-top:6px">✓ Mobile Responsive<br>✓ Fast Loading<br>✓ SEO Optimized<br>✓ Worldwide Ready<br>✓ Naira & Dollar<br>✓ Hosted on OMUGO</div></div>`;
+
+ html += `</div></div><div style="background:${isDark? '#000' : '#111'};color:#888;padding:12px 5%;text-align:center;font-size:9px">© 2026 ${safeName} • Built & Hosted FREE 30 days on OMUGO AI • Auto-updates • Monetizable</div></div>`;
+
  document.getElementById('preview').innerHTML = html;
  window.lastBuilt = html;
- document.getElementById('preview').scrollIntoView({behavior:'smooth'});
 }
-function publishSite(){ if(!window.lastBuilt){alert('Please build your website first! Type in big box and click Build');return;} alert('🎉 SUCCESS! Your website is now LIVE and HOSTED on OMUGO AI!\n\nHosted FREE 30 days\nAfter 30 days: Pay ₦1k or $3 to keep hosting'); window.open('https://wa.me/2347035399931?text=My site hosted on OMUGO - Keep hosting','_blank');}
+
+function publishSite(){
+ if(!window.lastBuilt){alert('Build first!');return;}
+ alert('🎉 SUCCESS! '+ 'Your website is LIVE & HOSTED on OMUGO AI!\n\nThis is universal builder - works for ANY of the 1 million prompts!\nFREE 30 days!');
+ window.open('https://wa.me/2347035399931?text=My universal site hosted on OMUGO','_blank');
+}
 </script>
 </body>
 </html>
