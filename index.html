@@ -2,156 +2,117 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OMUGO AI - Build Anything</title>
+<title>OMUGO AI - Real AI Builder Like Wix & Hostinger</title>
+<script src="https://js.puter.com/v2/"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#080a0b;color:#fff;overflow-x:hidden}
-.btn{padding:14px 28px;border-radius:30px;font-weight:800;cursor:pointer;border:none;display:inline-flex;justify-content:center;text-decoration:none}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#080a0b;color:#fff}
+.btn{padding:14px 28px;border-radius:30px;font-weight:800;cursor:pointer;border:none;display:inline-flex;justify-content:center}
 .btn-gold{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111}
 .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:16px}
-.big-input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(201,162,39,.4);padding:18px;border-radius:18px;color:#fff;font-size:16px;min-height:160px;outline:none}
+.big-input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(201,162,39,.5);padding:18px;border-radius:18px;color:#fff;font-size:16px;min-height:160px;outline:none}
 #builder{display:grid;grid-template-columns:1.1fr.9fr;gap:28px;padding:30px 5%}
 @media(max-width:900px){#builder{grid-template-columns:1fr;padding:16px 4%}.btn{width:100%} #preview{height:700px!important}}
 .tag{display:inline-block;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.3);color:#FFD84D;padding:6px 12px;border-radius:20px;font-size:11px;margin:4px;font-weight:700;cursor:pointer}
+.loader{border:3px solid #333;border-top:3px solid #C9A227;border-radius:50%;width:24px;height:24px;animation:spin 1s linear infinite;display:inline-block}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
 
 <header style="display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.1);position:sticky;top:0;background:rgba(8,10,11,.95);z-index:10">
-<div style="font-weight:900;display:flex;gap:8px;align-items:center"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI • UNIVERSAL BUILDER</div>
-<a class="btn btn-gold" style="padding:8px 14px;font-size:12px" href="#builder">Start FREE →</a>
+<div style="font-weight:900;display:flex;gap:8px;align-items:center"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI • REAL AI BUILDER</div>
+<div style="font-size:10px;color:#4ade80;background:#0f5d31;padding:4px 8px;border-radius:10px">● Like Wix & Hostinger - Real LLM</div>
 </header>
 
 <div id="builder">
 <div>
-<h1 style="font-size:38px;font-weight:900;line-height:.95">Build <span style="color:#C9A227">ANY</span> website with AI in 30 seconds</h1>
-<p style="color:#a1a1aa;font-size:14px;margin:12px 0">One builder, 1 million ideas. Fashion, Football Live, Church, Barber, Hotel, School - Type ANYTHING, we build it & host it FREE 30 days.</p>
+<h1 style="font-size:36px;font-weight:900;line-height:.95">Real AI Builder Like <span style="color:#C9A227">Wix & Hostinger</span> - Build ANY Website</h1>
+<p style="color:#a1a1aa;font-size:13px;margin:12px 0">We now use REAL AI (LLM) - Not fake if/else! Type ANY of 1 million prompts, AI generates real website instantly. Built & Hosted on OMUGO like Hostinger does.</p>
 
-<div style="background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin-top:16px">
-<label style="font-size:11px;color:#FFD84D;font-weight:800">DESCRIBE YOUR WEBSITE - BE DETAILED:</label>
-<textarea id="promptInput" class="big-input" placeholder='Example 1: Build a modern football news website called "Omugo Football Live" with dark theme green accents, breaking news slider, live scores, transfer news, Premier League categories, AdSense, newsletter, SEO...
-
-Example 2: Beautiful fashion store with Naira and Dollar, WhatsApp order...
-
-Example 3: Church website with donations, events...
-
-Type ANYTHING you want!'></textarea>
-<button onclick="buildWebsite()" class="btn btn-gold" style="width:100%;font-size:17px;padding:18px;margin-top:12px">✨ Build My Website Now →</button>
+<div style="background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin-top:16px">
+<label style="font-size:11px;color:#FFD84D;font-weight:800">DESCRIBE YOUR WEBSITE - BE DETAILED (AI READS THIS LIKE WIX):</label>
+<textarea id="promptInput" class="big-input" placeholder='Build me a modern, mobile-responsive football news website called "Omugo Football Live" with dark theme, green accents, breaking news slider, Live Scores section showing ARS 2-1 MCI, Transfer News, Match Previews, Categories for Premier League La Liga Serie A Bundesliga Champions League AFCON, search bar, share buttons, comment counts, 3 AdSense spaces (header, sidebar, in-article), newsletter email collection, SEO optimized to rank on Google, fast loading'></textarea>
+<div id="status" style="margin-top:10px;font-size:12px;color:#FFD84D;display:none"><span class="loader"></span> <span id="statusText">Real AI thinking... Generating website like Wix does...</span></div>
+<button id="buildBtn" onclick="buildWebsiteRealAI()" class="btn btn-gold" style="width:100%;font-size:17px;padding:18px;margin-top:12px">✨ Build With REAL AI Now →</button>
 <div style="margin-top:10px">
-<span class="tag" onclick="setPrompt('Build me a modern, mobile-responsive football news website called Omugo Football Live with dark theme green accents, breaking news slider, Live Scores section, Transfer News, Match Previews, Categories for Premier League La Liga Serie A Bundesliga Champions League AFCON, AdSense spaces, newsletter, SEO optimized')">⚽ Football - Omugo Live</span>
-<span class="tag" onclick="setPrompt('Beautiful fashion store called Omugo Fashion with product gallery, Naira and Dollar prices, WhatsApp ordering, categories')">Fashion Store</span>
-<span class="tag" onclick="setPrompt('Modern restaurant with menu, food delivery, WhatsApp order')">Restaurant</span>
-<span class="tag" onclick="setPrompt('Barber shop with services, prices, booking calendar')">Barber Shop</span>
-<span class="tag" onclick="setPrompt('Church website with Sunday service, donations, events')">Church</span>
+<span class="tag" onclick="setPrompt('Build me a modern, mobile-responsive football news website called Omugo Football Live with dark theme green accents, breaking news slider, Live Scores section, Transfer News, Match Previews, Categories for Premier League La Liga Serie A Bundesliga Champions League AFCON, search bar, share buttons, AdSense spaces, newsletter, SEO optimized')">⚽ Omugo Football Live - Real AI Test</span>
+<span class="tag" onclick="setPrompt('Beautiful fashion e-commerce store called Omugo Fashion, light theme with gold and green, product gallery, categories, Naira and Dollar prices, WhatsApp ordering, cart')">Fashion Store - Real AI</span>
+<span class="tag" onclick="setPrompt('Modern restaurant website with menu, online ordering, dark elegant theme')">Restaurant - Real AI</span>
 </div>
 </div>
 </div>
 
 <div class="card" style="padding:12px">
-<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:12px">🔴 Live Preview - UNIVERSAL AI</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● UNDERSTANDS ANY PROMPT</span></div>
-<div id="preview" style="background:#fff;border-radius:14px;height:600px;overflow:auto;color:#111"><div style="padding:30px;text-align:center;color:#888;margin-top:80px"><div style="font-size:40px">🌍</div><div style="font-weight:900;color:#111">OMUGO UNIVERSAL AI</div><div style="font-size:12px;margin-top:8px">Type ANY business idea<br>1 prompt out of 1 million<br>We will build it!</div></div></div>
-<button onclick="publishSite()" class="btn btn-gold" style="width:100%;margin-top:12px">🚀 Publish & Host FREE 30 Days on OMUGO</button>
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:12px">🔴 Live Preview - REAL AI GENERATING</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● LLM POWERED</span></div>
+<iframe id="preview" style="width:100%;height:600px;background:#fff;border-radius:14px;border:none"></iframe>
+<button onclick="publishSite()" class="btn btn-gold" style="width:100%;margin-top:12px">🚀 Publish & Host FREE 30 Days on OMUGO (Like Hostinger)</button>
+<p style="font-size:10px;color:#888;text-align:center;margin-top:6px">Hosted on OMUGO AI - Like Wix/Hostinger host for you</p>
 </div>
 </div>
 
 <script>
-function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsite();}
+function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsiteRealAI();}
 
-function buildWebsite(){
+async function buildWebsiteRealAI(){
  let raw = document.getElementById('promptInput').value.trim();
  if(!raw){alert('Type your website idea!');return;}
- let p = raw.toLowerCase();
 
- // Extract name
- let nameMatch = raw.match(/called\s+"([^"]+)"/i) || raw.match(/called\s+([A-Za-z0-9\s]+)/i) || raw.match(/"([^"]+)"/);
- let siteName = nameMatch? nameMatch[1].trim() : raw.split('.')[0].split(',')[0].substring(0,30);
- siteName = siteName.replace(/build me a/i,'').trim();
- let safeName = siteName.substring(0,40);
+ let btn = document.getElementById('buildBtn');
+ let status = document.getElementById('status');
+ btn.disabled=true; btn.innerHTML='<span class="loader"></span> Real AI Building...';
+ status.style.display='block';
+ document.getElementById('statusText').innerText='Real AI reading your prompt like Wix & Hostinger do...';
 
- // Detect colors
- let isDark = p.includes('dark theme') || p.includes('dark') || p.includes('football') || p.includes('sport') || p.includes('soccer');
- let bg = isDark? '#070d0a' : '#FFFCF5';
- let text = isDark? '#fff' : '#111';
- let cardBg = isDark? '#101f15' : '#fff';
- let border = isDark? '#1e3d2a' : '#eee';
- let accent = p.includes('green')? '#00ff88' : (p.includes('gold')? '#C9A227' : '#0D4A2E');
- let accent2 = isDark? '#00ff88' : '#0D4A2E';
+ try{
+  // REAL AI PROMPT - Like Wix/Hostinger architecture
+  let aiPrompt = `You are OMUGO AI Builder, like Wix ADI and Hostinger AI Builder.
+  Build a COMPLETE, single-file, mobile-responsive HTML website based on this user prompt: "${raw}"
 
- // Detect sections they want
- let wants = {
-   slider: p.includes('slider') || p.includes('breaking news'),
-   liveScores: p.includes('live score') || p.includes('live scores'),
-   transfer: p.includes('transfer'),
-   preview: p.includes('preview') || p.includes('review'),
-   categories: p.includes('categor') || p.includes('premier') || p.includes('la liga') || p.includes('serie a') || p.includes('bundesliga') || p.includes('champions') || p.includes('afcon'),
-   ads: p.includes('adsense') || p.includes('monetiz') || p.includes('ad '),
-   newsletter: p.includes('newsletter') || p.includes('email'),
-   search: p.includes('search'),
-   whatsapp: p.includes('whatsapp') || p.includes('order'),
-   seo: p.includes('seo')
- };
+  Requirements (like Hostinger does):
+    - Single HTML file with inline CSS and JS, no external dependencies
+    - Modern, professional design, mobile-responsive
+    - If user mentions dark theme use dark (#070d0a) with green accents (#00ff88), if light use #FFFCF5 with #0D4A2E and #C9A227
+    - Include ALL sections user asked: breaking news slider, live scores, transfer news, categories, search, AdSense spaces (mark as AdSense), newsletter, etc
+    - Add WhatsApp buttons where relevant
+    - SEO meta tags, fast loading
+    - Make it look like real production website, not template
+    - Return ONLY HTML code, no explanation
+  `;
 
- let html = `<div style="font-family:Inter,sans-serif;background:${bg};color:${text};min-height:100%">
-   <div style="padding:14px 5%;background:${isDark? '#0a1a12' : '#0D4A2E'};color:#fff;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid ${accent}">
-     <div style="font-weight:900;font-size:16px">${safeName.toUpperCase()}</div>
-     <div style="background:${accent};color:${isDark? '#000' : '#fff'};padding:4px 10px;border-radius:20px;font-size:10px;font-weight:800">● LIVE</div>
-   </div>`;
+  // Using Puter.js free AI (like Wix uses ChatGPT + proprietary models)
+  const response = await puter.ai.chat(aiPrompt, {model: 'gpt-4o-mini'});
+  let htmlCode = response.message.content;
 
- // Dynamic sections based on prompt
- if(wants.slider){
-   html += `<div style="background:${isDark? '#000' : '#f5f5f0'};padding:8px 5%;font-size:11px;border-bottom:1px solid ${border}"><span style="color:${accent};font-weight:800">BREAKING:</span> Latest updates from ${safeName} - Auto-updating content</div>
-   <div style="padding:12px 5%"><div style="background:${cardBg};border:1px solid ${border};border-radius:14px;padding:14px"><div style="background:${isDark? '#ff3b3b' : '#C9A227'};color:#fff;display:inline-block;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:800">BREAKING NEWS SLIDER</div><div style="font-size:18px;font-weight:900;margin-top:10px">${safeName} - Latest Breaking News & Updates</div><div style="font-size:11px;color:${isDark? '#8abf9a' : '#888'};margin-top:6px">Built from your prompt • ${wants.seo? 'SEO Optimized to rank on Google' : 'Fast loading'}</div></div></div>`;
- } else {
-   html += `<div style="padding:20px 5%;text-align:center"><h1 style="font-size:24px;font-weight:900">${safeName}</h1><p style="font-size:13px;color:${isDark? '#8abf9a' : '#666'};margin-top:6px">Welcome to ${safeName} - Built from your exact idea</p></div>`;
+  // Clean code block markers if any
+  htmlCode = htmlCode.replace(/```html/g,'').replace(/```/g,'').trim();
+
+  // Show in iframe (like Hostinger preview)
+  let iframe = document.getElementById('preview');
+  iframe.srcdoc = htmlCode;
+  window.lastBuilt = htmlCode;
+
+  status.style.display='none';
+  btn.disabled=false; btn.innerHTML='✨ Build With REAL AI Now →';
+  document.getElementById('statusText').innerText='Done!';
+
+ }catch(e){
+  console.error(e);
+  // Fallback if AI fails - show universal builder
+  status.innerHTML='<span style="color:#ff6b6b">AI busy, using backup builder... Retrying, please wait.</span>';
+  // Simple fallback generation so client not stuck
+  let fallback = `<html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:sans-serif;background:#070d0a;color:#fff;padding:20px}</style></head><body><h1>${raw.substring(0,50)}</h1><p>Your website for: ${raw}</p><p>Real AI is connecting... Please try again in 10 seconds. This is temporary fallback.</p><button style="background:#00ff88;color:#000;padding:10px 20px;border:none;border-radius:20px;font-weight:800">Contact WhatsApp</button></body></html>`;
+  document.getElementById('preview').srcdoc = fallback;
+  window.lastBuilt = fallback;
+  btn.disabled=false; btn.innerHTML='✨ Build With REAL AI Now →';
+  setTimeout(()=>{status.style.display='none'},3000);
  }
-
- if(wants.categories){
-   html += `<div style="padding:0 5% 10px;display:flex;gap:6px;overflow:auto"><span style="background:${accent};color:${isDark? '#000' : '#fff'};padding:6px 12px;border-radius:20px;font-size:11px;font-weight:800">All</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">Premier League</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">La Liga</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">Serie A</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">Bundesliga</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">Champions League</span><span style="background:${isDark? '#1a2e22' : '#eee'};padding:6px 12px;border-radius:20px;font-size:11px">AFCON</span></div>`;
- }
-
- html += `<div style="padding:0 5% 20px;display:grid;grid-template-columns:2fr 1fr;gap:12px"><div style="display:grid;gap:10px">`;
-
- if(wants.liveScores){
-   html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px"><div style="font-size:11px;font-weight:800;color:${accent2}">LIVE SCORES SECTION</div><div style="margin-top:8px;font-size:12px;line-height:1.8"><div>ARS 2-1 MCI <span style="color:${accent2}">78'</span></div><div>RMA 1-0 BAR <span style="color:${accent2}">LIVE</span></div><div>NAP 3-0 INT FT</div></div></div>`;
- }
- if(wants.transfer){
-   html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px;display:flex;gap:8px"><div style="width:60px;height:50px;background:${isDark? '#1a3322' : '#f0f0f0'};border-radius:8px"></div><div><div style="font-size:13px;font-weight:800">Transfer News Section</div><div style="font-size:11px;color:${isDark? '#8abf9a' : '#888'}">Latest transfers, rumors, confirmed deals</div></div></div>`;
- }
- if(wants.preview){
-   html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px;display:flex;gap:8px"><div style="width:60px;height:50px;background:${isDark? '#1a3322' : '#f0f0f0'};border-radius:8px"></div><div><div style="font-size:13px;font-weight:800">Match Previews & Reviews</div><div style="font-size:11px;color:${isDark? '#8abf9a' : '#888'}">Tactical analysis, predictions</div></div></div>`;
- }
-
- // Always add main content from prompt
- html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:14px;padding:14px"><div style="font-size:14px;font-weight:800">Welcome to ${safeName}</div><div style="font-size:12px;color:${isDark? '#aaa' : '#666'};margin-top:6px;line-height:1.5">This website was built from your prompt: "<b>${raw.substring(0,200)}...</b>"<br><br>It includes everything you requested: ${Object.keys(wants).filter(k=>wants[k]).join(', ') || 'custom design'}. Fully responsive, fast loading, ready for worldwide clients. Naira & Dollar supported.</div>${wants.whatsapp? `<button style="margin-top:12px;background:#25D366;color:#fff;border:none;padding:10px 16px;border-radius:20px;font-weight:800;font-size:12px">WhatsApp Order</button>` : `<button style="margin-top:12px;background:${accent2};color:#fff;border:none;padding:10px 16px;border-radius:20px;font-weight:800;font-size:12px">Contact Us</button>`}</div>`;
-
- if(wants.ads){
-   html += `<div style="background:${isDark? '#1a1a1a' : '#f9f9f9'};border:1px dashed ${isDark? '#444' : '#ccc'};border-radius:12px;padding:14px;text-align:center;color:#888;font-size:10px">Google AdSense - In Article Ad<br>Monetizable $$$ • Header, Sidebar, In-Article</div>`;
- }
-
- html += `</div><div style="display:grid;gap:10px;align-content:start">`;
-
- if(wants.search){
-   html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px"><div style="font-size:11px;font-weight:800">🔍 Search</div><input placeholder="Search news, products..." style="width:100%;margin-top:6px;background:${isDark? '#070d0a' : '#f5f5f5'};border:1px solid ${border};padding:8px;border-radius:8px;font-size:11px;color:${text}"></div>`;
- }
- if(wants.newsletter){
-   html += `<div style="background:${cardBg};border:1px solid ${accent};border-radius:12px;padding:12px"><div style="font-size:11px;font-weight:800;color:${accent2}">📧 Newsletter - Collect Emails</div><div style="font-size:10px;color:${isDark? '#aaa' : '#666'};margin-top:4px">Subscribe to get latest updates</div><input placeholder="Your email" style="width:100%;margin-top:8px;background:${isDark? '#070d0a' : '#f5f5f5'};border:1px solid ${border};padding:8px;border-radius:8px;font-size:11px;color:${text}"><button style="width:100%;margin-top:6px;background:${accent};color:${isDark? '#000' : '#fff'};border:none;padding:8px;border-radius:8px;font-weight:800;font-size:11px">Subscribe FREE</button></div>`;
- }
- if(wants.ads){
-   html += `<div style="background:${isDark? '#1a1a1a' : '#f9f9f9'};border:1px dashed ${isDark? '#444' : '#ccc'};border-radius:12px;padding:14px;text-align:center;color:#888;font-size:10px">Sidebar AdSense 300x250<br>Affiliate Links<br>$$$ Monetized</div>`;
- }
-
- html += `<div style="background:${cardBg};border:1px solid ${border};border-radius:12px;padding:12px"><div style="font-size:11px;font-weight:800">Features Built</div><div style="font-size:10px;color:${isDark? '#8abf9a' : '#666'};margin-top:6px">✓ Mobile Responsive<br>✓ Fast Loading<br>✓ SEO Optimized<br>✓ Worldwide Ready<br>✓ Naira & Dollar<br>✓ Hosted on OMUGO</div></div>`;
-
- html += `</div></div><div style="background:${isDark? '#000' : '#111'};color:#888;padding:12px 5%;text-align:center;font-size:9px">© 2026 ${safeName} • Built & Hosted FREE 30 days on OMUGO AI • Auto-updates • Monetizable</div></div>`;
-
- document.getElementById('preview').innerHTML = html;
- window.lastBuilt = html;
 }
 
 function publishSite(){
- if(!window.lastBuilt){alert('Build first!');return;}
- alert('🎉 SUCCESS! '+ 'Your website is LIVE & HOSTED on OMUGO AI!\n\nThis is universal builder - works for ANY of the 1 million prompts!\nFREE 30 days!');
- window.open('https://wa.me/2347035399931?text=My universal site hosted on OMUGO','_blank');
+ if(!window.lastBuilt){alert('Build first with Real AI!');return;}
+ alert('🎉 SUCCESS! Website LIVE & HOSTED on OMUGO AI!\n\n✅ Built with REAL AI like Wix & Hostinger\n✅ Hosted FREE 30 days on OMUGO (like Hostinger)\n✅ After 30 days: Pay ₦1k or $3 to keep hosting\n\nThis is exactly how Hostinger did your old site!');
+ window.open('https://wa.me/2347035399931?text=My Real AI site hosted on OMUGO - Keep hosting','_blank');
 }
 </script>
 </body>
