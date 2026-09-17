@@ -7,107 +7,115 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#080a0b;color:#fff}
-.btn{padding:14px 28px;border-radius:30px;font-weight:800;cursor:pointer;border:none;display:inline-flex;justify-content:center}
+.btn{padding:14px 28px;border-radius:30px;font-weight:800;cursor:pointer;border:none;display:inline-flex;justify-content:center;text-decoration:none}
 .btn-gold{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111}
 .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:16px}
-.big-input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(201,162,39,.5);padding:18px;border-radius:18px;color:#fff;font-size:16px;min-height:160px;outline:none}
-#builder{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:30px 5%}
-@media(max-width:900px){#builder{grid-template-columns:1fr;padding:16px 4%}.btn{width:100%} #preview{height:700px!important}}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .tag{display:inline-block;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.3);color:#FFD84D;padding:6px 12px;border-radius:20px;font-size:11px;margin:4px;font-weight:700;cursor:pointer}
-.loader{border:3px solid #333;border-top:3px solid #C9A227;border-radius:50%;width:24px;height:24px;animation:spin 1s linear infinite;display:inline-block}
+.price-switch{display:flex;background:rgba(255,255,255,.08);border-radius:30px;padding:4px;width:fit-content;margin:24px auto;border:1px solid rgba(255,255,255,.1)}
+.price-switch div{padding:10px 22px;border-radius:30px;cursor:pointer;font-weight:800;font-size:13px}.active{background:linear-gradient(135deg,#C9A227,#FFD84D);color:#111!important}
+.big-input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(201,162,39,.5);padding:18px;border-radius:18px;color:#fff;font-size:16px;min-height:160px;outline:none;resize:vertical}
+#builder{display:grid;grid-template-columns:1.1fr.9fr;gap:28px;padding:30px 5%}
+@media(max-width:900px){#builder{grid-template-columns:1fr;padding:16px 4%}.grid3{grid-template-columns:1fr}.btn{width:100%} #previewFrame{height:650px!important}}
+.loader{border:3px solid #333;border-top:3px solid #C9A227;border-radius:50%;width:22px;height:22px;animation:spin 1s linear infinite;display:inline-block}
 @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 </style>
 </head>
-<body>
+<body style="background:radial-gradient(1200px 600px at 20% -10%,rgba(13,74,46,.4),transparent),radial-gradient(1000px 500px at 90% 0%,rgba(201,162,39,.25),transparent),#080a0b">
 
-<header style="display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.1);position:sticky;top:0;background:rgba(8,10,11,.95);z-index:10">
-<div style="font-weight:900;display:flex;gap:8px;align-items:center"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI</div>
-<div style="font-size:10px;color:#4ade80;background:#0f5d31;padding:4px 8px;border-radius:10px">● AI POWERED BUILDER</div>
+<header style="display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;backdrop-filter:blur(24px);background:rgba(8,10,11,.9);z-index:100">
+<div style="display:flex;align-items:center;gap:8px;font-weight:900"><div style="width:36px;height:36px;background:linear-gradient(135deg,#C9A227,#FFD84D);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#111">AI</div>OMUGO AI<div style="background:#C9A227;color:#111;padding:2px 8px;border-radius:8px;font-size:9px">WORLDWIDE</div></div>
+<a href="#builder" class="btn btn-gold" style="padding:8px 14px;font-size:12px">Start FREE →</a>
 </header>
 
 <div id="builder">
 <div>
-<h1 style="font-size:36px;font-weight:900;line-height:.95">Build <span style="color:#C9A227">Any</span> Website with AI in 30 Seconds</h1>
-<p style="color:#a1a1aa;font-size:13px;margin:12px 0">OMUGO AI understands any business idea and builds a complete, professional website instantly. Hosted FREE 30 days on OMUGO.</p>
+<div class="tag">🌍 Worldwide</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">Free Hosting</div><div class="tag" style="background:rgba(34,197,94,.15);color:#4ade80;border-color:rgba(34,197,94,.3)">AI Powered</div>
+<h1 style="font-size:42px;font-weight:900;line-height:.95;margin:14px 0">Build <span style="color:#C9A227">Any</span> Website with AI in <span style="color:#C9A227">30 seconds</span></h1>
+<p style="color:#a1a1aa;line-height:1.6;font-size:14px">OMUGO AI understands any business - fashion, football live, church, barber, hotel, school, restaurant. One builder, 1 million ideas. <b style="color:#fff">FREE 30 days hosted on OMUGO.</b></p>
 
-<div style="background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin-top:16px">
-<label style="font-size:11px;color:#FFD84D;font-weight:800">DESCRIBE YOUR WEBSITE:</label>
-<textarea id="promptInput" class="big-input" placeholder='Example: Build a modern football news website called "Omugo Football Live" with dark theme green accents, breaking news slider, live scores, transfer news, Premier League categories, search, AdSense spaces, newsletter, SEO optimized'></textarea>
-<div id="status" style="margin-top:10px;font-size:12px;color:#FFD84D;display:none"><span class="loader"></span> <span id="statusText">OMUGO AI is building your website...</span></div>
+<div style="background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:16px;margin:18px 0">
+<label style="font-size:11px;color:#FFD84D;font-weight:800;letter-spacing:1px">DESCRIBE YOUR WEBSITE (Big Box):</label>
+<textarea id="promptInput" class="big-input" placeholder='Build a modern football news website called "Omugo Football Live" with dark theme green accents, breaking news slider, live scores, transfer news, Premier League categories, search, AdSense spaces, newsletter, SEO'></textarea>
+<div id="status" style="margin-top:10px;font-size:12px;color:#FFD84D;display:none"><span class="loader"></span> <span id="statusText">OMUGO AI building...</span></div>
 <button id="buildBtn" onclick="buildWebsite()" class="btn btn-gold" style="width:100%;font-size:17px;padding:18px;margin-top:12px">✨ Build My Website Now →</button>
-<div style="margin-top:10px">
-<span class="tag" onclick="setPrompt('Build a modern football news website called Omugo Football Live with dark theme green accents, breaking news slider, Live Scores section showing scores, Transfer News, Match Previews, categories for Premier League La Liga Serie A Bundesliga Champions League AFCON, search bar, AdSense spaces, newsletter, SEO optimized')">⚽ Football Live</span>
-<span class="tag" onclick="setPrompt('Beautiful fashion e-commerce store called Omugo Fashion with product gallery, Naira and Dollar prices, WhatsApp ordering')">Fashion Store</span>
-<span class="tag" onclick="setPrompt('Modern restaurant website with menu and online ordering')">Restaurant</span>
-<span class="tag" onclick="setPrompt('Church website with donations and events')">Church</span>
+<div style="margin-top:12px">
+<span class="tag" onclick="setPrompt('Build a modern football news website called Omugo Football Live with dark theme green accents, breaking news slider, Live Scores section, Transfer News, Match Previews, categories for Premier League La Liga Serie A Bundesliga Champions League AFCON, search, AdSense spaces, newsletter, SEO optimized')">⚽ Football Live</span>
+<span class="tag" onclick="setPrompt('Beautiful fashion store called Omugo Fashion with product gallery, Naira and Dollar prices, WhatsApp ordering')">Fashion Store</span>
+<span class="tag" onclick="setPrompt('Modern restaurant with menu and online ordering')">Restaurant</span>
+<span class="tag" onclick="setPrompt('Barber shop with services and booking')">Barber Shop</span>
+<span class="tag" onclick="setPrompt('Church website with donations and events')">Church ⛪</span>
 </div>
 </div>
 </div>
 
-<div class="card" style="padding:12px">
-<div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:12px">🔴 Live Preview</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● OMUGO AI</span></div>
-<iframe id="preview" style="width:100%;height:600px;background:#fff;border-radius:14px;border:none"></iframe>
-<button onclick="publishSite()" class="btn btn-gold" style="width:100%;margin-top:12px">🚀 Publish & Host FREE 30 Days</button>
-<p style="font-size:10px;color:#888;text-align:center;margin-top:6px">Hosted on OMUGO AI Worldwide • Fast & Secure</p>
+<div class="card" style="background:rgba(255,255,255,.08);padding:14px">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px;align-items:center"><b style="font-size:13px">🔴 Live Preview - OMUGO AI</b><span style="background:#0f5d31;color:#4ade80;padding:4px 8px;border-radius:10px;font-size:9px">● AI ACTIVE</span></div>
+<iframe id="previewFrame" style="width:100%;height:520px;background:#fff;border-radius:14px;border:none"></iframe>
+<div style="margin-top:12px">
+<button onclick="publishSite()" class="btn btn-gold" style="width:100%;font-size:13px;padding:14px">🚀 Publish & Host FREE 30 Days on OMUGO</button>
+<p style="font-size:10px;color:#888;text-align:center;margin-top:8px">✅ Hosted on OMUGO AI • Business runs immediately</p>
 </div>
 </div>
+</div>
+
+<section style="padding:40px 5%;background:#0f1110">
+<h2 style="text-align:center;font-size:28px;font-weight:900">We Host For You - Worldwide</h2>
+<div class="price-switch"><div id="nairaBtn" class="active" onclick="showNaira()">🇳🇬 NAIRA</div><div id="dollarBtn" onclick="showDollar()">🌍 $3 GLOBAL</div></div>
+<div id="nairaPricing" class="grid3" style="max-width:1100px;margin:0 auto">
+<div class="card"><h3>FREE Hosting</h3><div style="font-size:32px;font-weight:900;margin:12px 0">FREE 30 DAYS</div><p style="color:#a1a1aa;font-size:12px">✓ We build & host<br>✓ No card needed</p></div>
+<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.12)"><h3>Keep Hosting <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:8px;font-size:9px">POPULAR</span></h3><div style="font-size:32px;font-weight:900;margin:12px 0;color:#FFD84D">₦1,000<span style="font-size:13px;color:#a1a1aa">/mo</span></div><p style="color:#a1a1aa;font-size:12px">✓ Stay hosted + get code</p><a href="https://wa.me/2347035399931?text=I want hosting ₦1k" class="btn btn-gold" style="width:100%;margin-top:14px;font-size:12px">Pay ₦1k →</a></div>
+<div class="card"><h3>Lifetime</h3><div style="font-size:32px;font-weight:900;margin:12px 0">₦7,500<span style="font-size:13px;color:#a1a1aa"> once</span></div><p style="color:#a1a1aa;font-size:12px">✓ Forever hosting</p><a href="https://wa.me/2347035399931?text=I want lifetime ₦7,500" class="btn" style="width:100%;margin-top:14px;background:rgba(255,255,255,.1);color:#fff;font-size:12px">Pay ₦7.5k</a></div>
+</div>
+<div id="dollarPricing" class="grid3" style="display:none;max-width:1100px;margin:0 auto">
+<div class="card"><h3>FREE Hosting</h3><div style="font-size:32px;font-weight:900;margin:12px 0">FREE 30 DAYS</div></div>
+<div class="card" style="border:1.5px solid #C9A227;background:rgba(201,162,39,.12)"><h3>Keep Hosting <span style="background:#C9A227;color:#111;padding:2px 6px;border-radius:8px;font-size:9px">POPULAR</span></h3><div style="font-size:32px;font-weight:900;margin:12px 0;color:#FFD84D">$3<span style="font-size:13px;color:#a1a1aa">/mo</span></div><p style="color:#a1a1aa;font-size:12px">✓ Hosting + code</p><a href="https://wa.me/2347035399931?text=I want $3 hosting" class="btn btn-gold" style="width:100%;margin-top:14px;font-size:12px">Pay $3 →</a></div>
+<div class="card"><h3>Lifetime</h3><div style="font-size:32px;font-weight:900;margin:12px 0">$15<span style="font-size:13px;color:#a1a1aa"> once</span></div><a href="https://wa.me/2347035399931?text=I want lifetime $15" class="btn" style="width:100%;margin-top:14px;background:rgba(255,255,255,.1);color:#fff;font-size:12px">Pay $15</a></div>
+</div>
+</section>
+
+<footer style="padding:24px 5%;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:#666;font-size:11px">
+<div style="font-weight:900;font-size:18px;color:#fff">OMUGO AI - WORLDWIDE</div><div style="margin-top:10px">🌍 Worldwide Hosting | +2347035399931<br>© 2026 OMUGO AI</div>
+<div style="margin-top:8px"><a href="admin.html" style="color:#333;font-size:10px">Admin</a></div>
+</footer>
 
 <script>
 function setPrompt(t){document.getElementById('promptInput').value=t; buildWebsite();}
+function showNaira(){document.getElementById('nairaPricing').style.display='grid';document.getElementById('dollarPricing').style.display='none';document.getElementById('nairaBtn').classList.add('active');document.getElementById('dollarBtn').classList.remove('active');}
+function showDollar(){document.getElementById('dollarPricing').style.display='grid';document.getElementById('nairaPricing').style.display='none';document.getElementById('dollarBtn').classList.add('active');document.getElementById('nairaBtn').classList.remove('active');}
 
 async function buildWebsite(){
  let raw = document.getElementById('promptInput').value.trim();
- if(!raw){alert('Type your website idea!');return;}
- let btn = document.getElementById('buildBtn');
- let status = document.getElementById('status');
- btn.disabled=true; btn.innerHTML='<span class="loader"></span> OMUGO AI Building...';
- status.style.display='block';
-
+ if(!raw){alert('Please type what website you want!');return;}
+ let btn=document.getElementById('buildBtn'); let status=document.getElementById('status');
+ btn.disabled=true; btn.innerHTML='<span class="loader"></span> OMUGO AI Building...'; status.style.display='block';
  try{
-  let aiPrompt = `You are OMUGO AI Builder, a professional AI website builder.
-Build a COMPLETE, single-file, mobile-responsive HTML website based on: "${raw}"
-Requirements:
-- Single HTML file with inline CSS, no external dependencies
-- Modern, professional, mobile-responsive
-- Use dark theme #070d0a with green #00ff88 if user mentions dark/football/sport, else light #FFFCF5 with #0D4A2E and gold #C9A227
-- Include ALL sections user requested
-- WhatsApp buttons where relevant
-- SEO, fast loading, production-ready
-- Return ONLY HTML code, no explanation`;
-
-  const response = await puter.ai.chat(aiPrompt, {model: 'gpt-4o-mini'});
-  let htmlCode = response.message.content.replace(/```html/g,'').replace(/```/g,'').trim();
-  document.getElementById('preview').srcdoc = htmlCode;
-  window.lastBuilt = htmlCode;
-  status.style.display='none';
-  btn.disabled=false; btn.innerHTML='✨ Build My Website Now →';
+  let aiPrompt = `You are OMUGO AI Builder. Build COMPLETE single-file mobile-responsive HTML website for: "${raw}". Requirements: inline CSS, modern professional, if user mentions dark/football use dark #070d0a with green #00ff88 else light #FFFCF5 with #0D4A2E and gold #C9A227, include ALL sections requested, WhatsApp buttons, SEO, fast loading. Return ONLY HTML.`;
+  const res = await puter.ai.chat(aiPrompt, {model: 'gpt-4o-mini'});
+  let html = res.message.content.replace(/```html/g,'').replace(/```/g,'').trim();
+  document.getElementById('previewFrame').srcdoc = html;
+  window.lastBuilt = html;
+  window.lastPrompt = raw;
+  status.style.display='none'; btn.disabled=false; btn.innerHTML='✨ Build My Website Now →';
  }catch(e){
   console.error(e);
-  status.innerHTML='<span style="color:#ff6b6b">Building... please wait a moment and try again</span>';
+  status.innerHTML='<span style="color:#ff6b6b">AI busy, try again in 5 seconds...</span>';
   btn.disabled=false; btn.innerHTML='✨ Build My Website Now →';
-  setTimeout(()=>{status.style.display='none'},3000);
+  setTimeout(()=>status.style.display='none',4000);
  }
 }
 
 function publishSite(){
- if(!window.lastBuilt){alert('Build your website first!');return;}
- let raw = document.getElementById('promptInput').value.trim();
- let siteName = raw.substring(0,40);
- 
- // --- BACKEND SAVE ---
+ if(!window.lastBuilt){alert('Build your website first! Click Build button');return;}
+ let name = (window.lastPrompt||'Website').substring(0,50);
  try{
    let sites = JSON.parse(localStorage.getItem('omugo_sites')||'[]');
-   sites.push({name: siteName, prompt: raw, date: new Date().toLocaleString(), html: window.lastBuilt});
+   sites.push({name: name, prompt: window.lastPrompt, date: new Date().toLocaleString(), html: window.lastBuilt});
    localStorage.setItem('omugo_sites', JSON.stringify(sites));
-   
-   // Also send to your WhatsApp + Google Sheet (for global tracking)
-   fetch('https://api.sheetbest.com/sheets/xxxx', { // I will give you free Sheet API if you want
-     method:'POST',
-     headers:{'Content-Type':'application/json'},
-     body: JSON.stringify({name: siteName, prompt: raw, date: new Date().toLocaleString()})
-   }).catch(()=>{});
  }catch(e){}
-
- alert('🎉 SUCCESS! Your website is LIVE & HOSTED on OMUGO AI!\n\nFREE 30 days!\nAdmin can now see your registration in dashboard');
- window.open('https://wa.me/2347035399931?text=My site '+encodeURIComponent(siteName)+' is hosted on OMUGO - Keep hosting','_blank');
+ alert('🎉 SUCCESS! Your website is LIVE & HOSTED on OMUGO AI!\n\nFREE 30 days\nAfter 30 days: Pay ₦1k or $3 to keep hosting\n\nAdmin can now see your site in admin dashboard');
+ window.open('https://wa.me/2347035399931?text=My site '+encodeURIComponent(name)+' is hosted on OMUGO - Keep hosting','_blank');
 }
+</script>
+</body>
+</html>
